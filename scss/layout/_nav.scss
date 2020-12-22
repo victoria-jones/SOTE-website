@@ -1,0 +1,21 @@
+.site-nav, .nav-footer, .nav-social {
+
+    &__list {
+        list-style-type: none;
+        width: 100%;
+    }
+    
+    &__item {
+        display: inline-block;
+    }
+    
+}
+
+.nav-main {
+    width: 100%;
+    grid-column: 2 / 9;
+    grid-row: 1;
+    position: relative;
+    z-index: 1;
+}
+

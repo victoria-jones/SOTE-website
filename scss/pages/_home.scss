@@ -1,0 +1,39 @@
+.header {
+    background-image: url(../img/leaves_bg-large.jpg);
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.clones {
+    background-color: $color-white;
+    //background-image: url(../img/plant-small-lq.jpg);
+    //background-repeat: no-repeat;
+    //background-size: contain;
+    min-height: 80vh;
+    padding: 7rem 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    &__info {
+        max-width: 50rem;
+    }
+}
+
+.merch {
+    background-color: $color-primary-green-med;
+    color: $color-grey-light;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.white-space {
+    background-color: $color-white;
+    height: 30rem;
+}

@@ -1,0 +1,33 @@
+/**********************
+
+REM sizing used for styling
+base size:  1rem = 10px
+
+def:
+- base browser sizes at 16px 
+- changed to 62.5% to equal 10px
+- conversions are (desired px size)/16px
+    - change to percent
+
+**********************/
+
+//browser reset
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;   //1rem = 10px
+}
+
+//browser reset
+body {
+    box-sizing: border-box;
+    padding: 2rem;
+    //not part of browser reset 
+    background-color: $color-grey-light;
+}

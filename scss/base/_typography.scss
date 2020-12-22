@@ -1,0 +1,35 @@
+body {
+    font-family: $font-primary;
+    line-height: 1.7;
+    font-size: $default-font-size;
+}
+
+.header-2 {
+    font-size: $display-font-size;
+    line-height: 1;
+    margin-bottom: 4rem;
+}
+
+.list {
+    list-style-type: none;
+    &__item {
+        background-image: url(../img/bulletpoint.png);
+        background-repeat: no-repeat;
+        padding-left: 5rem;
+        &:not(last-child) {
+            margin-bottom: 3rem;
+        }
+    }
+}
+
+.link {
+    &,
+    &:link,
+    &:visited {
+        font-size: $link-font-size;
+        color: $color-primary-yellow;
+        text-decoration: none;
+        border-bottom: .15rem solid $color-primary-yellow;
+    }
+}
+

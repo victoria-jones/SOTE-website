@@ -13,3 +13,151 @@ Date Last Modified: 12/21/2020
 /****** imports only ******/
 /**************************/
 /****** variables only ******/
+/**********************
+
+REM sizing used for styling
+base size:  1rem = 10px
+
+def:
+- base browser sizes at 16px 
+- changed to 62.5% to equal 10px
+- conversions are (desired px size)/16px
+    - change to percent
+
+**********************/
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+  padding: 2rem;
+  background-color: #efefef;
+}
+
+body {
+  font-family: "Roboto Condensed", sans-serif;
+  line-height: 1.7;
+  font-size: 1.6rem;
+}
+
+.header-2 {
+  font-size: 3.8rem;
+  line-height: 1;
+  margin-bottom: 4rem;
+}
+
+.list {
+  list-style-type: none;
+}
+.list__item {
+  background-image: url(../img/bulletpoint.png);
+  background-repeat: no-repeat;
+  padding-left: 5rem;
+}
+.list__item:not(last-child) {
+  margin-bottom: 3rem;
+}
+
+.link, .link:link, .link:visited {
+  font-size: 2rem;
+  color: #e0c15a;
+  text-decoration: none;
+  border-bottom: 0.15rem solid #e0c15a;
+}
+
+.margin-space {
+  margin: 5rem;
+}
+
+.container {
+  display: grid;
+  grid-template-rows: 10rem repeat(4, maxcontent) 20rem;
+  grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(-webkit-min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
+  grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
+}
+
+.header, .clones, .merch, .white-space {
+  grid-column: 1/-1;
+}
+
+.header {
+  grid-row: 1/2;
+}
+
+.clones {
+  grid-row: 3;
+}
+
+.merch {
+  grid-row: 4;
+}
+
+.white-space {
+  grid-row: 5;
+}
+
+.footer {
+  grid-row: 6;
+  grid-column: 1/-1;
+}
+
+.site-nav__list, .nav-footer__list, .nav-social__list {
+  list-style-type: none;
+  width: 100%;
+}
+.site-nav__item, .nav-footer__item, .nav-social__item {
+  display: inline-block;
+}
+
+.nav-main {
+  width: 100%;
+  grid-column: 2/9;
+  grid-row: 1;
+  position: relative;
+  z-index: 1;
+}
+
+.header {
+  background-image: url(../img/leaves_bg-large.jpg);
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.clones {
+  background-color: #fff;
+  min-height: 80vh;
+  padding: 7rem 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.clones__info {
+  max-width: 50rem;
+}
+
+.merch {
+  background-color: #2b4220;
+  color: #efefef;
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.white-space {
+  background-color: #fff;
+  height: 30rem;
+}
