@@ -67,15 +67,81 @@ body {
   margin-bottom: 3rem;
 }
 
+.margin-top-sml {
+  margin-top: 5rem;
+}
+
+.margin-top-med {
+  margin-top: 10rem;
+}
+
+.btn {
+  /*&::after {
+      content: "";
+      //background-color: grey;
+      background-image: url(../img/roots.png);
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 250%;
+      height: 250%;
+      position: absolute;
+      z-index: -99999;
+      top: -130%;
+      left: -90%;
+      transform: scale(0);
+      transition: all .4s;
+      backface-visibility: hidden;
+  }*/
+}
+.btn, .btn:link, .btn:visited {
+  font-family: "LEMONMILKPro-Bold", sans-serif;
+  color: #fff;
+  font-size: 1.6rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 1.5rem 4rem;
+  border: none;
+  border-radius: 0.1rem;
+  background-color: #e0c15a;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  transition: all 0.2s;
+  backface-visibility: hidden;
+  position: relative;
+  z-index: 1;
+}
+.btn:hover {
+  transform: translateY(-3px) rotate(-3deg);
+  box-shadow: 0 1.5rem 2.5rem rgba(0, 0, 0, 0.3);
+  /*&::after {
+      transform: scale(1);
+  } */
+}
+.btn:active {
+  background-color: #96813c;
+  transform: translateY(1px) rotate(-3deg);
+  box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.8);
+}
+
+.link {
+  padding: 0 0.3rem;
+}
 .link, .link:link, .link:visited {
   font-size: 2rem;
   color: #e0c15a;
   text-decoration: none;
   border-bottom: 0.15rem solid #e0c15a;
+  background-image: linear-gradient(120deg, #e0c15a 50%, transparent 50%, transparent 0%);
+  background-size: 255%;
+  background-position: 100%;
+  transition: all 0.4s;
 }
-
-.margin-space {
-  margin: 5rem;
+.link:hover {
+  background-size: 225%;
+  background-position: initial;
+  color: #fff;
 }
 
 .container {
@@ -83,6 +149,11 @@ body {
   grid-template-rows: 10rem repeat(4, maxcontent) 20rem;
   grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(-webkit-min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
   grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
+}
+
+.nav-main {
+  grid-column: 2/10;
+  grid-row: 1;
 }
 
 .header, .clones, .merch, .white-space {
@@ -110,26 +181,89 @@ body {
   grid-column: 1/-1;
 }
 
-.site-nav__list, .nav-footer__list, .nav-social__list {
+.site-nav__list, .nav-footer__list, .social-nav__list {
   list-style-type: none;
   width: 100%;
 }
-.site-nav__item, .nav-footer__item, .nav-social__item {
+.site-nav__item, .nav-footer__item, .social-nav__item {
   display: inline-block;
 }
 
 .nav-main {
   width: 100%;
-  grid-column: 2/9;
-  grid-row: 1;
+  height: 10rem;
   position: relative;
   z-index: 1;
+}
+.nav-main__header {
+  color: #efefef;
+  padding: 3rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.nav-main__img-holder {
+  flex-grow: 1.3;
+  text-align: right;
+}
+.nav-main__img {
+  height: 7rem;
+  display: inline-block;
+}
+.nav-main__social-nav {
+  flex-grow: 1;
+  text-align: right;
+}
+
+.site-nav__list {
+  display: flex;
+  justify-content: space-between;
+}
+.site-nav__link {
+  display: inline-block;
+  transition: all 0.2s;
+}
+.site-nav__link, .site-nav__link:link, .site-nav__link:visited {
+  color: #fff;
+  font-family: "LEMONMILKPro-Regular", sans-serif;
+  text-decoration: none;
+}
+.site-nav__link:hover {
+  transform: scale(1.2) translateY(-2px);
+  color: #e0c15a;
+}
+.site-nav__link:active {
+  transform: translateY(0);
+  color: #96813c;
+}
+
+.social-nav__icon {
+  height: 2rem;
+  width: 2rem;
+  fill: #fff;
+  cursor: pointer;
+}
+.social-nav__list {
+  width: 100%;
+}
+.social-nav__item:not(:last-child) {
+  margin-right: 3rem;
+}
+.social-nav__link:hover .social-nav__icon {
+  transition: all 0.2s;
+  fill: #e0c15a;
+  transform: scale(1.2) translateY(-2px);
+}
+.social-nav__link:active .social-nav__icon {
+  transform: translateY(0);
+  fill: #96813c;
 }
 
 .header {
   background-image: url(../img/leaves_bg-large.jpg);
   background-size: cover;
-  height: 100vh;
+  background-attachment: fixed;
+  height: 110vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -139,18 +273,49 @@ body {
 .clones {
   background-color: #fff;
   min-height: 80vh;
-  padding: 7rem 5rem;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
+}
+.clones__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 7rem 5rem;
 }
 .clones__info {
   max-width: 50rem;
+}
+.clones::before {
+  content: "";
+  background-image: url(../img/torn-edge.png);
+  width: 100%;
+  height: 20rem;
+  display: block;
+  align-self: flex-start;
+  position: relative;
+  top: -8rem;
+  margin-bottom: -20rem;
+}
+.clones::after {
+  content: "";
+  background-image: url(../img/torn-edge.png);
+  background-position: 0 -8rem;
+  background-repeat: repeat-x;
+  width: 100%;
+  height: 20rem;
+  display: block;
+  align-self: flex-end;
+  position: relative;
+  bottom: 8rem;
+  margin-bottom: -20rem;
 }
 
 .merch {
   background-color: #2b4220;
   color: #efefef;
+  padding-top: 8rem;
   height: 50vh;
   display: flex;
   justify-content: center;

@@ -5,6 +5,11 @@
     grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem,1fr) [full-end];
 }
 
+.nav-main {
+    grid-column: 2 / 10;
+    grid-row: 1;
+}
+
 .header, .clones, .merch, .white-space {
     grid-column: 1 / -1;
 }

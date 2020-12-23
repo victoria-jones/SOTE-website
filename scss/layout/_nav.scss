@@ -1,4 +1,4 @@
-.site-nav, .nav-footer, .nav-social {
+.site-nav, .nav-footer, .social-nav {
 
     &__list {
         list-style-type: none;
@@ -13,9 +13,91 @@
 
 .nav-main {
     width: 100%;
-    grid-column: 2 / 9;
-    grid-row: 1;
+    height: 10rem;
     position: relative;
     z-index: 1;
+
+     //logo and social media links
+    &__header {
+        color: $color-grey-light;
+        padding: 3rem 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__img-holder {
+        flex-grow: 1.3;
+        text-align: right;
+    }
+
+    &__img {
+        height: 7rem;
+        display: inline-block;
+    }
+
+    &__social-nav {
+        flex-grow: 1;
+        text-align: right;
+    }
+
 }
+
+.site-nav {
+
+    &__list {
+        display:flex;
+        justify-content: space-between;
+    }
+    &__link {
+        display: inline-block;
+        transition: all .2s;
+        &,
+        &:link,
+        &:visited {
+            //font-size: $link-font-size;
+            color: $color-white;
+            font-family: $font-display-light;
+            text-decoration: none;
+        }
+
+        &:hover {
+            transform: scale(1.2) translateY(-2px);
+            color: $color-primary-yellow;
+        }
+        &:active {
+            transform: translateY(0);
+            color: $color-primary-yellow-dark;
+        }
+    }
+}
+
+.social-nav {
+    
+    &__icon {
+        height: 2rem;
+        width: 2rem;
+        fill: $color-white;
+        cursor: pointer;
+    }
+    &__list {
+        width: 100%;
+    }
+    &__item {
+        &:not(:last-child) {
+            margin-right: 3rem;
+        }
+    }
+
+    &__link:hover &__icon {
+        transition: all .2s;
+        fill: $color-primary-yellow;
+        transform: scale(1.2) translateY(-2px);
+    }
+    &__link:active &__icon {
+        transform: translateY(0);
+        fill: $color-primary-yellow-dark;
+    }
+}
+
 

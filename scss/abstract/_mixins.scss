@@ -1,3 +1,11 @@
 @mixin box-shadow-light {
-    box-shadow: 0 1rem 2rem rgba($color-black, .2);
+    box-shadow: 0 1rem 2rem rgba($color-black, .5);
+}
+
+@mixin box-shadow-lifted {
+    box-shadow: 0 1.5rem 2.5rem rgba($color-black, .3);
+}
+
+@mixin box-shadow-pushed {
+    box-shadow: 0 .5rem 1.5rem rgba($color-black, .8);
 }

@@ -22,14 +22,3 @@ body {
     }
 }
 
-.link {
-    &,
-    &:link,
-    &:visited {
-        font-size: $link-font-size;
-        color: $color-primary-yellow;
-        text-decoration: none;
-        border-bottom: .15rem solid $color-primary-yellow;
-    }
-}
-
