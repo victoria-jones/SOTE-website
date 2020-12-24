@@ -41,6 +41,15 @@
         text-align: right;
     }
 
+    @include respond(tab-port) {
+        &__social-nav, &__img-holder {
+            flex-grow: 1;
+        }
+        &__img-holder {
+            text-align: left;
+        }
+    }
+
 }
 
 .site-nav {

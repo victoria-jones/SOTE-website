@@ -23,4 +23,7 @@
         background-position: initial;
         color: $color-white;
     }
+    &:active {
+        transform: scale(.9);
+    }
 }

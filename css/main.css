@@ -12,6 +12,19 @@ Date Last Modified: 12/21/2020
 /**************************/
 /****** imports only ******/
 /**************************/
+/* BOX SHADOWS */
+/* MEDIA QUERIES */
+/***********
+$breakpoints:
+    - phone-small   300px
+    - phone         600px
+    - tab-port      900px
+    - tab-land      1200px
+    - big-desktop   1800px
+
+EM used here (do not change to different measurement)
+1em === 16px
+***********/
 /****** variables only ******/
 /**********************
 
@@ -41,6 +54,11 @@ body {
   box-sizing: border-box;
   padding: 2rem;
   background-color: #efefef;
+}
+@media only screen and (max-width: 37.5em) {
+  body {
+    padding: 0;
+  }
 }
 
 body {
@@ -143,6 +161,9 @@ body {
   background-position: initial;
   color: #fff;
 }
+.link:active {
+  transform: scale(0.9);
+}
 
 .container {
   display: grid;
@@ -214,6 +235,14 @@ body {
   flex-grow: 1;
   text-align: right;
 }
+@media only screen and (max-width: 56.25em) {
+  .nav-main__social-nav, .nav-main__img-holder {
+    flex-grow: 1;
+  }
+  .nav-main__img-holder {
+    text-align: left;
+  }
+}
 
 .site-nav__list {
   display: flex;
@@ -269,6 +298,16 @@ body {
   justify-content: center;
   align-items: center;
 }
+@media only screen and (max-width: 56.25em) {
+  .header__img {
+    transform: scale(0.6);
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .header__img {
+    transform: scale(0.4);
+  }
+}
 
 .clones {
   background-color: #fff;
@@ -283,9 +322,54 @@ body {
   justify-content: center;
   align-items: center;
   padding: 7rem 5rem;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
 }
 .clones__info {
   max-width: 50rem;
+}
+@media only screen and (max-width: 75em) {
+  .clones__container {
+    padding: 7rem 0;
+  }
+  .clones__img {
+    margin-left: -20%;
+  }
+}
+@media only screen and (max-width: 56.25em) {
+  .clones__container {
+    width: 100%;
+  }
+  .clones__img {
+    position: absolute;
+    left: -14rem;
+    top: 12rem;
+  }
+  .clones__info {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    margin: 0 2rem;
+  }
+  .clones__list, .clones__header {
+    align-self: flex-end;
+    width: 80%;
+  }
+  .clones__link {
+    align-self: center;
+    margin-top: 25rem;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .clones__img {
+    top: 36rem;
+    left: -20rem;
+  }
+  .clones__header {
+    width: 100%;
+  }
 }
 .clones::before {
   content: "";

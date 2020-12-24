@@ -7,6 +7,18 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    @include respond(tab-port) {
+        &__img {
+            transform: scale(.6);
+        }
+    }
+
+    @include respond(phone) {
+        &__img {
+            transform: scale(.4);
+        }
+    }
 }
 
 .clones {
@@ -25,10 +37,60 @@
         justify-content: center;
         align-items: center;
         padding: 7rem 5rem;
+        overflow: hidden; 
+        position: relative;
+        z-index: 1;
     }
     
     &__info {
         max-width: 50rem;
+    }
+
+    @include respond(tab-land) {
+        &__container {
+            padding: 7rem 0;
+        }
+        &__img {
+            margin-left: -20%;
+        }
+    }
+
+    @include respond (tab-port) {
+
+        &__container {
+            //display: block;
+            width: 100%;
+        }
+        &__img {
+            position: absolute;
+            left: -14rem;
+            top: 12rem;
+        }
+        &__info {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            max-width: 100%;
+            margin: 0 2rem;
+        }
+        &__list, &__header {
+            align-self: flex-end;
+            width: 80%;
+        }
+        &__link {
+            align-self: center;
+            margin-top: 25rem;
+        }
+    }
+
+    @include respond(phone) {
+        &__img {
+            top: 36rem;
+            left: -20rem;
+        }
+        &__header {
+            width: 100%;
+        }
     }
 
     // torn paper edges
