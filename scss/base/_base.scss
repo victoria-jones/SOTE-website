@@ -30,6 +30,7 @@ body {
     padding: 2rem;
     //not part of browser reset 
     background-color: $color-grey-light;
+    //overflow-x: hidden;
 
     @include respond(phone) {
         padding: 0;

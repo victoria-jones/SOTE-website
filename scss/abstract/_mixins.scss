@@ -16,6 +16,7 @@
 /***********
 $breakpoints:
     - phone-small   300px
+    - phone-med     480px
     - phone         600px
     - tab-port      900px
     - tab-land      1200px
@@ -27,6 +28,9 @@ EM used here (do not change to different measurement)
 @mixin respond($breakpoint) {
     @if $breakpoint == phone-small {
         @media only screen and (max-width: 18.75em) { @content };   //300px
+    }
+    @if $breakpoint == phone-med {
+        @media only screen and (max-width: 30em) { @content };      //480px
     }
     @if $breakpoint == phone {
         @media only screen and (max-width: 37.5em) { @content };    //600px

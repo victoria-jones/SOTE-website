@@ -17,6 +17,7 @@ Date Last Modified: 12/21/2020
 /***********
 $breakpoints:
     - phone-small   300px
+    - phone-med     480px
     - phone         600px
     - tab-port      900px
     - tab-land      1200px
@@ -135,7 +136,7 @@ body {
   box-shadow: 0 1.5rem 2.5rem rgba(0, 0, 0, 0.3);
   /*&::after {
       transform: scale(1);
-  } */
+  }*/
 }
 .btn:active {
   background-color: #96813c;
@@ -154,6 +155,7 @@ body {
   background-image: linear-gradient(120deg, #e0c15a 50%, transparent 50%, transparent 0%);
   background-size: 255%;
   background-position: 100%;
+  background-repeat: repeat-y;
   transition: all 0.4s;
 }
 .link:hover {
@@ -163,6 +165,68 @@ body {
 }
 .link:active {
   transform: scale(0.9);
+}
+.link__white, .link__white:link, .link__white:visited {
+  font-size: 1.6rem;
+  color: #efefef;
+  border-bottom: 1rem solid #efefef;
+  transition: all 0.3s;
+}
+
+.torn-edge::before {
+  content: "";
+  background-image: url(../img/torn-edge.png);
+  width: 100%;
+  height: 20rem;
+  display: block;
+  align-self: flex-start;
+  position: relative;
+  top: -8rem;
+  margin-bottom: -20rem;
+}
+.torn-edge::after {
+  content: "";
+  background-image: url(../img/torn-edge.png);
+  background-position: 0 -8rem;
+  background-repeat: repeat-x;
+  width: 100%;
+  height: 20rem;
+  display: block;
+  align-self: flex-end;
+  position: relative;
+  bottom: 8rem;
+  margin-bottom: -20rem;
+}
+
+.footer {
+  color: #efefef;
+  background-color: #2b4220;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 4rem 0;
+}
+.footer > *:not(:last-child) {
+  margin-bottom: 3rem;
+}
+.footer__img {
+  height: 7rem;
+}
+
+.footer-nav {
+  max-width: 500px;
+}
+.footer-nav__link, .footer-nav__link:visited, .footer-nav__link:link {
+  color: #efefef;
+  text-decoration: none;
+  border-bottom: 1px solid #efefef;
+  padding: 0 0.3rem;
+}
+.footer-nav__link:hover {
+  border-bottom: 1px solid #e0c15a;
+}
+.footer-nav__item:not(:last-child) {
+  margin-right: 5rem;
 }
 
 .container {
@@ -202,11 +266,11 @@ body {
   grid-column: 1/-1;
 }
 
-.site-nav__list, .nav-footer__list, .social-nav__list {
+.site-nav__list, .footer-nav__list, .social-nav__list {
   list-style-type: none;
   width: 100%;
 }
-.site-nav__item, .nav-footer__item, .social-nav__item {
+.site-nav__item, .footer-nav__item, .social-nav__item {
   display: inline-block;
 }
 
@@ -322,7 +386,6 @@ body {
   justify-content: center;
   align-items: center;
   padding: 7rem 5rem;
-  overflow: hidden;
   position: relative;
   z-index: 1;
 }
@@ -338,9 +401,6 @@ body {
   }
 }
 @media only screen and (max-width: 56.25em) {
-  .clones__container {
-    width: 100%;
-  }
   .clones__img {
     position: absolute;
     left: -14rem;
@@ -364,38 +424,13 @@ body {
 }
 @media only screen and (max-width: 37.5em) {
   .clones__img {
-    top: 36rem;
+    top: 20rem;
     left: -20rem;
   }
   .clones__header {
     width: 100%;
   }
 }
-.clones::before {
-  content: "";
-  background-image: url(../img/torn-edge.png);
-  width: 100%;
-  height: 20rem;
-  display: block;
-  align-self: flex-start;
-  position: relative;
-  top: -8rem;
-  margin-bottom: -20rem;
-}
-.clones::after {
-  content: "";
-  background-image: url(../img/torn-edge.png);
-  background-position: 0 -8rem;
-  background-repeat: repeat-x;
-  width: 100%;
-  height: 20rem;
-  display: block;
-  align-self: flex-end;
-  position: relative;
-  bottom: 8rem;
-  margin-bottom: -20rem;
-}
-
 .merch {
   background-color: #2b4220;
   color: #efefef;
