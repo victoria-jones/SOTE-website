@@ -16,7 +16,16 @@
     </head>
 
     <body class="container">
+
         <div class="nav-main">
+            <!-- mobile nav parts -->
+            <input type="checkbox" class="nav-mobile__checkbox" id="nav-mobile-toggle" />
+            <label for="nav-mobile-toggle" class="nav-mobile__button">
+                <span class="nav-mobile__icon">&nbsp;</span>
+            </label>
+            <div class="nav-mobile__background">&nbsp;</div>
+            <img src="img/SOTE_logo.png" alt="SOTE Nursery logo" class="nav-mobile__img" />
+
             <nav class="nav-main__header">
                 <div class="nav-main__img-holder"><img src="img/SOTE_logo.png" alt="SOTE logo" class="nav-main__img" /></div>
                 <div class="social-nav nav-main__social-nav">
@@ -45,6 +54,7 @@
                     </ul>
                 </div>
             </nav>
+
             <nav class="site-nav">
                 <ul class="site-nav__list">
                     <li class="site-nav__item"><a href="#" class="site-nav__link">Home</a></li>
@@ -60,7 +70,7 @@
                 </ul>
             </nav>
         </div>
-            
+         
         <header class="header">
                 <img src="img/SOTE-full-logo-white.png" alt="Salt Of The Earth Nursery" class="header__img" />
                 <a href="#" class="btn header__btn margin-top-med">View Genetics</a>

@@ -18,6 +18,10 @@
         backface-visibility: hidden; //animation glitch fix
         position: relative; //set for background roots
         z-index: 1;
+
+        @include respond(tab-port) {
+            font-size: 1.4rem;
+        }
     }
 
     &:hover {
@@ -51,7 +55,5 @@
         transition: all .4s;
         backface-visibility: hidden;
     }*/
-
-   
     
 }

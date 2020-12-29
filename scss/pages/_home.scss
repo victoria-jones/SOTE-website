@@ -19,6 +19,14 @@
             transform: scale(.4);
         }
     }
+
+    @include respond(phone-med){
+        &__img {
+            //swap this image out with one that wraps instead, its getting too small
+                //for now its fine
+            transform: scale(.3);
+        }
+    }
 }
 
 .clones {
@@ -37,8 +45,8 @@
         justify-content: center;
         align-items: center;
         padding: 7rem 5rem;
-        //overflow-x: hidden; 
-        //overflow-y: visible;
+        overflow-x: hidden; 
+        overflow-y: hidden;
         position: relative;
         z-index: 1;
     }
@@ -65,7 +73,7 @@
         &__img {
             position: absolute;
             left: -14rem;
-            top: 12rem;
+            top: 18rem;
             //transform: scale(.7);
         }
         &__info {
@@ -88,8 +96,9 @@
 
     @include respond(phone) {
         &__img {
-            top: 20rem;
-            left: -20rem;
+            top: 25rem;
+            left: -18rem;
+            transform: scale(.8);
         }
         &__header {
             width: 100%;
@@ -97,11 +106,19 @@
     }
 
     @include respond(phone-med) {
+        &__container {
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+        }
         &__img {
-            //top: 45rem;
+            position: initial;
+            //transform: scale(.5);
+            order: 2;
+            margin: -15rem 0 -15rem 0;
         }
         &__link {
-            //margin-top: 15rem;
+            margin-top: 3rem;
         }
     }
 }
