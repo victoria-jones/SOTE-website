@@ -22,3 +22,12 @@ body {
     }
 }
 
+.page-header {
+    font-size: $title-font-size;
+    color: $color-white;
+    margin-top: 20rem;
+    @include respond(phone) {
+        margin-top: 12rem;
+    }
+}
+

@@ -1,5 +1,9 @@
 
 /* BOX SHADOWS */
+@mixin box-shadow-lightest {
+    box-shadow: 0 1rem 2rem rgba($color-black, .2);
+}
+
 @mixin box-shadow-light {
     box-shadow: 0 1rem 2rem rgba($color-black, .5);
 }
@@ -10,6 +14,11 @@
 
 @mixin box-shadow-pushed {
     box-shadow: 0 .5rem 1.5rem rgba($color-black, .8);
+}
+
+/* container padding */ 
+@mixin default-container-padding {
+    padding: 4rem 7rem;
 }
 
 /* MEDIA QUERIES */    

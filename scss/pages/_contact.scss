@@ -1,0 +1,65 @@
+.contact {
+   background-image: url(../img/leaves2_bg-large.jpg);
+   background-repeat: no-repeat;
+   background-size: cover; 
+   background-attachment: fixed;
+   min-height: 100vh;
+
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+
+   &__header,
+   &__form-wrapper {
+       max-width: 80rem;
+       width: 100%;
+   }
+
+   &__header {
+       background-color: $color-white;
+       //margin-top: 30rem;
+       &--wrapper {
+           position: relative;
+           z-index: 1;
+           @include default-container-padding;
+       }
+   }
+
+   @include respond(tab-port) {
+       &__form-wrapper {
+           max-width: 95%;
+       }
+   }
+}
+
+.contact__social-nav {
+    .social-nav {
+        &__list {
+            display: flex;
+            justify-content: center;
+        }
+        &__icon {
+            fill: $color-black;
+            width: 2.8rem;
+            height: 2.8rem;
+        }
+        &__item {
+            &:not(:last-child) {
+                margin-right: 5rem;
+            }
+        }
+
+        @include respond(phone) {
+            &__icon {
+                width: 3.5rem;
+                height: 3.5rem;
+            }
+            &__item {
+                &:not(:last-child) {
+                    margin-right: 8rem;
+                }
+            }
+        }
+    }
+}

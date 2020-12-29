@@ -243,13 +243,13 @@
         height: 250%;
         width: 0;
         position: fixed;
-        right: -5rem;
+        right: -10rem;
         top: -100vh;
         z-index: 2;
         //background-color: $color-primary-green-med;
         background-image: linear-gradient(60deg, transparent 0%, transparent 50%, $color-primary-green-med 50%, $color-primary-green-med 100%);
         background-repeat: no-repeat;
-        background-size: 255%;
+        background-size: 270%;
         background-position: -30%;
         backface-visibility: hidden;
         transition: 1s cubic-bezier(0.83, 0, 0.17, 1);

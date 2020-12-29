@@ -39,6 +39,10 @@
         @include box-shadow-pushed;
     }
 
+    &:focus {
+        //outline: 3px solid $color-primary-yellow-dark;
+    }
+
     /*&::after {
         content: "";
         //background-color: grey;
