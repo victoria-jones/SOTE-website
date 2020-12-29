@@ -1,0 +1,59 @@
+.btn {
+    &,
+    &:link,
+    &:visited {
+        font-family: $font-display;
+        color: $color-white;
+        font-size: $default-font-size;
+        text-decoration: none;
+        text-transform: uppercase;
+        padding: 1.5rem 4rem;
+        border: none;
+        border-radius: .1rem;
+        background-color: $color-primary-yellow;
+        @include box-shadow-light;
+        cursor: pointer;
+        backface-visibility: hidden; //for animations
+        transition: all .2s;
+        backface-visibility: hidden; //animation glitch fix
+        position: relative; //set for background roots
+        z-index: 1;
+
+        @include respond(tab-port) {
+            font-size: 1.4rem;
+        }
+    }
+
+    &:hover {
+        transform: translateY(-3px) rotate(-3deg);
+        @include box-shadow-lifted;
+
+        /*&::after {
+            transform: scale(1);
+        }*/
+    }
+
+    &:active {
+        background-color: $color-primary-yellow-dark;
+        transform: translateY(1px) rotate(-3deg);
+        @include box-shadow-pushed;
+    }
+
+    /*&::after {
+        content: "";
+        //background-color: grey;
+        background-image: url(../img/roots.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 250%;
+        height: 250%;
+        position: absolute;
+        z-index: -99999;
+        top: -130%;
+        left: -90%;
+        transform: scale(0);
+        transition: all .4s;
+        backface-visibility: hidden;
+    }*/
+    
+}

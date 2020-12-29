@@ -1,0 +1,291 @@
+.site-nav, .footer-nav, .social-nav {
+
+    &__list {
+        list-style-type: none;
+        width: 100%;
+    }
+    
+    &__item {
+        display: inline-block;
+    }
+    
+}
+
+.nav-main {
+    width: 100%;
+    height: 10rem;
+    position: relative;
+    //z-index: 1;
+
+     //logo and social media links
+    &__header {
+        color: $color-grey-light;
+        padding: 3rem 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__img-holder {
+        flex-grow: 1.33;
+        text-align: right;
+    }
+
+    &__img {
+        height: 7rem;
+        display: inline-block;
+    }
+
+    &__social-nav {
+        flex-grow: 1;
+        text-align: right;
+    }
+
+    @include respond(tab-port) {
+        &__social-nav, &__img-holder {
+            flex-grow: 1;
+        }
+        &__img-holder {
+            text-align: left;
+        }
+    }
+
+    @include respond(phone) {
+        &__header {
+            padding: 0;
+        }
+        &__img-holder {
+            display: none;
+        }
+    }
+
+}
+
+.site-nav {
+    
+    &__list {
+        display:flex;
+        justify-content: space-between;
+    }
+    &__link {
+        display: inline-block;
+        transition: all .2s;
+        &,
+        &:link,
+        &:visited {
+            //font-size: $link-font-size;
+            color: $color-white;
+            font-family: $font-display-light;
+            text-decoration: none;
+        }
+
+        &:hover {
+            transform: scale(1.2) translateY(-2px);
+            color: $color-primary-yellow;
+        }
+        &:active {
+            transform: translateY(0);
+            color: $color-primary-yellow-dark;
+        }
+    }
+}
+
+.social-nav {
+    
+    &__icon {
+        height: 2rem;
+        width: 2rem;
+        fill: $color-white;
+        cursor: pointer;
+    }
+    &__list {
+        width: 100%;
+    }
+    &__item {
+        &:not(:last-child) {
+            margin-right: 3rem;
+        }
+    }
+
+    &__link:hover &__icon {
+        transition: all .2s;
+        fill: $color-primary-yellow;
+        transform: scale(1.2) translateY(-2px);
+    }
+    &__link:active &__icon {
+        transform: translateY(0);
+        fill: $color-primary-yellow-dark;
+    }
+    
+}
+
+.nav-mobile__,
+.nav-mobile__button,
+.nav-mobile__icon,
+.nav-mobile__img,
+.nav-mobile__background,
+.nav-mobile__checkbox {
+    display: none;
+}
+
+//mobile nav styles and functionality
+
+@include respond(phone) {
+
+    .site-nav, .nav-main__header {
+        z-index: 2;
+        width: 0;
+        opacity: 0;
+        //right: 0;
+        transition: .8s cubic-bezier(0.83, 0, 0.17, 1) .2s;
+    }
+
+    .site-nav {
+        position: fixed;
+        left: 0;
+        margin-top: 20vh;
+        font-size: 2.5rem;
+        &__list {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        &__item {
+            &:not(:last-child) {
+                margin-bottom: 1.5rem;
+            }
+        }
+    }
+
+    .nav-main {
+        &__header {
+            position: absolute;
+            bottom: -70vh;
+        }
+        
+        &__social-nav {
+            text-align: center;
+            position: fixed;
+        }
+
+        .social-nav__icon {
+            height: 2.5rem;
+            width: 2.5rem;
+        }
+
+        .social-nav__item {
+            &:not(:last-child) {
+                margin-right: 15vw;
+            }
+        }
+    }
+
+    .nav-mobile__button,
+    .nav-mobile__icon,
+    .nav-mobile__img,
+    .nav-mobile__background {
+        display: block;
+    }
+
+    .nav-mobile__button {
+        height: 6rem;
+        width: 6rem;
+        position: fixed;
+        top: 0;
+        right: 0;
+        margin-top: 1rem;
+        margin-right: 1rem;
+        z-index: 9999;
+        border-radius: 50%;
+        background-color: $color-white;
+        @include box-shadow-light;
+        text-align: center;
+        cursor: pointer;
+    }
+
+    .nav-mobile__icon {
+        position: relative;
+        margin-top: 2.8rem;
+        width: 4.3rem;
+        
+        &,
+        &::before,
+        &::after {
+            height: 3px;
+            background-color: $color-primary-green-med;
+            display: inline-block;
+        }
+
+        &::before,
+        &::after {
+            content: "";
+            position: absolute;
+            width: 2.8rem;
+            left: .8rem;
+            transition: all .5s;
+        }
+
+        &::before { top: 1.2rem; }
+        &::after { bottom: 1.2rem; }
+    }
+
+    .nav-mobile__img {
+        height: 6rem;
+        position: fixed;
+        top: 0;
+        left: 0;
+        margin-left: 1rem;
+        margin-top: 1rem;
+        z-index: 2;
+    }
+
+    .nav-mobile__background {
+        height: 250%;
+        width: 0;
+        position: fixed;
+        right: -5rem;
+        top: -100vh;
+        z-index: 2;
+        //background-color: $color-primary-green-med;
+        background-image: linear-gradient(60deg, transparent 0%, transparent 50%, $color-primary-green-med 50%, $color-primary-green-med 100%);
+        background-repeat: no-repeat;
+        background-size: 255%;
+        background-position: -30%;
+        backface-visibility: hidden;
+        transition: 1s cubic-bezier(0.83, 0, 0.17, 1);
+    }
+
+    //scroll out background
+    .nav-mobile__checkbox:checked ~ .nav-mobile__background {
+        width: 170%;
+        background-position: 100%;
+    }
+
+    //scroll out navigation
+    .nav-mobile__checkbox:checked ~ .site-nav,
+    .nav-mobile__checkbox:checked ~ .nav-main__header {
+        //right: 0;
+        width: 100%;
+        opacity: 1;
+    }
+
+    //icon change to close 
+    .nav-mobile__checkbox:checked ~ .nav-mobile__button .nav-mobile__icon {
+        background-color: transparent;
+    }
+
+    .nav-mobile__checkbox:checked ~ .nav-mobile__button .nav-mobile__icon::before {
+        top: 0;
+        transform: rotate(135deg) scale(1.5, 1);
+    }
+
+    .nav-mobile__checkbox:checked ~ .nav-mobile__button .nav-mobile__icon::after {
+        top: 0;
+        transform: rotate(-135deg) scale(1.5, 1);
+    }
+
+
+}
+
+
+

@@ -1,0 +1,11 @@
+{
+  "name": "sote_finalwebsite",
+  "version": "1.0.0",
+  "description": "SOTE Nursery website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Victoria Jones",
+  "license": "ISC"
+}

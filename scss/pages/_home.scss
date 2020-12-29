@@ -1,0 +1,139 @@
+.header {
+    background-image: url(../img/leaves_bg-large.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    height: 110vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    @include respond(tab-port) {
+        &__img {
+            transform: scale(.6);
+        }
+    }
+
+    @include respond(phone) {
+        &__img {
+            transform: scale(.4);
+        }
+    }
+
+    @include respond(phone-med){
+        &__img {
+            //swap this image out with one that wraps instead, its getting too small
+                //for now its fine
+            transform: scale(.3);
+        }
+    }
+}
+
+.clones {
+    background-color: $color-white;
+    //background-image: url(../img/plant-small-lq.jpg);
+    //background-repeat: no-repeat;
+    //background-size: contain;
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+    &__container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 7rem 5rem;
+        overflow-x: hidden; 
+        overflow-y: hidden;
+        position: relative;
+        z-index: 1;
+    }
+    
+    &__info {
+        max-width: 50rem;
+    }
+
+    @include respond(tab-land) {
+        &__container {
+            padding: 7rem 0;
+        }
+        &__img {
+            margin-left: -20%;
+        }
+    }
+
+    @include respond (tab-port) {
+
+        &__container {
+            //display: block;
+            //width: 100%;
+        }
+        &__img {
+            position: absolute;
+            left: -14rem;
+            top: 18rem;
+            //transform: scale(.7);
+        }
+        &__info {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            max-width: 100%;
+            margin: 0 2rem;
+        }
+        &__list, &__header {
+            align-self: flex-end;
+            width: 80%;
+        }
+        &__link {
+            align-self: center;
+            margin-top: 25rem;
+        }
+
+    }
+
+    @include respond(phone) {
+        &__img {
+            top: 25rem;
+            left: -18rem;
+            transform: scale(.8);
+        }
+        &__header {
+            width: 100%;
+        }
+    }
+
+    @include respond(phone-med) {
+        &__container {
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+        }
+        &__img {
+            position: initial;
+            //transform: scale(.5);
+            order: 2;
+            margin: -15rem 0 -15rem 0;
+        }
+        &__link {
+            margin-top: 3rem;
+        }
+    }
+}
+
+.merch {
+    background-color: $color-primary-green-med;
+    color: $color-grey-light;
+    padding-top: 8rem;  //to recenter flex items after torn edge added to section above this
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.white-space {
+    background-color: $color-white;
+    height: 30rem;
+}

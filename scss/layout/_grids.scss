@@ -1,0 +1,34 @@
+.container {
+    display: grid;
+    //10 columns for all pages
+    grid-template-rows: 10rem repeat(4, maxcontent) 20rem; 
+    grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem,1fr) [full-end];
+}
+
+.nav-main {
+    grid-column: 2 / 10;
+    grid-row: 1;
+}
+
+.header, .clones, .merch, .white-space {
+    grid-column: 1 / -1;
+}
+
+.header {
+    grid-row: 1 / 2;
+}
+.clones {
+    grid-row: 3;
+}
+.merch {
+    grid-row: 4;
+}
+.white-space {
+    grid-row: 5;
+}
+
+
+.footer {
+    grid-row: 6;
+    grid-column: 1 / -1;
+}
