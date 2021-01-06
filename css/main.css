@@ -541,12 +541,12 @@ body {
   }
 
   .nav-mobile__img {
-    height: 6rem;
+    height: 4rem;
     position: fixed;
     top: 0;
     left: 0;
     margin-left: 1rem;
-    margin-top: 1rem;
+    margin-top: 2rem;
     z-index: 2;
   }
 
