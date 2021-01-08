@@ -408,6 +408,7 @@ body {
 .site-nav__link {
   display: inline-block;
   transition: all 0.2s;
+  cursor: pointer;
 }
 .site-nav__link, .site-nav__link:link, .site-nav__link:visited {
   color: #fff;
@@ -415,12 +416,50 @@ body {
   text-decoration: none;
 }
 .site-nav__link:hover {
-  transform: scale(1.2) translateY(-2px);
   color: #e0c15a;
+  transform: scale(1.2) translateY(-2px);
 }
 .site-nav__link:active {
-  transform: translateY(0);
   color: #96813c;
+  transform: translateY(0);
+}
+.site-nav__checkbox {
+  display: none;
+}
+.site-nav__dropitem {
+  height: 100%;
+}
+.site-nav__droplink {
+  font-size: 1.6rem !important;
+  border: none !important;
+  padding: 1rem 2rem;
+  display: block;
+}
+.site-nav__dropicon {
+  border: solid #fff;
+  border-width: 0 2px 2px 0;
+  width: 1rem;
+  height: 1rem;
+  display: inline-block;
+  margin-bottom: 0.3rem;
+  transform: rotate(45deg);
+  transition: all 0.2s;
+}
+.site-nav__dropdown {
+  list-style-type: none;
+  background-color: #fff;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  max-height: 0;
+}
+.site-nav__dropdown {
+  transition: 0.8s cubic-bezier(0.83, 0, 0.17, 1);
+}
+.site-nav__checkbox:checked ~ .site-nav__dropbtn .site-nav__droplist .site-nav__dropdown {
+  max-height: 50rem;
+}
+.site-nav__checkbox:checked ~ .site-nav__dropbtn .site-nav__droplist .site-nav__dropicon {
+  transform: rotate(-45deg);
 }
 
 .social-nav__icon {
@@ -475,6 +514,9 @@ body {
   }
   .site-nav__item:not(:last-child) {
     margin-bottom: 1.5rem;
+  }
+  .site-nav__droplist {
+    margin-right: -2rem;
   }
 
   .nav-main__header {
