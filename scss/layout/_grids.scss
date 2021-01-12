@@ -10,7 +10,15 @@
     grid-row: 1;
 }
 
-.header, .clones, .merch, .white-space {
+.header, 
+.clones, 
+.merch, 
+.home__contact,
+.seedtomed,
+.footer,
+.contact,
+.thefamily,
+.whoweare__contact {
     grid-column: 1 / -1;
 }
 
@@ -23,12 +31,43 @@
 .merch {
     grid-row: 4;
 }
-.white-space {
+.home__contact {
     grid-row: 5;
 }
 
 
 .footer {
     grid-row: 6;
-    grid-column: 1 / -1;
+}
+
+.contact {
+    grid-row: 1 / -1;
+}
+
+.seedtomed {
+    grid-row: 2;
+}
+
+.thefamily {
+    grid-row: 3;
+}
+
+.whoweare__contact {
+    grid-row: 4;
+}
+
+
+//The Family (Who We Are Page)
+.thefamily {
+    //its important that these stay as perfect squares
+    &__grid {
+        display: grid;
+        grid-template-rows: repeat(2, 18rem);
+        grid-template-columns: repeat(5, 18rem);
+    }
+    
+    &__p {
+        grid-column: 4 / 6;
+    }
+    
 }

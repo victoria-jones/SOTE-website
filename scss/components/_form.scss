@@ -1,0 +1,76 @@
+.form-wrapper {
+    width: 100%;
+    background-color: rgba($color-white, .8);
+    @include default-container-padding;
+
+    @include respond(phone) {
+        padding: 3rem 2rem;
+
+        h2 {
+            text-align: center;
+        }
+    }
+}
+
+.form {
+    &__group:not(:last-child) {
+        margin-bottom: 2rem;
+    }
+
+    &__textarea {
+        min-height: 15rem;
+    }
+
+    &__input,
+    &__textarea {       
+        font-family: inherit;
+        color: inherit;
+        font-size: $default-font-size;
+        padding: 1.5rem 2rem;
+        border-radius: .1rem;
+        background-color: $color-white;
+        border: none;
+        border-bottom: 3px solid transparent;
+        width: 90%;
+        display: block;
+        transition: all .3s;
+
+        &:focus {
+            outline: none;
+            @include box-shadow-lightest;
+
+            &:invalid {
+                border-bottom: 3px solid $color-primary-yellow;
+            }
+        }
+
+        @include respond(phone) {
+            width: 100%;
+        }
+    }
+
+    &__label {
+        margin-left: 1.8rem;
+        font-weight: bold;
+        display: block;
+        transition: all .3s;
+    }
+
+    //drop label into view when input is focused 
+    &__input:placeholder-shown + &__label,
+    &__textarea:placeholder-shown + &__label {
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-4rem);
+    }
+}
+
+.component__contact {
+    background-image: url(../img/leaves2_bg-large.jpg);
+    background-repeat: no-repeat;
+    background-size: cover; 
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    @include default-section-container-padding;
+}

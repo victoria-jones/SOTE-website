@@ -1,0 +1,121 @@
+.whoweare {
+    background-image: url(../img/leaves_bg-large.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__header {
+        margin-top: 25vh;
+    }
+
+    &__p-container {
+        background-color: $color-white;
+        padding: 9rem 7rem;
+        @include default-container-max-width;
+    }
+}
+
+.seedtomed {
+    background-color: $color-white;
+
+    &__bg-img {
+        position: relative;
+        z-index: 1;
+        width: 100%;
+        //overflow: hidden;
+        background-image: url(../img/overhead-plant.jpg),
+                        url(../img/overhead-plant-med.jpg);
+        background-repeat: no-repeat, no-repeat;
+        background-position: (140% 0), (-30% 100%);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+    }
+     
+    &__container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        z-index: 1;
+        @include default-container-max-width-large;
+        @include default-section-container-padding;
+    }
+
+    &__header {
+        align-self: flex-start;
+        margin-bottom: 8rem;
+    }
+}
+
+.step {
+    @include default-skew-vertical;
+    background-color: $color-primary-green-med;
+    color: $color-grey-light;
+    overflow-x: hidden;
+    @include box-shadow-light;
+    
+    &:not(:last-child) {
+        margin-bottom: 10rem;
+    }
+    
+    &__img {
+        min-width: 30rem;
+        max-height: 100%;
+        background-color: orange;
+        margin-left: -4rem;
+    }
+    &__container {
+        display: flex;
+        @include default-unskew-vertical; 
+    }
+
+    &--wrapper {
+        @include default-container-padding;
+    }
+}
+
+.thefamily {
+    background-color: $color-primary-green-med;
+    color: $color-grey-light;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        @include default-section-container-padding;
+        width: 90%;
+        @include default-container-max-width-large;
+    }
+
+    &__grid {
+        padding: 2rem 0;
+    }
+
+    &__header {
+        align-self: center;
+    }
+
+    &__btn {
+        align-self: center;
+    }
+
+    &__p {
+        padding-left: 2rem;
+        display: flex;
+        align-items: center;
+    }
+
+    &__img--wrapper {
+        background-image: url(../img/soilbox.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        padding: 2rem;
+    }
+}

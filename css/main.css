@@ -13,6 +13,7 @@ Date Last Modified: 12/21/2020
 /****** imports only ******/
 /**************************/
 /* BOX SHADOWS */
+/* container padding */
 /* MEDIA QUERIES */
 /***********
 $breakpoints:
@@ -68,10 +69,21 @@ body {
   font-size: 1.6rem;
 }
 
+.header-1 {
+  font-size: 4.5rem;
+  color: #fff;
+  margin-bottom: 4rem;
+}
+
 .header-2 {
   font-size: 3.8rem;
   line-height: 1;
   margin-bottom: 4rem;
+}
+
+.header-3 {
+  font-size: 2.8rem;
+  margin-bottom: 2.5rem;
 }
 
 .list {
@@ -86,12 +98,39 @@ body {
   margin-bottom: 3rem;
 }
 
+.page-header {
+  font-size: 4.5rem;
+  color: #fff;
+  margin-top: 20rem;
+}
+@media only screen and (max-width: 37.5em) {
+  .page-header {
+    margin-top: 12rem;
+  }
+}
+
+p:not(:last-child) {
+  margin-bottom: 2rem;
+}
+
 .margin-top-sml {
   margin-top: 5rem;
 }
 
 .margin-top-med {
   margin-top: 10rem;
+}
+
+.margin-bottom-med {
+  margin-bottom: 10rem;
+}
+
+.margin-bottom-sml {
+  margin-bottom: 5rem;
+}
+
+.torn-edge-fix {
+  padding-top: 8rem;
 }
 
 .btn {
@@ -147,6 +186,72 @@ body {
   background-color: #96813c;
   transform: translateY(1px) rotate(-3deg);
   box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.8);
+}
+.form-wrapper {
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 4rem 7rem;
+}
+@media only screen and (max-width: 37.5em) {
+  .form-wrapper {
+    padding: 3rem 2rem;
+  }
+  .form-wrapper h2 {
+    text-align: center;
+  }
+}
+
+.form__group:not(:last-child) {
+  margin-bottom: 2rem;
+}
+.form__textarea {
+  min-height: 15rem;
+}
+.form__input, .form__textarea {
+  font-family: inherit;
+  color: inherit;
+  font-size: 1.6rem;
+  padding: 1.5rem 2rem;
+  border-radius: 0.1rem;
+  background-color: #fff;
+  border: none;
+  border-bottom: 3px solid transparent;
+  width: 90%;
+  display: block;
+  transition: all 0.3s;
+}
+.form__input:focus, .form__textarea:focus {
+  outline: none;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+}
+.form__input:focus:invalid, .form__textarea:focus:invalid {
+  border-bottom: 3px solid #e0c15a;
+}
+@media only screen and (max-width: 37.5em) {
+  .form__input, .form__textarea {
+    width: 100%;
+  }
+}
+.form__label {
+  margin-left: 1.8rem;
+  font-weight: bold;
+  display: block;
+  transition: all 0.3s;
+}
+.form__input:placeholder-shown + .form__label, .form__textarea:placeholder-shown + .form__label {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-4rem);
+}
+
+.component__contact {
+  background-image: url(../img/leaves2_bg-large.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  padding: 7rem 5rem;
 }
 
 .link {
@@ -246,7 +351,15 @@ body {
   grid-row: 1;
 }
 
-.header, .clones, .merch, .white-space {
+.header,
+.clones,
+.merch,
+.home__contact,
+.seedtomed,
+.footer,
+.contact,
+.thefamily,
+.whoweare__contact {
   grid-column: 1/-1;
 }
 
@@ -262,13 +375,37 @@ body {
   grid-row: 4;
 }
 
-.white-space {
+.home__contact {
   grid-row: 5;
 }
 
 .footer {
   grid-row: 6;
-  grid-column: 1/-1;
+}
+
+.contact {
+  grid-row: 1/-1;
+}
+
+.seedtomed {
+  grid-row: 2;
+}
+
+.thefamily {
+  grid-row: 3;
+}
+
+.whoweare__contact {
+  grid-row: 4;
+}
+
+.thefamily__grid {
+  display: grid;
+  grid-template-rows: repeat(2, 18rem);
+  grid-template-columns: repeat(5, 18rem);
+}
+.thefamily__p {
+  grid-column: 4/6;
 }
 
 .site-nav__list, .footer-nav__list, .social-nav__list {
@@ -327,6 +464,7 @@ body {
 .site-nav__link {
   display: inline-block;
   transition: all 0.2s;
+  cursor: pointer;
 }
 .site-nav__link, .site-nav__link:link, .site-nav__link:visited {
   color: #fff;
@@ -334,12 +472,53 @@ body {
   text-decoration: none;
 }
 .site-nav__link:hover {
-  transform: scale(1.2) translateY(-2px);
   color: #e0c15a;
+  transform: scale(1.2) translateY(-2px);
 }
 .site-nav__link:active {
-  transform: translateY(0);
   color: #96813c;
+  transform: translateY(0);
+}
+.site-nav__checkbox {
+  display: none;
+}
+.site-nav__droplist {
+  margin-right: -7.4rem;
+}
+.site-nav__dropitem {
+  height: 100%;
+}
+.site-nav__droplink {
+  font-size: 1.6rem !important;
+  border: none !important;
+  padding: 1rem 2rem;
+  display: block;
+}
+.site-nav__dropicon {
+  border: solid #fff;
+  border-width: 0 2px 2px 0;
+  width: 1rem;
+  height: 1rem;
+  display: inline-block;
+  margin-bottom: 0.3rem;
+  transform: rotate(45deg);
+  transition: all 0.2s;
+}
+.site-nav__dropdown {
+  list-style-type: none;
+  background-color: #fff;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  max-height: 0;
+}
+.site-nav__dropdown {
+  transition: 0.8s cubic-bezier(0.83, 0, 0.17, 1);
+}
+.site-nav__checkbox:checked ~ .site-nav__dropbtn .site-nav__droplist .site-nav__dropdown {
+  max-height: 50rem;
+}
+.site-nav__checkbox:checked ~ .site-nav__dropbtn .site-nav__droplist .site-nav__dropicon {
+  transform: rotate(-45deg);
 }
 
 .social-nav__icon {
@@ -394,6 +573,9 @@ body {
   }
   .site-nav__item:not(:last-child) {
     margin-bottom: 1.5rem;
+  }
+  .site-nav__droplist {
+    margin-right: -4rem;
   }
 
   .nav-main__header {
@@ -460,12 +642,12 @@ body {
   }
 
   .nav-mobile__img {
-    height: 6rem;
+    height: 4rem;
     position: fixed;
     top: 0;
     left: 0;
     margin-left: 1rem;
-    margin-top: 1rem;
+    margin-top: 2rem;
     z-index: 2;
   }
 
@@ -473,12 +655,12 @@ body {
     height: 250%;
     width: 0;
     position: fixed;
-    right: -5rem;
+    right: -10rem;
     top: -100vh;
     z-index: 2;
     background-image: linear-gradient(60deg, transparent 0%, transparent 50%, #2b4220 50%, #2b4220 100%);
     background-repeat: no-repeat;
-    background-size: 255%;
+    background-size: 270%;
     background-position: -30%;
     -webkit-backface-visibility: hidden;
             backface-visibility: hidden;
@@ -510,15 +692,69 @@ body {
     transform: rotate(-135deg) scale(1.5, 1);
   }
 }
-.header {
-  background-image: url(../img/leaves_bg-large.jpg);
+.contact {
+  background-image: url(../img/leaves2_bg-large.jpg);
+  background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
-  height: 110vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+.contact__header, .contact__form-wrapper {
+  max-width: 80rem;
+  width: 100%;
+}
+.contact__header {
+  background-color: #fff;
+}
+.contact__header--wrapper {
+  position: relative;
+  z-index: 1;
+  padding: 4rem 7rem;
+}
+@media only screen and (max-width: 56.25em) {
+  .contact__form-wrapper {
+    max-width: 95%;
+  }
+}
+
+.contact__social-nav .social-nav__list {
+  display: flex;
+  justify-content: center;
+}
+.contact__social-nav .social-nav__icon {
+  fill: #000;
+  width: 2.8rem;
+  height: 2.8rem;
+}
+.contact__social-nav .social-nav__item:not(:last-child) {
+  margin-right: 5rem;
+}
+@media only screen and (max-width: 37.5em) {
+  .contact__social-nav .social-nav__icon {
+    width: 3.5rem;
+    height: 3.5rem;
+  }
+  .contact__social-nav .social-nav__item:not(:last-child) {
+    margin-right: 8rem;
+  }
+}
+
+.home__header {
+  background-image: url(../img/leaves_bg-large.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.header {
+  height: 110vh;
 }
 @media only screen and (max-width: 56.25em) {
   .header__img {
@@ -616,7 +852,6 @@ body {
 .merch {
   background-color: #2b4220;
   color: #efefef;
-  padding-top: 8rem;
   height: 50vh;
   display: flex;
   justify-content: center;
@@ -626,4 +861,109 @@ body {
 .white-space {
   background-color: #fff;
   height: 30rem;
+}
+
+.whoweare {
+  background-image: url(../img/leaves_bg-large.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.whoweare__header {
+  margin-top: 25vh;
+}
+.whoweare__p-container {
+  background-color: #fff;
+  padding: 9rem 7rem;
+  max-width: 80rem;
+}
+
+.seedtomed {
+  background-color: #fff;
+}
+.seedtomed__bg-img {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  background-image: url(../img/overhead-plant.jpg), url(../img/overhead-plant-med.jpg);
+  background-repeat: no-repeat, no-repeat;
+  background-position: 140% 0, -30% 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.seedtomed__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+  max-width: 100rem;
+  padding: 7rem 5rem;
+}
+.seedtomed__header {
+  align-self: flex-start;
+  margin-bottom: 8rem;
+}
+
+.step {
+  transform: skew(-15deg, 0);
+  background-color: #2b4220;
+  color: #efefef;
+  overflow-x: hidden;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.5);
+}
+.step:not(:last-child) {
+  margin-bottom: 10rem;
+}
+.step__img {
+  min-width: 30rem;
+  max-height: 100%;
+  background-color: orange;
+  margin-left: -4rem;
+}
+.step__container {
+  display: flex;
+  transform: skew(15deg, 0);
+}
+.step--wrapper {
+  padding: 4rem 7rem;
+}
+
+.thefamily {
+  background-color: #2b4220;
+  color: #efefef;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.thefamily__container {
+  display: flex;
+  flex-direction: column;
+  padding: 7rem 5rem;
+  width: 90%;
+  max-width: 100rem;
+}
+.thefamily__grid {
+  padding: 2rem 0;
+}
+.thefamily__header {
+  align-self: center;
+}
+.thefamily__btn {
+  align-self: center;
+}
+.thefamily__p {
+  padding-left: 2rem;
+  display: flex;
+  align-items: center;
+}
+.thefamily__img--wrapper {
+  background-image: url(../img/soilbox.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  padding: 2rem;
 }

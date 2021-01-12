@@ -1,5 +1,9 @@
 
 /* BOX SHADOWS */
+@mixin box-shadow-lightest {
+    box-shadow: 0 1rem 2rem rgba($color-black, .2);
+}
+
 @mixin box-shadow-light {
     box-shadow: 0 1rem 2rem rgba($color-black, .5);
 }
@@ -10,6 +14,30 @@
 
 @mixin box-shadow-pushed {
     box-shadow: 0 .5rem 1.5rem rgba($color-black, .8);
+}
+
+/* container padding */ 
+@mixin default-container-padding {
+    padding: 4rem 7rem;
+}
+
+@mixin default-container-max-width {
+    max-width: 80rem;
+}
+
+@mixin default-container-max-width-large {
+    max-width: 100rem;
+}
+
+@mixin default-section-container-padding {
+    padding: 7rem 5rem;
+}
+
+@mixin default-skew-vertical {
+    transform: skew(-15deg, 0);
+}
+@mixin default-unskew-vertical {
+    transform: skew(15deg, 0);
 }
 
 /* MEDIA QUERIES */    

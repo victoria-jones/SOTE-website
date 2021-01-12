@@ -1,12 +1,14 @@
-.header {
+.home__header {
     background-image: url(../img/leaves_bg-large.jpg);
     background-size: cover;
     background-attachment: fixed;
-    height: 110vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+.header {
+    height: 110vh;
 
     @include respond(tab-port) {
         &__img {
@@ -126,7 +128,7 @@
 .merch {
     background-color: $color-primary-green-med;
     color: $color-grey-light;
-    padding-top: 8rem;  //to recenter flex items after torn edge added to section above this
+    //padding-top: 8rem;  //to recenter flex items after torn edge added to section above this
     height: 50vh;
     display: flex;
     justify-content: center;
