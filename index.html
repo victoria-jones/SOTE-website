@@ -110,7 +110,31 @@
             </div>
         </section>
 
-        <section class="white-space"></section>
+        <section class="home__contact component__contact">
+            <div class="contact__form-wrapper form-wrapper margin-bottom-sml margin-top-sml">
+                <h2 class="margin-bottom-sml">Contact Us</h2>
+                <form action="#" class="contact__form form">
+                    <div class="form__group">
+                        <input type="text" class="form__input" placeholder="Name" id="name" required />
+                        <label for="name" class="form__label">Name</label>
+                    </div>
+
+                    <div class="form__group">
+                        <input type="email" class="form__input" placeholder="Email" id="email" required />
+                        <label for="name" class="form__label">Email</label>
+                    </div>
+
+                    <div class="form__group">
+                        <textarea class="form__textarea" placeholder="Message" id="message"></textarea>
+                        <label for="message" class="form__label">Message</label>
+                    </div>
+
+                    <div class="form__group">
+                        <button class="btn">Send</button>
+                    </div>
+                </form>
+            </div>
+        </section>
 
         <footer class="footer">
             <img src="img/SOTE_logo.png" alt="SOTE logo" class="footer__img" />
@@ -151,6 +175,7 @@
 
             <p>&copy;2021 Salt of the Earth Nursery</p>
             <!--chrome animation on load glitch fix-->
+            <!--which apparent only works when it feels like it...-->
             <script> </script>
         </footer>
     </body>

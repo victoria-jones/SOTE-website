@@ -244,6 +244,16 @@ p:not(:last-child) {
   transform: translateY(-4rem);
 }
 
+.component__contact {
+  background-image: url(../img/leaves2_bg-large.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  padding: 7rem 5rem;
+}
+
 .link {
   padding: 0 0.3rem;
 }
@@ -344,11 +354,12 @@ p:not(:last-child) {
 .header,
 .clones,
 .merch,
-.white-space,
+.home__contact,
 .seedtomed,
 .footer,
 .contact,
-.thefamily {
+.thefamily,
+.whoweare__contact {
   grid-column: 1/-1;
 }
 
@@ -364,7 +375,7 @@ p:not(:last-child) {
   grid-row: 4;
 }
 
-.white-space {
+.home__contact {
   grid-row: 5;
 }
 
@@ -382,6 +393,19 @@ p:not(:last-child) {
 
 .thefamily {
   grid-row: 3;
+}
+
+.whoweare__contact {
+  grid-row: 4;
+}
+
+.thefamily__grid {
+  display: grid;
+  grid-template-rows: repeat(2, 18rem);
+  grid-template-columns: repeat(5, 18rem);
+}
+.thefamily__p {
+  grid-column: 4/6;
 }
 
 .site-nav__list, .footer-nav__list, .social-nav__list {
@@ -857,11 +881,19 @@ p:not(:last-child) {
 }
 
 .seedtomed {
+  background-color: #fff;
+}
+.seedtomed__bg-img {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  background-image: url(../img/overhead-plant.jpg), url(../img/overhead-plant-med.jpg);
+  background-repeat: no-repeat, no-repeat;
+  background-position: 140% 0, -30% 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: white;
 }
 .seedtomed__container {
   display: flex;
@@ -915,9 +947,23 @@ p:not(:last-child) {
   width: 90%;
   max-width: 100rem;
 }
+.thefamily__grid {
+  padding: 2rem 0;
+}
 .thefamily__header {
   align-self: center;
 }
 .thefamily__btn {
   align-self: center;
+}
+.thefamily__p {
+  padding-left: 2rem;
+  display: flex;
+  align-items: center;
+}
+.thefamily__img--wrapper {
+  background-image: url(../img/soilbox.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  padding: 2rem;
 }

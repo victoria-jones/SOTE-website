@@ -64,3 +64,13 @@
         transform: translateY(-4rem);
     }
 }
+
+.component__contact {
+    background-image: url(../img/leaves2_bg-large.jpg);
+    background-repeat: no-repeat;
+    background-size: cover; 
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    @include default-section-container-padding;
+}
