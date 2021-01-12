@@ -24,13 +24,14 @@
                 <span class="nav-mobile__icon">&nbsp;</span>
             </label>
             <div class="nav-mobile__background">&nbsp;</div>
-            <a href="index.html">
+            <a href="#">
                 <img src="img/SOTE_logo-mobile.png" alt="SOTE Nursery logo" class="nav-mobile__img" />
             </a>
+            
 
             <nav class="nav-main__header">
                 <div class="nav-main__img-holder">
-                    <a href="index.html"><img src="img/SOTE_logo.png" alt="SOTE logo" class="nav-main__img" /></a>    
+                    <a href="#"><img src="img/SOTE_logo.png" alt="SOTE logo" class="nav-main__img" /></a>    
                 </div>
                 <div class="social-nav nav-main__social-nav">
                     <ul class="social-nav__list">
@@ -60,17 +61,21 @@
             </nav>
 
             <nav class="site-nav">
+                
                 <ul class="site-nav__list">
+                    <input type="checkbox" class="site-nav__checkbox" id="nav-droptoggle" />
                     <li class="site-nav__item"><a href="index.html" class="site-nav__link">Home</a></li>
-                    <li class="site-nav__item"><a href="#" class="site-nav__link">About us</a>
-                        <!--<ul>
-                            <li><a href="#">Who we are</a></li>
-                            <li><a href="#">Meet the family</a></li>
-                        </ul>-->
-                    </li>
+                    <label for="nav-droptoggle" class="site-nav__dropbtn">
+                        <li class="site-nav__item site-nav__link site-nav__droplist">About us <div class="site-nav__dropicon"></div>
+                            <ul class="site-nav__dropdown">
+                                <li class="site-nav__dropitem"><a href="whoweare.html" class="site-nav__droplink link">Who we are</a></li>
+                                <li class="site-nav__dropitem"><a href="#" class="site-nav__droplink link">Meet the family</a></li>
+                            </ul>
+                        </li> 
+                    </label>  
                     <li class="site-nav__item"><a href="#" class="site-nav__link">Genetics</a></li>
                     <li class="site-nav__item"><a href="#" class="site-nav__link">Merch</a></li>
-                    <li class="site-nav__item"><a href="#" class="site-nav__link">Contact Us</a></li>
+                    <li class="site-nav__item"><a href="contact.html" class="site-nav__link">Contact Us</a></li>
                 </ul>
             </nav>
         </div>

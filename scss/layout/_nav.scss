@@ -92,6 +92,11 @@
     &__checkbox {
         display: none;
     }
+    //fixes the offset of the nav element cause by the width of the dropdown
+        //cuts off half of the width
+    &__droplist {
+        margin-right: -7.4rem;
+    }
 
     &__dropitem {
         height: 100%;
@@ -206,7 +211,7 @@
         }
 
         &__droplist {
-            margin-right: -2rem; //for space the drop list arrow takes up
+            margin-right: -4rem; //for space the drop list arrow takes up, relign the item to center
         }
     }
 

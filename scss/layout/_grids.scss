@@ -10,7 +10,14 @@
     grid-row: 1;
 }
 
-.header, .clones, .merch, .white-space {
+.header, 
+.clones, 
+.merch, 
+.white-space,
+.seedtomed,
+.footer,
+.contact,
+.thefamily {
     grid-column: 1 / -1;
 }
 
@@ -30,10 +37,19 @@
 
 .footer {
     grid-row: 6;
-    grid-column: 1 / -1;
 }
 
 .contact {
-    grid-column: 1 / -1;
     grid-row: 1 / -1;
 }
+
+.seedtomed {
+    grid-row: 2;
+}
+
+.thefamily {
+    grid-row: 3;
+}
+
+
+//The Family (Who We Are Page)

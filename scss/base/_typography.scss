@@ -4,10 +4,21 @@ body {
     font-size: $default-font-size;
 }
 
+.header-1 {
+    font-size: $title-font-size;
+    color: $color-white;
+    margin-bottom: 4rem;
+}
+
 .header-2 {
     font-size: $display-font-size;
     line-height: 1;
     margin-bottom: 4rem;
+}
+
+.header-3 {
+    font-size: $display-font-size-small;
+    margin-bottom: 2.5rem;
 }
 
 .list {
@@ -28,6 +39,12 @@ body {
     margin-top: 20rem;
     @include respond(phone) {
         margin-top: 12rem;
+    }
+}
+
+p {
+    &:not(:last-child) {
+        margin-bottom: 2rem;
     }
 }
 

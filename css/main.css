@@ -69,10 +69,21 @@ body {
   font-size: 1.6rem;
 }
 
+.header-1 {
+  font-size: 4.5rem;
+  color: #fff;
+  margin-bottom: 4rem;
+}
+
 .header-2 {
   font-size: 3.8rem;
   line-height: 1;
   margin-bottom: 4rem;
+}
+
+.header-3 {
+  font-size: 2.8rem;
+  margin-bottom: 2.5rem;
 }
 
 .list {
@@ -98,6 +109,10 @@ body {
   }
 }
 
+p:not(:last-child) {
+  margin-bottom: 2rem;
+}
+
 .margin-top-sml {
   margin-top: 5rem;
 }
@@ -112,6 +127,10 @@ body {
 
 .margin-bottom-sml {
   margin-bottom: 5rem;
+}
+
+.torn-edge-fix {
+  padding-top: 8rem;
 }
 
 .btn {
@@ -322,7 +341,14 @@ body {
   grid-row: 1;
 }
 
-.header, .clones, .merch, .white-space {
+.header,
+.clones,
+.merch,
+.white-space,
+.seedtomed,
+.footer,
+.contact,
+.thefamily {
   grid-column: 1/-1;
 }
 
@@ -344,12 +370,18 @@ body {
 
 .footer {
   grid-row: 6;
-  grid-column: 1/-1;
 }
 
 .contact {
-  grid-column: 1/-1;
   grid-row: 1/-1;
+}
+
+.seedtomed {
+  grid-row: 2;
+}
+
+.thefamily {
+  grid-row: 3;
 }
 
 .site-nav__list, .footer-nav__list, .social-nav__list {
@@ -425,6 +457,9 @@ body {
 }
 .site-nav__checkbox {
   display: none;
+}
+.site-nav__droplist {
+  margin-right: -7.4rem;
 }
 .site-nav__dropitem {
   height: 100%;
@@ -516,7 +551,7 @@ body {
     margin-bottom: 1.5rem;
   }
   .site-nav__droplist {
-    margin-right: -2rem;
+    margin-right: -4rem;
   }
 
   .nav-main__header {
@@ -684,15 +719,18 @@ body {
   }
 }
 
-.header {
+.home__header {
   background-image: url(../img/leaves_bg-large.jpg);
   background-size: cover;
   background-attachment: fixed;
-  height: 110vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.header {
+  height: 110vh;
 }
 @media only screen and (max-width: 56.25em) {
   .header__img {
@@ -790,7 +828,6 @@ body {
 .merch {
   background-color: #2b4220;
   color: #efefef;
-  padding-top: 8rem;
   height: 50vh;
   display: flex;
   justify-content: center;
@@ -800,4 +837,87 @@ body {
 .white-space {
   background-color: #fff;
   height: 30rem;
+}
+
+.whoweare {
+  background-image: url(../img/leaves_bg-large.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.whoweare__header {
+  margin-top: 25vh;
+}
+.whoweare__p-container {
+  background-color: #fff;
+  padding: 9rem 7rem;
+  max-width: 80rem;
+}
+
+.seedtomed {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+}
+.seedtomed__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+  max-width: 100rem;
+  padding: 7rem 5rem;
+}
+.seedtomed__header {
+  align-self: flex-start;
+  margin-bottom: 8rem;
+}
+
+.step {
+  transform: skew(-15deg, 0);
+  background-color: #2b4220;
+  color: #efefef;
+  overflow-x: hidden;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.5);
+}
+.step:not(:last-child) {
+  margin-bottom: 10rem;
+}
+.step__img {
+  min-width: 30rem;
+  max-height: 100%;
+  background-color: orange;
+  margin-left: -4rem;
+}
+.step__container {
+  display: flex;
+  transform: skew(15deg, 0);
+}
+.step--wrapper {
+  padding: 4rem 7rem;
+}
+
+.thefamily {
+  background-color: #2b4220;
+  color: #efefef;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.thefamily__container {
+  display: flex;
+  flex-direction: column;
+  padding: 7rem 5rem;
+  width: 90%;
+  max-width: 100rem;
+}
+.thefamily__header {
+  align-self: center;
+}
+.thefamily__btn {
+  align-self: center;
 }

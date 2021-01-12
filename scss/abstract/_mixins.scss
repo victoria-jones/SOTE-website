@@ -21,6 +21,25 @@
     padding: 4rem 7rem;
 }
 
+@mixin default-container-max-width {
+    max-width: 80rem;
+}
+
+@mixin default-container-max-width-large {
+    max-width: 100rem;
+}
+
+@mixin default-section-container-padding {
+    padding: 7rem 5rem;
+}
+
+@mixin default-skew-vertical {
+    transform: skew(-15deg, 0);
+}
+@mixin default-unskew-vertical {
+    transform: skew(15deg, 0);
+}
+
 /* MEDIA QUERIES */    
 /***********
 $breakpoints:
