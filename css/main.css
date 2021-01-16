@@ -297,6 +297,34 @@ p:not(:last-child) {
 .soilbox__img, .soilbox--wrapper::before {
   grid-area: 1/1/2/2;
 }
+@media only screen and (max-width: 75em) {
+  .soilbox__grid {
+    align-self: center;
+  }
+}
+@media only screen and (max-width: 56.25em) {
+  .soilbox__grid {
+    display: flex !important;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .soilbox--wrapper {
+    width: 30%;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .soilbox {
+    overflow-x: hidden;
+  }
+  .soilbox--wrapper {
+    width: 45%;
+  }
+}
+@media only screen and (max-width: 30em) {
+  .soilbox--wrapper {
+    width: 50%;
+  }
+}
 
 .torn-edge::before {
   content: "";
@@ -434,8 +462,7 @@ p:not(:last-child) {
   grid-row: 5;
 }
 
-.thefamily__grid,
-.family-group__grid {
+.soilbox__grid {
   display: grid;
   grid-template-columns: repeat(5, minmax(12rem, 18rem));
   grid-auto-flow: dense;
@@ -982,6 +1009,11 @@ p:not(:last-child) {
 .family-group__about--3 h2 {
   text-align: center;
 }
+@media only screen and (max-width: 56.25em) {
+  .family-group__about--1, .family-group__about--2 {
+    margin-bottom: 3rem;
+  }
+}
 
 .whoweare {
   background-image: url(../img/leaves_bg-large.jpg);
@@ -1175,38 +1207,44 @@ p:not(:last-child) {
   }*/
 }
 @media only screen and (max-width: 75em) {
+  .thefamily {
+    /*&__grid {
+         align-self: center;
+     }*/
+  }
   .thefamily__container {
     padding-left: 0;
     padding-right: 0;
   }
-  .thefamily__grid {
-    align-self: center;
-  }
 }
 @media only screen and (max-width: 56.25em) {
-  .thefamily__grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+  .thefamily {
+    /*&__grid {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }*/
+    /*&__img--wrapper {
+        width: 30%;
+    }*/
   }
   .thefamily__p {
     order: -1;
     padding-bottom: 2rem;
   }
-  .thefamily__img--wrapper {
-    width: 30%;
-  }
 }
 @media only screen and (max-width: 37.5em) {
   .thefamily {
-    overflow-x: hidden;
-  }
-  .thefamily__img--wrapper {
-    width: 45%;
+    /* overflow-x: hidden;
+     &__img--wrapper {
+         width: 45%;
+     }*/
   }
 }
 @media only screen and (max-width: 30em) {
-  .thefamily__img--wrapper {
-    width: 50%;
+  .thefamily {
+    /*&__img--wrapper {
+        width: 50%;
+    }*/
   }
 }
