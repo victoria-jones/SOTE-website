@@ -18,7 +18,11 @@
 .footer,
 .contact,
 .thefamily,
-.whoweare__contact {
+.whoweare__contact,
+.family-group--1,
+.family-group--2,
+.family-group--3,
+.meetthefamily__contact {
     grid-column: 1 / -1;
 }
 
@@ -34,7 +38,6 @@
 .home__contact {
     grid-row: 5;
 }
-
 
 .footer {
     grid-row: 6;
@@ -56,18 +59,52 @@
     grid-row: 4;
 }
 
+.family-group--1 {
+    grid-row: 2;
+}
 
-//The Family (Who We Are Page)
-.thefamily {
+.family-group--2 {
+    grid-row: 3;
+}
+
+.family-group--3 {
+    grid-row: 4;
+}
+
+.meetthefamily__contact {
+    grid-row: 5;
+}
+
+
+//The Family grid (who we are & meet the family)
+.thefamily,
+.family-group {
     //its important that these stay as perfect squares
     &__grid {
         display: grid;
-        grid-template-rows: repeat(2, 18rem);
-        grid-template-columns: repeat(5, 18rem);
-    }
-    
+        //grid-template-rows: repeat(2, minmax(12rem, 18rem));
+        grid-template-columns: repeat(5, minmax(12rem, 18rem));
+        grid-auto-flow: dense;
+    }  
+}
+
+//only who we are 
+.thefamily {
     &__p {
         grid-column: 4 / 6;
     }
-    
 }
+
+//meet the fam
+.family-group {
+    &__about--1 {
+        grid-column: 1 / 4;
+    }
+    &__about--2 {
+        grid-column: 3 / -1;
+    }
+    &__about--3 {
+        grid-column: 1 / -1;
+    }
+}
+

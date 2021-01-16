@@ -1,20 +1,39 @@
 .whoweare {
     background-image: url(../img/leaves_bg-large.jpg);
-    background-size: cover;
+
+    //moved to a reusable header layout
+    /*background-size: cover;
     background-attachment: fixed;
     display: flex;
     flex-direction: column;
     align-items: center;
+    height: auto;*/
 
-    &__header {
-        margin-top: 25vh;
-    }
-
-    &__p-container {
+    /*&__p-container {
         background-color: $color-white;
         padding: 9rem 7rem;
         @include default-container-max-width;
+        @include box-shadow-light;
     }
+
+    @include respond(tab-port) {
+        &__p-container {
+            max-width: 95%;
+        }
+    }
+
+    @include respond(phone) {
+        &__p-container {
+            padding: 6rem 4rem;  
+            margin-bottom: 10rem; 
+        }
+    }
+
+    @include respond(phone-med) {
+        &__p-container {
+            margin-bottom: 15rem;
+        }
+    }*/
 }
 
 .seedtomed {
@@ -40,8 +59,7 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        position: relative;
-        z-index: 1;
+        @include torn-edge-fix;
         @include default-container-max-width-large;
         @include default-section-container-padding;
     }
@@ -49,6 +67,40 @@
     &__header {
         align-self: flex-start;
         margin-bottom: 8rem;
+    }
+
+    @include respond(tab-port) {
+
+        &__container {
+            padding: 5rem 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        &__bg-img {
+            background-image: url(../img/overhead-plant-med.jpg),
+                                url(../img/overhead-plant-small.jpg);
+            background-position: (calc(100% + 20rem) 0), (-15rem 100%);
+        }
+    }  
+    
+    @include respond(phone) {
+        &__bg-img {
+            background-position: (calc(100% + 10rem) 12rem), (-15rem 100%);
+        }
+
+        &__header {
+            align-self: center;
+            width: 90%;
+        }
+        
+    }
+
+    @include respond(phone-med) {
+        &__bg-img {
+            background-position: (calc(100% + 10rem) 12rem), (-15rem 95%)
+        }
     }
 }
 
@@ -76,6 +128,37 @@
 
     &--wrapper {
         @include default-container-padding;
+    }
+
+    @include respond(tab-port) {
+        transform: skew(0);
+        max-width: 50rem;
+        width: 90%;
+        max-height: 70rem;
+        overflow-y: hidden;
+        overflow-x: auto;
+         &__container {
+             transform: skew(0);
+            display: flex;
+            flex-direction: column;
+         }
+
+         &__img {
+             height: 30rem;
+             margin-top: -5rem;
+             @include default-skew-horizontal;
+         }
+    }
+
+    @include respond(phone) {
+        max-width: 30rem;
+        &--wrapper {
+            padding: 0 3rem 3rem 3rem;
+        } 
+    }
+
+    @include respond(phone-med) {
+        width: 95%;
     }
 }
 
@@ -112,10 +195,66 @@
         align-items: center;
     }
 
+    /* this chunk moved to soilbox component */
     &__img--wrapper {
-        background-image: url(../img/soilbox.png);
+        /*background-image: url(../img/soilbox.png);
         background-size: contain;
         background-repeat: no-repeat;
-        padding: 2rem;
+        padding: 1rem;
+        //make the grid into perfect squares 
+        display: grid;
+        &::before {
+            content: "";
+            padding-bottom: 100%;
+            display: block;
+        }*/
+    }
+
+    //square grid inside content fix 
+    &__img,
+    &__img--wrapper::before {
+        //grid-area: 1 / 1 / 2 / 2;
+    }
+    /******/
+    
+    @include respond(tab-land) {
+        &__container {
+            padding-left: 0;
+            padding-right: 0;
+        }
+
+        &__grid {
+            align-self: center;
+        }
+    }
+
+    @include respond(tab-port) {
+        &__grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        &__p {
+            order: -1;
+            padding-bottom: 2rem;
+        }
+
+        &__img--wrapper {
+            width: 30%;
+        }
+    }
+
+    @include respond(phone) {
+        overflow-x: hidden;
+        &__img--wrapper {
+            width: 45%;
+        }
+    }
+
+    @include respond(phone-med) {
+        &__img--wrapper {
+            width: 50%;
+        }
     }
 }

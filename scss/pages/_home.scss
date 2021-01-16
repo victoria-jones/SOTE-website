@@ -7,29 +7,6 @@
     justify-content: center;
     align-items: center;
 }
-.header {
-    height: 110vh;
-
-    @include respond(tab-port) {
-        &__img {
-            transform: scale(.6);
-        }
-    }
-
-    @include respond(phone) {
-        &__img {
-            transform: scale(.4);
-        }
-    }
-
-    @include respond(phone-med){
-        &__img {
-            //swap this image out with one that wraps instead, its getting too small
-                //for now its fine
-            transform: scale(.3);
-        }
-    }
-}
 
 .clones {
     background-color: $color-white;
@@ -49,8 +26,7 @@
         padding: 7rem 5rem;
         overflow-x: hidden; 
         overflow-y: hidden;
-        position: relative;
-        z-index: 1;
+        @include torn-edge-fix;
     }
     
     &__info {

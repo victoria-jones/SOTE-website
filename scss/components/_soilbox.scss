@@ -1,0 +1,20 @@
+.soilbox {
+    &--wrapper {
+        background-image: url(../img/soilbox.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        padding: 1rem;
+        //make the grid into perfect squares 
+        display: grid;
+        &::before {
+            content: "";
+            padding-bottom: 100%;
+            display: block;
+        }
+    }
+
+    &__img,
+    &--wrapper::before {
+        grid-area: 1 / 1 / 2 / 2;
+    }
+}
