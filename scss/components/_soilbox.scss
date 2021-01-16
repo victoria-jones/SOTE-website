@@ -12,9 +12,40 @@
             display: block;
         }
     }
-
+    //part of the perfect square fix
     &__img,
     &--wrapper::before {
         grid-area: 1 / 1 / 2 / 2;
+    }
+
+    @include respond(tab-land) {
+        &__grid {
+            align-self: center;
+        }
+    }
+
+    @include respond(tab-port) {
+        &__grid {
+            display: flex !important;   //not sure why this is getting overriden yet, tried to fix it but not working so far, so  important is here
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        &--wrapper {
+            width: 30%;
+        }
+    }
+
+    @include respond(phone) {
+        overflow-x: hidden;
+        &--wrapper {
+            width: 45%;
+        }
+    }
+
+    @include respond(phone-med) {
+        &--wrapper {
+            width: 50%;
+        }
     }
 }

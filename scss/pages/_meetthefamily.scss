@@ -52,5 +52,13 @@
                 text-align: center;
             }
         }
+
+        @include respond(tab-port) {
+            &--1,
+            &--2 {
+               margin-bottom: 3rem;
+    
+            }
+        }
     }
 }

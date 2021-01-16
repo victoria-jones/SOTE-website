@@ -223,38 +223,38 @@
             padding-right: 0;
         }
 
-        &__grid {
+       /*&__grid {
             align-self: center;
-        }
+        }*/
     }
 
     @include respond(tab-port) {
-        &__grid {
+        /*&__grid {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-        }
+        }*/
 
         &__p {
             order: -1;
             padding-bottom: 2rem;
         }
 
-        &__img--wrapper {
+        /*&__img--wrapper {
             width: 30%;
-        }
+        }*/
     }
 
     @include respond(phone) {
-        overflow-x: hidden;
+       /* overflow-x: hidden;
         &__img--wrapper {
             width: 45%;
-        }
+        }*/
     }
 
     @include respond(phone-med) {
-        &__img--wrapper {
+        /*&__img--wrapper {
             width: 50%;
-        }
+        }*/
     }
 }
