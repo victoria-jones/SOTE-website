@@ -40,6 +40,18 @@
     transform: skew(15deg, 0);
 }
 
+@mixin default-skew-horizontal {
+    transform: skew(0, 7deg);
+}
+@mixin default-unskew-horizontal {
+    transform: skew(0, -7deg);
+}
+
+@mixin torn-edge-fix {
+    position: relative;
+    z-index: 1;
+}
+
 /* MEDIA QUERIES */    
 /***********
 $breakpoints:

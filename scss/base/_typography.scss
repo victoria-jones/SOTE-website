@@ -38,7 +38,7 @@ body {
     color: $color-white;
     margin-top: 20rem;
     @include respond(phone) {
-        margin-top: 12rem;
+        margin-top: 12rem !important;
     }
 }
 
