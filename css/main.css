@@ -187,6 +187,37 @@ p:not(:last-child) {
   transform: translateY(1px) rotate(-3deg);
   box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.8);
 }
+.card-btn, .card-btn:link, .card-btn:visited {
+  font-family: "LEMONMILKPro-Bold", sans-serif;
+  color: #fff;
+  font-size: 1.2rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 1.2rem 2rem;
+  border: none;
+  border-radius: 0.1rem;
+  background-color: #e0c15a;
+  cursor: pointer;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  transition: all 0.2s;
+  backface-visibility: hidden;
+  position: relative;
+  z-index: 1;
+}
+.card-btn:hover {
+  transform: translateY(-3px) rotate(-3deg);
+  box-shadow: 0 1.5rem 2.5rem rgba(0, 0, 0, 0.3);
+  /*&::after {
+      transform: scale(1);
+  }*/
+}
+.card-btn:active {
+  background-color: #96813c;
+  transform: translateY(1px) rotate(-3deg);
+  box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.8);
+}
+
 .form-wrapper {
   width: 100%;
   background-color: rgba(255, 255, 255, 0.8);
@@ -276,6 +307,31 @@ p:not(:last-child) {
   transform: scale(0.9);
 }
 .link__white, .link__white:link, .link__white:visited {
+  font-size: 1.6rem;
+  color: #efefef;
+  border-bottom: 1rem solid #efefef;
+  transition: all 0.3s;
+}
+
+.card-link, .card-link:link, .card-link:visited {
+  color: #e0c15a;
+  text-decoration: none;
+  border-bottom: 0.15rem solid #e0c15a;
+  background-image: linear-gradient(120deg, #e0c15a 50%, transparent 50%, transparent 0%);
+  background-size: 255%;
+  background-position: 100%;
+  background-repeat: repeat-y;
+  transition: all 0.4s;
+}
+.card-link:hover {
+  background-size: 225%;
+  background-position: initial;
+  color: #fff;
+}
+.card-link:active {
+  transform: scale(0.9);
+}
+.card-link__white, .card-link__white:link, .card-link__white:visited {
   font-size: 1.6rem;
   color: #efefef;
   border-bottom: 1rem solid #efefef;
@@ -406,7 +462,9 @@ p:not(:last-child) {
 .family-group--1,
 .family-group--2,
 .family-group--3,
-.meetthefamily__contact {
+.meetthefamily__contact,
+.genetics__contact,
+.genetics {
   grid-column: 1/-1;
 }
 
@@ -480,6 +538,18 @@ p:not(:last-child) {
 }
 .family-group__about--3 {
   grid-column: 1/-1;
+}
+
+.genetics {
+  display: grid;
+  grid-template-columns: 30rem 3fr;
+  grid-gap: 2rem;
+}
+.genetics__filter-bar {
+  grid-column: 1/-1;
+}
+.genetics__side-menu, .genetics__genetics-container {
+  grid-row: 2;
 }
 
 .header {
@@ -865,6 +935,80 @@ p:not(:last-child) {
   .contact__social-nav .social-nav__item:not(:last-child) {
     margin-right: 8rem;
   }
+}
+
+.genetics {
+  background-color: #fff;
+  padding-bottom: 2rem;
+}
+.genetics__header {
+  background-image: url(../img/leaves_bg-large.jpg);
+}
+.genetics__filter-bar {
+  width: 100%;
+  background-color: #546b34;
+  color: #efefef;
+  padding: 1.5rem;
+  display: flex;
+  justify-content: flex-end;
+}
+.genetics__side-menu {
+  background-color: #DDD;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.5);
+  margin-left: 2rem;
+  padding: 2rem;
+}
+.genetics__side-menu__header {
+  color: #2b4220;
+}
+.genetics__container {
+  margin-right: 2rem;
+}
+
+.genetics-section__p {
+  margin-bottom: 4rem;
+  margin-top: -2rem;
+}
+
+.genetics-card {
+  background-color: #efefef;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.5);
+  width: 27rem;
+  overflow: hidden;
+  margin-bottom: 2rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+.genetics-card__container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.genetics-card__img {
+  background-color: orange;
+  height: 17rem;
+  margin-top: -2rem;
+  transform: skew(0, 7deg);
+}
+.genetics-card__header {
+  margin-bottom: 0;
+  color: #2b4220;
+  font-size: 2.4rem;
+}
+.genetics-card__info {
+  padding: 0 2rem 2rem 2rem;
+}
+.genetics-card__type, .genetics-card__care {
+  display: flex;
+  padding-bottom: 0.5rem;
+}
+.genetics-card__care {
+  padding-bottom: 1rem;
+}
+.genetics-card__btns {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .home__header {

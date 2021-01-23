@@ -1,0 +1,88 @@
+.genetics {
+    background-color: $color-white;
+    padding-bottom: 2rem;
+    &__header {
+        background-image: url(../img/leaves_bg-large.jpg);
+    }
+
+    &__filter-bar {
+        width: 100%;
+        background-color: $color-primary-green;
+        color: $color-grey-light;
+        padding: 1.5rem;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    &__side-menu {
+        background-color: $color-grey;
+        @include box-shadow-light;
+        margin-left: 2rem;
+        padding: 2rem;
+
+        &__header {
+            color: $color-primary-green-med;
+        }
+    }
+
+    &__container {
+        margin-right: 2rem;
+    }
+
+}
+
+.genetics-section {
+    &__p {
+        margin-bottom: 4rem;
+        margin-top: -2rem;
+    }
+}
+
+.genetics-card {
+    background-color: $color-grey-light;
+    @include box-shadow-light;
+    width: 27rem;
+    overflow: hidden;
+    margin-bottom: 2rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+
+    &__container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    &__img {
+        background-color: orange;
+        height: 17rem;
+        margin-top: -2rem;
+        @include default-skew-horizontal;
+    }
+
+    &__header {
+        margin-bottom: 0;
+        color: $color-primary-green-med;
+        font-size: 2.4rem;
+    }
+
+    &__info {
+        padding: 0 2rem 2rem 2rem;
+    }
+
+    &__type,
+    &__care {
+        display: flex;
+        padding-bottom: .5rem;
+    }
+
+    &__care {
+        padding-bottom: 1rem;
+    }
+
+    &__btns {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+}

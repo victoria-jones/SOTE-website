@@ -61,3 +61,45 @@
     }*/
     
 }
+
+.card-btn {
+    &,
+    &:link,
+    &:visited {
+        font-family: $font-display;
+        color: $color-white;
+        font-size: $font-size-small;
+        text-decoration: none;
+        text-transform: uppercase;
+        padding: 1.2rem 2rem;
+        border: none;
+        border-radius: .1rem;
+        background-color: $color-primary-yellow;
+        //@include box-shadow-light;
+        cursor: pointer;
+        backface-visibility: hidden; //for animations
+        transition: all .2s;
+        backface-visibility: hidden; //animation glitch fix
+        position: relative; //set for background roots
+        z-index: 1;
+
+        @include respond(tab-port) {
+            //font-size: 1.4rem;
+        }
+    }
+
+    &:hover {
+        transform: translateY(-3px) rotate(-3deg);
+        @include box-shadow-lifted;
+
+        /*&::after {
+            transform: scale(1);
+        }*/
+    }
+
+    &:active {
+        background-color: $color-primary-yellow-dark;
+        transform: translateY(1px) rotate(-3deg);
+        @include box-shadow-pushed;
+    }
+}
