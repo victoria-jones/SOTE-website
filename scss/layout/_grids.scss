@@ -22,7 +22,9 @@
 .family-group--1,
 .family-group--2,
 .family-group--3,
-.meetthefamily__contact {
+.meetthefamily__contact,
+.genetics__contact,
+.genetics {
     grid-column: 1 / -1;
 }
 
@@ -104,6 +106,22 @@
     }
     &__about--3 {
         grid-column: 1 / -1;
+    }
+}
+
+//Genetics section grid 
+.genetics {
+    display: grid;
+    grid-template-columns: 30rem 3fr;
+    grid-gap: 2rem;
+
+    &__filter-bar {
+        grid-column: 1 / -1;
+    }
+
+    &__side-menu,
+    &__genetics-container {
+        grid-row: 2;
     }
 }
 

@@ -38,3 +38,42 @@
         }
     }
 }
+
+.card-link {
+    //padding: 0 .3rem;
+    &,
+    &:link,
+    &:visited {
+        //font-size: $link-font-size;
+        color: $color-primary-yellow;
+        text-decoration: none;
+        border-bottom: .15rem solid $color-primary-yellow;
+
+        //highlight animation 
+        background-image: linear-gradient(120deg, $color-primary-yellow 50%, transparent 50%, transparent 0%); 
+        background-size: 255%;
+        background-position: 100%;
+        background-repeat: repeat-y;
+        transition: all .4s;
+    }
+
+    &:hover {
+        background-size: 225%;
+        background-position: initial;
+        color: $color-white;
+    }
+    &:active {
+        transform: scale(.9);
+    }
+
+    &__white {
+        &,
+        &:link,
+        &:visited {
+            font-size: $default-font-size;
+            color: $color-grey-light;
+            border-bottom: 1rem solid $color-grey-light;
+            transition: all .3s;
+        }
+    }
+}
