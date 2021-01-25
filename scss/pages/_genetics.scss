@@ -1,17 +1,8 @@
 .genetics {
     background-color: $color-white;
-    padding-bottom: 2rem;
+    padding-bottom: 20rem;
     &__header {
         background-image: url(../img/leaves_bg-large.jpg);
-    }
-
-    &__filter-bar {
-        width: 100%;
-        background-color: $color-primary-green;
-        color: $color-grey-light;
-        padding: 1.5rem;
-        display: flex;
-        justify-content: flex-end;
     }
 
     &__side-menu {
@@ -23,12 +14,67 @@
         &__header {
             color: $color-primary-green-med;
         }
+
+        &--list {
+            list-style-type: none;
+            margin-left: 2rem;
+        }
+
+        
     }
 
     &__container {
         margin-right: 2rem;
     }
 
+    &__key {
+        &--list {
+            list-style-type: none;
+            display: flex;
+            margin-top: 1rem;
+            justify-content: space-between;
+        }
+        &--item {
+            display: flex;
+            align-items: center;
+
+            &--1 {
+                color: $color-secondary-green;
+                fill: $color-secondary-green;
+            }
+
+            &--2 {
+                color: $color-secondary-violet;
+                fill: $color-secondary-violet;
+            }
+
+            &--3 {
+                color: $color-secondary-blue;
+                fill: $color-secondary-blue;
+            }
+
+            &--4 {
+                color: $color-primary-yellow;
+                fill: $color-primary-yellow;
+            }
+        }
+        &--icon {
+            width: 2rem;
+            height: 2rem;
+            margin-right: 1rem;
+        }
+    }
+
+}
+
+.genetics-filter {
+    width: 100%;
+    background-color: $color-primary-green;
+    color: $color-grey-light;
+    padding: 1.5rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
 }
 
 .genetics-section {
@@ -73,11 +119,29 @@
     &__type,
     &__care {
         display: flex;
+        align-items: center;
         padding-bottom: .5rem;
     }
 
     &__care {
         padding-bottom: 1rem;
+    }
+
+    &__type {
+        &--icon {
+           &--1 {
+               fill: $color-secondary-green;
+           }
+           &--2 {
+               fill: $color-secondary-violet;
+           }
+           &--3 {
+               fill: $color-secondary-blue;
+           }
+           &--4 {
+               fill: $color-primary-yellow;
+           }
+        }
     }
 
     &__btns {
