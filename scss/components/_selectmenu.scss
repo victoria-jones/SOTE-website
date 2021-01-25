@@ -1,0 +1,20 @@
+.genetics-filter {
+
+    &__menu {   
+        font-family: inherit;
+        font-size: inherit;
+        padding: 1rem;
+        min-width: 15rem;
+        margin-left: 1.2rem;
+        @include border-radius;
+
+        &:focus {
+            border-color: $color-primary-yellow;
+        }
+    }
+
+    &__label {
+        font-size: 2rem;
+    }
+}
+

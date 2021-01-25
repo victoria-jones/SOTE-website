@@ -115,13 +115,13 @@
     grid-template-columns: 30rem 3fr;
     grid-gap: 2rem;
 
-    &__filter-bar {
-        grid-column: 1 / -1;
-    }
-
     &__side-menu,
     &__genetics-container {
         grid-row: 2;
     }
+}
+
+.genetics-filter {
+    grid-column: 1 / -1;
 }
 

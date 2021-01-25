@@ -88,19 +88,60 @@
                             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima reprehenderit fuga maiores et repudiandae? Corporis odio, omnis repellat ipsum ipsam magni! Repellat voluptatum praesentium numquam at reiciendis? Nulla, ab officiis!
                         </p>
                         <div class="genetics__key">
-                            genetic keys
+                            <h3 class="genetics__key--title">Genetics Key:</h3>
+
+                            <ul class="genetics__key--list">
+                                <li class="genetics__key--item genetics__key--item--1">
+                                    <svg class="genetics__key--icon">
+                                        <use xlink:href="img/sprite.svg#icon-arrow-with-circle-up"></use>
+                                    </svg>
+                                    <span class="genetics__key--icon-name">Indica</span>
+                                </li>
+                                <li class="genetics__key--item genetics__key--item--2">
+                                    <svg class="genetics__key--icon">
+                                        <use xlink:href="img/sprite.svg#icon-arrow-with-circle-down"></use>
+                                    </svg>
+                                    <span class="genetics__key--icon-name">Sativa</span>
+                                </li>
+                                <li class="genetics__key--item genetics__key--item--3">
+                                    <svg class="genetics__key--icon">
+                                        <use xlink:href="img/sprite.svg#icon-home3"></use>
+                                    </svg>
+                                    <span class="genetics__key--icon-name">Grows Indoors</span>
+                                </li>
+                                <li class="genetics__key--item genetics__key--item--4">
+                                    <svg class="genetics__key--icon">
+                                        <use xlink:href="img/sprite.svg#icon-sun"></use>
+                                    </svg>
+                                    <span class="genetics__key--icon-name">Grows Outdoors</span>
+                                </li>
+                            </ul>
                         </div>
                     </div>    
                 </div>
             </header>
 
             <section class="genetics">
-                    <div class="genetics__filter-bar">filter</div>
+                    <div class="genetics-filter">
+                        <label for="genetics-filter-select" class="genetics-filter__label">Filter View:</label>
+                        <select name="genetics-filter-select" id="genetics-filter-select" class="genetics-filter__menu">
+                            <option class="genetics-filter__option" value="none"></option>
+                            <option class="genetics-filter__option" value="indica">Indica</option>
+                            <option class="genetics-filter__option" value="sativa">Sativa</option>
+                            <option class="genetics-filter__option" value="option">option</option>
+                            <option class="genetics-filter__option" value="option">option</option>
+                            <option class="genetics-filter__option" value="option">option</option>
+                        </select>
+                    </div>
 
                     <nav class="genetics__side-menu">
                         <h3 class="genetics__side-menu__header header-3">Strain List</h3>
                         <ul class="genetics__side-menu--list">
-                            side menu
+                            <li class="genetics__side-menu--item"><a href="#" class="genetics__side-menu--link link--green">list item</a></li>
+                            <li class="genetics__side-menu--item"><a href="#" class="genetics__side-menu--link link--green">list item</a></li>
+                            <li class="genetics__side-menu--item"><a href="#" class="genetics__side-menu--link link--green">list item</a></li>
+                            <li class="genetics__side-menu--item"><a href="#" class="genetics__side-menu--link link--green">list item</a></li>
+                            <li class="genetics__side-menu--item"><a href="#" class="genetics__side-menu--link link--green">list item</a></li>
                         </ul>
                     </nav>
 
@@ -114,17 +155,24 @@
                             <div class="genetics-card__container">
                                 <div class="genetics-card">
                                     <div class="genetics-card__img">
-                                        img
+                                        img <!--unskew the image when placed-->
                                     </div>
                                     <div class="genetics-card__info">
                                         <h3 class="genetics-card__header header-3">Strain Name</h3>
                                         <div class="genetics-card__type">
-                                            <div class="genetics-card__type-img"> type img</div>
-                                            <span class="genetics-card__type-name">type</span>
+                                            <svg class="genetics__key--icon genetics-card__type--icon--1">
+                                                <use xlink:href="img/sprite.svg#icon-arrow-with-circle-up"></use>
+                                            </svg>
+                                            <span class="genetics__key--icon-name">Indica</span>
                                         </div>
                                         <div class="genetics-card__care">
-                                            <div class="genetics-card__care-img">care img</div>
-                                            <span class="genetics-card__care-name">care</span>
+                                            <svg class="genetics__key--icon genetics-card__type--icon--3">
+                                                <use xlink:href="img/sprite.svg#icon-home3"></use>
+                                            </svg>
+                                            <svg class="genetics__key--icon genetics-card__type--icon--4">
+                                                <use xlink:href="img/sprite.svg#icon-sun"></use>
+                                            </svg>
+                                            <span class="genetics__key--icon-name">Grows Indoors/Outdoors</span>
                                         </div>
                                         <div class="genetics-card__btns">
                                             <a href="#" class="card-btn">Contact Us</a>
@@ -140,12 +188,16 @@
                                     <div class="genetics-card__info">
                                         <h3 class="genetics-card__header header-3">Strain Name</h3>
                                         <div class="genetics-card__type">
-                                            <div class="genetics-card__type-img"> type img</div>
-                                            <span class="genetics-card__type-name">type</span>
+                                            <svg class="genetics__key--icon genetics-card__type--icon--2">
+                                                <use xlink:href="img/sprite.svg#icon-arrow-with-circle-down"></use>
+                                            </svg>
+                                            <span class="genetics__key--icon-name">Sativa</span>
                                         </div>
                                         <div class="genetics-card__care">
-                                            <div class="genetics-card__care-img">care img</div>
-                                            <span class="genetics-card__care-name">care</span>
+                                            <svg class="genetics__key--icon genetics-card__type--icon--3">
+                                                <use xlink:href="img/sprite.svg#icon-home3"></use>
+                                            </svg>
+                                            <span class="genetics__key--icon-name">Grows Indoors</span>
                                         </div>
                                         <div class="genetics-card__btns">
                                             <a href="#" class="card-btn">Contact Us</a>
@@ -161,12 +213,16 @@
                                     <div class="genetics-card__info">
                                         <h3 class="genetics-card__header header-3">Strain Name</h3>
                                         <div class="genetics-card__type">
-                                            <div class="genetics-card__type-img"> type img</div>
-                                            <span class="genetics-card__type-name">type</span>
+                                            <svg class="genetics__key--icon genetics-card__type--icon--1">
+                                                <use xlink:href="img/sprite.svg#icon-arrow-with-circle-up"></use>
+                                            </svg>
+                                            <span class="genetics__key--icon-name">Indica</span>
                                         </div>
                                         <div class="genetics-card__care">
-                                            <div class="genetics-card__care-img">care img</div>
-                                            <span class="genetics-card__care-name">care</span>
+                                            <svg class="genetics__key--icon genetics-card__type--icon--4">
+                                                <use xlink:href="img/sprite.svg#icon-sun"></use>
+                                            </svg>
+                                            <span class="genetics__key--icon-name">Grows Outdoors</span>
                                         </div>
                                         <div class="genetics-card__btns">
                                             <a href="#" class="card-btn">Contact Us</a>
@@ -182,12 +238,19 @@
                                     <div class="genetics-card__info">
                                         <h3 class="genetics-card__header header-3">Strain Name</h3>
                                         <div class="genetics-card__type">
-                                            <div class="genetics-card__type-img"> type img</div>
-                                            <span class="genetics-card__type-name">type</span>
+                                            <svg class="genetics__key--icon genetics-card__type--icon--2">
+                                                <use xlink:href="img/sprite.svg#icon-arrow-with-circle-down"></use>
+                                            </svg>
+                                            <span class="genetics__key--icon-name">Sativa</span>
                                         </div>
                                         <div class="genetics-card__care">
-                                            <div class="genetics-card__care-img">care img</div>
-                                            <span class="genetics-card__care-name">care</span>
+                                            <svg class="genetics__key--icon genetics-card__type--icon--3">
+                                                <use xlink:href="img/sprite.svg#icon-home3"></use>
+                                            </svg>
+                                            <svg class="genetics__key--icon genetics-card__type--icon--4">
+                                                <use xlink:href="img/sprite.svg#icon-sun"></use>
+                                            </svg>
+                                            <span class="genetics__key--icon-name">Grows Indoors/Outdoors</span>
                                         </div>
                                         <div class="genetics-card__btns">
                                             <a href="#" class="card-btn">Contact Us</a>
@@ -203,12 +266,16 @@
                                     <div class="genetics-card__info">
                                         <h3 class="genetics-card__header header-3">Strain Name</h3>
                                         <div class="genetics-card__type">
-                                            <div class="genetics-card__type-img"> type img</div>
-                                            <span class="genetics-card__type-name">type</span>
+                                            <svg class="genetics__key--icon genetics-card__type--icon--2">
+                                                <use xlink:href="img/sprite.svg#icon-arrow-with-circle-down"></use>
+                                            </svg>
+                                            <span class="genetics__key--icon-name">Sativa</span>
                                         </div>
                                         <div class="genetics-card__care">
-                                            <div class="genetics-card__care-img">care img</div>
-                                            <span class="genetics-card__care-name">care</span>
+                                            <svg class="genetics__key--icon genetics-card__type--icon--3">
+                                                <use xlink:href="img/sprite.svg#icon-home3"></use>
+                                            </svg>
+                                            <span class="genetics__key--icon-name">Grows Indoors</span>
                                         </div>
                                         <div class="genetics-card__btns">
                                             <a href="#" class="card-btn">Contact Us</a>
@@ -224,12 +291,19 @@
                                     <div class="genetics-card__info">
                                         <h3 class="genetics-card__header header-3">Strain Name</h3>
                                         <div class="genetics-card__type">
-                                            <div class="genetics-card__type-img"> type img</div>
-                                            <span class="genetics-card__type-name">type</span>
+                                            <svg class="genetics__key--icon genetics-card__type--icon--1">
+                                                <use xlink:href="img/sprite.svg#icon-arrow-with-circle-up"></use>
+                                            </svg>
+                                            <span class="genetics__key--icon-name">Indica</span>
                                         </div>
                                         <div class="genetics-card__care">
-                                            <div class="genetics-card__care-img">care img</div>
-                                            <span class="genetics-card__care-name">care</span>
+                                            <svg class="genetics__key--icon genetics-card__type--icon--3">
+                                                <use xlink:href="img/sprite.svg#icon-home3"></use>
+                                            </svg>
+                                            <svg class="genetics__key--icon genetics-card__type--icon--4">
+                                                <use xlink:href="img/sprite.svg#icon-sun"></use>
+                                            </svg>
+                                            <span class="genetics__key--icon-name">Grows Indoors/Outdoors</span>
                                         </div>
                                         <div class="genetics-card__btns">
                                             <a href="#" class="card-btn">Contact Us</a>
@@ -247,6 +321,41 @@
             </section>
 
             <section class="genetics__contact component__contact">
+                <div class="contact__header torn-edge margin-bottom-med margin-top-med">
+                    <div class="contact__header--wrapper">
+                        <h2>Have any Questions?</h2>
+                        <p class="contact__p">
+                            Contact us directly for more information on our genetics and follow us on social media to get immediate updates on our available gentics.
+                        </p>
+    
+                        <nav class="social-nav contact__social-nav">
+                            <ul class="social-nav__list margin-top-sml">
+                                <li class="social-nav__item">
+                                    <a href="#" class="social-nav__link">
+                                        <svg class="social-nav__icon">
+                                            <use xlink:href="img/sprite.svg#icon-facebook"></use>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li class="social-nav__item">
+                                    <a href="#" class="social-nav__link">
+                                        <svg class="social-nav__icon">
+                                            <use xlink:href="img/sprite.svg#icon-instagram"></use>
+                                        </svg>
+                                    </a> 
+                                </li>
+                                <li class="social-nav__item">
+                                    <a href="#" class="social-nav__link">
+                                        <svg class="social-nav__icon">
+                                            <use xlink:href="img/sprite.svg#icon-twitter"></use>
+                                        </svg>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>    
+                </div>
+
                 <div class="contact__form-wrapper form-wrapper margin-bottom-sml margin-top-sml">
                     <h2 class="margin-bottom-sml">Contact Us</h2>
                     <form action="#" class="contact__form form">
