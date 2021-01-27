@@ -3,6 +3,12 @@
     padding-bottom: 20rem;
     &__header {
         background-image: url(../img/leaves_bg-large.jpg);
+
+        &--wrapper {
+            @include respond(phone) {
+                padding: 1.5rem;
+            }
+        }
     }
 
     &__side-menu {
@@ -20,11 +26,98 @@
             margin-left: 2rem;
         }
 
+        &__checkbox,
+        &__icon {
+            display: none;
+        }
+
+        //accordion menu for phones
+        @include respond(tab-port) {
+            margin-left: 0;
+            margin-top: -2rem;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+
+            &--list {
+                background-color: $color-grey-light;
+                width: 100%;
+                margin-left: 0;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                //padding-bottom: 1rem;
+                overflow: hidden;
+                max-height: 0;
+            }
+
+            &--item {
+                &:not(:last-child) { margin-bottom: 1rem; }
+            }
+
+            &--list,
+            &--item {
+                transition: .8s cubic-bezier(0.83, 0, 0.17, 1);
+            }
+
+            &__header {
+                margin-bottom: 0;
+                margin-top: -3rem;  //remove space made by the ::before
+                padding: .5rem;
+                cursor: pointer;
+
+                &:hover {
+                    background-color: $color-white;
+                }
+            }
+
+            &__icon {
+                position: relative;
+                width: 1.5rem;
+                bottom: -2.5rem;
+                left: 95%;
+                
+
+                &,
+                &::before {
+                    height: 3px;
+                    background-color: $color-primary-green-med;
+                    display: inline-block;
+                }
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    width: 1.5rem;
+                    transform: rotate(90deg);
+                    transition: .8s cubic-bezier(0.83, 0, 0.17, 1);
+                }
+            }
+
+            &__checkbox:checked ~ &__button &__icon::before {
+                transform: rotate(180deg);
+            }
+
+            &__checkbox:checked ~ &--list {
+                padding-bottom: 1rem;
+                max-height: 100vh; 
+                overflow: auto;
+            }
+        }
         
     }
 
     &__container {
         margin-right: 2rem;
+
+        @include respond(tab-port) {
+            margin-right: 0;
+            padding: 0 2rem;
+        }
+
+        @include respond(phone) {
+            padding: 0;
+        }
     }
 
     &__key {
@@ -33,10 +126,28 @@
             display: flex;
             margin-top: 1rem;
             justify-content: space-between;
+
+            @include respond(phone) {
+                flex-wrap: wrap;
+                margin-left: auto;
+                margin-right: auto;
+                width: 80%;
+            }
+
+            @include respond(phone-med) {
+                width: 95%;
+            }
         }
         &--item {
             display: flex;
             align-items: center;
+
+            @include respond(phone) {
+                flex: 0 50%;   
+            }
+            @include respond(phone-med) {
+                flex: 0 100%;
+            }
 
             &--1 {
                 color: $color-secondary-green;
@@ -75,12 +186,24 @@
     display: flex;
     justify-content: flex-end;
     align-items: center;
+
+    @include respond(phone) {
+        justify-content: center;
+    }
 }
 
 .genetics-section {
     &__p {
         margin-bottom: 4rem;
         margin-top: -2rem;
+    }
+
+    @include respond(phone) {
+        &__header,
+        &__p {
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }
     }
 }
 
@@ -93,10 +216,21 @@
     margin-left: 1rem;
     margin-right: 1rem;
 
+    @include respond(phone-med) {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    @include respond(phone-small) {
+        width: 97%;
+    }
+
     &__container {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
+
+        
     }
 
     &__img {

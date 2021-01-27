@@ -191,6 +191,7 @@
         width: 0;
         opacity: 0;
         //right: 0;
+        //left: -1000rem;
         transition: .8s cubic-bezier(0.83, 0, 0.17, 1) .2s;
     }
 
@@ -203,6 +204,11 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            
+            //the sitenav is clickable on the edge of the screen but invisible this moves it out of range of the screen
+                //transition re-added to prevent a "skipping" to the negative margin while the menu moves out of view
+            margin-left: -6.1rem;
+            transition: margin-left .8s cubic-bezier(0.83, 0, 0.17, 1) .2s;
         }
         &__item {
             &:not(:last-child) {
@@ -340,6 +346,11 @@
     .nav-mobile__checkbox:checked ~ .nav-mobile__button .nav-mobile__icon::after {
         top: 0;
         transform: rotate(-135deg) scale(1.5, 1);
+    }
+
+    .nav-mobile__checkbox:checked ~ .site-nav .site-nav__list {
+        //refix the fix to stop the mobile menu from being invisible but clickable on the edge of the screen
+        margin-left: 0;
     }
 
 

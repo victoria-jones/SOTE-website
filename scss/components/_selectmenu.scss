@@ -16,5 +16,11 @@
     &__label {
         font-size: 2rem;
     }
+
+    @include respond(phone) {
+        &__menu {
+            width: 65%;
+        }
+    }
 }
 
