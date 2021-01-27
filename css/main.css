@@ -25,6 +25,11 @@ $breakpoints:
     - tab-land      1200px
     - big-desktop   1800px
 
+//height breakpoints
+    $breakpoints:
+        - phone-small-h 650px
+        - phone-med-h   740px
+
 EM used here (do not change to different measurement)
 1em === 16px
 ***********/
@@ -371,6 +376,100 @@ p:not(:last-child) {
   transform: scale(0.9);
 }
 
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(255, 255, 255, 0.5);
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  z-index: -1000;
+  /*&__button {
+      height: 6rem;
+      width: 6rem;
+      position: relative;
+      top: 0;
+      right: 0;
+      margin-top: 1rem;
+      margin-right: 1rem;
+      //z-index: 9999;
+      border-radius: 50%;
+      background-color: $color-white;
+      @include box-shadow-light;
+      text-align: center;
+      cursor: pointer;
+  }*/
+}
+.popup__checkbox {
+  display: none;
+}
+.popup--wrapper {
+  position: relative;
+  background-color: #fff;
+  width: 95vw;
+  height: 95vh;
+  max-width: 100rem;
+  max-height: 70rem;
+  display: flex;
+  overflow-x: hidden;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.5);
+  height: 0;
+  bottom: 110%;
+}
+@media only screen and (max-width: 56.25em) {
+  .popup--wrapper {
+    max-height: 95vh;
+  }
+}
+.popup__button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 101;
+  border-radius: 50%;
+  background-color: #fff;
+  width: 6rem;
+  height: 6rem;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: 0.2s;
+}
+@media only screen and (max-width: 56.25em) {
+  .popup__button {
+    top: 1.5rem;
+    right: 1.5rem;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.5);
+  }
+  .popup__button:active {
+    box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.8);
+    transform: translateY(1px);
+  }
+}
+.popup__icon {
+  position: relative;
+  width: 4rem;
+  top: 2.8rem;
+  left: 1rem;
+  transform: rotate(45deg);
+}
+.popup__icon, .popup__icon::before {
+  height: 3px;
+  background-color: #2b4220;
+  display: inline-block;
+}
+.popup__icon::before {
+  content: "";
+  position: absolute;
+  width: 4rem;
+  transform: rotate(90deg);
+}
+
 .genetics-filter__menu {
   font-family: inherit;
   font-size: inherit;
@@ -388,6 +487,21 @@ p:not(:last-child) {
 @media only screen and (max-width: 37.5em) {
   .genetics-filter__menu {
     width: 65%;
+  }
+}
+@media only screen and (max-width: 30em) {
+  .genetics-filter {
+    display: flex;
+    flex-direction: column;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .genetics-filter__label {
+    font-size: 1.8rem;
+  }
+  .genetics-filter__menu {
+    width: 90%;
+    margin-left: 0;
   }
 }
 
@@ -649,7 +763,8 @@ p:not(:last-child) {
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: auto;
+  min-height: auto;
+  padding-bottom: 15rem;
 }
 .alt-header__p-container {
   background-color: #fff;
@@ -1019,6 +1134,14 @@ p:not(:last-child) {
     margin-right: 8rem;
   }
 }
+@media only screen and (max-width: 30em) {
+  .contact__social-nav .social-nav__list {
+    justify-content: space-between;
+  }
+  .contact__social-nav .social-nav__item:not(:last-child) {
+    margin-right: 0;
+  }
+}
 
 .genetics {
   background-color: #fff;
@@ -1026,6 +1149,7 @@ p:not(:last-child) {
 }
 .genetics__header {
   background-image: url(../img/leaves_bg-large.jpg);
+  padding-bottom: 5rem;
 }
 @media only screen and (max-width: 37.5em) {
   .genetics__header--wrapper {
@@ -1085,7 +1209,7 @@ p:not(:last-child) {
     position: relative;
     width: 1.5rem;
     bottom: -2.5rem;
-    left: 95%;
+    left: 90%;
   }
   .genetics__side-menu__icon, .genetics__side-menu__icon::before {
     height: 3px;
@@ -1266,6 +1390,89 @@ p:not(:last-child) {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+.genetics-popup__img {
+  background-color: orange;
+  width: 220%;
+  margin-left: -16rem;
+  transform: skew(-15deg, 0);
+}
+.genetics-popup__info {
+  margin-left: 8rem;
+  padding-right: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.genetics-popup__header {
+  color: #2b4220;
+  margin-bottom: 1rem;
+}
+.genetics-popup__details {
+  margin: 3rem 0;
+  max-height: 30rem;
+  overflow-y: scroll;
+}
+.genetics-popup__type, .genetics-popup__care {
+  display: flex;
+  align-items: center;
+}
+@media only screen and (max-width: 56.25em) {
+  .genetics-popup--wrapper {
+    flex-wrap: wrap;
+  }
+  .genetics-popup__info {
+    margin-left: 0;
+    padding-right: 0;
+    padding: 0 4rem 2rem 4rem;
+    align-self: flex-start;
+  }
+  .genetics-popup__img {
+    width: 100%;
+    height: 40%;
+    margin-top: -5rem;
+    transform: skew(0);
+    margin-left: 0;
+    transform: skew(0, 7deg);
+  }
+}
+@media only screen and (max-width: 30em) {
+  .genetics-popup__info {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+  .genetics-popup__header, .genetics-popup__type, .genetics-popup__care {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  .genetics-popup__details {
+    max-height: 25rem;
+  }
+}
+@media only screen and (max-height: 46.25em) {
+  .genetics-popup__details {
+    max-height: 18.5rem;
+  }
+}
+@media only screen and (max-height: 40.625em) {
+  .genetics-popup__details {
+    max-height: 17rem;
+  }
+}
+@media only screen and (max-width: 18.75em) {
+  .genetics-popup__header, .genetics-popup__type, .genetics-popup__care {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  .genetics-popup__info {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  .genetics-popup__details {
+    max-height: 15rem;
+  }
 }
 
 .home__header {
