@@ -22,5 +22,20 @@
             width: 65%;
         }
     }
+
+    @include respond(phone-med) {
+        //min-width: 100%;
+        display: flex;
+        flex-direction: column;
+        padding-left: 0;
+        padding-right: 0;
+        &__label {
+            font-size: 1.8rem;
+        }
+        &__menu {
+            width: 90%;
+            margin-left: 0;
+        }
+    }
 }
 

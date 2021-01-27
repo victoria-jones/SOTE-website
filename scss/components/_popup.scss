@@ -1,0 +1,109 @@
+.popup {
+    position: fixed;
+    //z-index: 10000;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba($color-white, .5);
+    backdrop-filter: blur(5px);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    opacity: 0;
+    z-index: -1000;
+    
+
+    &__checkbox {
+        display: none;
+    }
+
+    &--wrapper {
+        position: relative;
+        background-color: $color-white;
+        width: 95vw;
+        height: 95vh;
+        max-width: 100rem;
+        max-height: 70rem;
+        display: flex;
+        overflow-x: hidden;
+        @include box-shadow-light;
+
+        height: 0;
+        bottom: 110%;
+
+        @include respond(tab-port) {
+            max-height: 95vh;
+        }
+    }
+
+    /*&__button {
+        height: 6rem;
+        width: 6rem;
+        position: relative;
+        top: 0;
+        right: 0;
+        margin-top: 1rem;
+        margin-right: 1rem;
+        //z-index: 9999;
+        border-radius: 50%;
+        background-color: $color-white;
+        @include box-shadow-light;
+        text-align: center;
+        cursor: pointer;
+    }*/
+
+    &__button {
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 101;
+        border-radius: 50%;
+        background-color: $color-white;
+        width: 6rem;
+        height: 6rem;
+        cursor: pointer;
+        flex-shrink: 0;
+        transition: .2s;
+
+        @include respond(tab-port) {
+            top: 1.5rem;
+            right: 1.5rem;
+            @include box-shadow-light;
+
+            &:active {
+                @include box-shadow-pushed;
+                transform: translateY(1px);
+            }
+        }
+    }
+    &__icon {
+        position: relative;
+        //z-index: 1000;
+        width: 4rem;
+        top: 2.8rem;
+        left: 1rem;
+        transform: rotate(45deg);
+        //cursor: pointer;
+
+        &,
+        &::before {
+            height: 3px;
+            background-color: $color-primary-green-med;
+            display: inline-block;
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            width: 4rem;
+            transform: rotate(90deg);
+            //transition: .8s cubic-bezier(0.83, 0, 0.17, 1);
+        }
+    }
+
+}
+
+

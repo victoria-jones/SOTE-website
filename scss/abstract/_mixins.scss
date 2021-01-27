@@ -68,6 +68,11 @@ $breakpoints:
     - tab-land      1200px
     - big-desktop   1800px
 
+//height breakpoints
+    $breakpoints:
+        - phone-small-h 650px
+        - phone-med-h   740px
+
 EM used here (do not change to different measurement)
 1em === 16px
 ***********/
@@ -89,5 +94,11 @@ EM used here (do not change to different measurement)
     }
     @if $breakpoint == big-desktop {
         @media only screen and (min-width: 112.5em) { @content };   //1800px
+    }
+    @if $breakpoint == phone-small-h {
+        @media only screen and (max-height: 40.625em) { @content }; //650px
+    }
+    @if $breakpoint == phone-med-h {
+        @media only screen and (max-height: 46.25em) { @content };  //740px
     }
 }

@@ -60,6 +60,7 @@
         }
 
         @include respond(phone) {
+            
             &__icon {
                 width: 3.5rem;
                 height: 3.5rem;
@@ -67,6 +68,17 @@
             &__item {
                 &:not(:last-child) {
                     margin-right: 8rem;
+                }
+            }
+        }
+
+        @include respond(phone-med) {
+            &__list {
+                justify-content: space-between;
+            }
+            &__item {
+                &:not(:last-child) {
+                    margin-right: 0;
                 }
             }
         }
