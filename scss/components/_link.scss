@@ -96,6 +96,10 @@
         background-position: 100%;
         background-repeat: repeat-y;
         transition: all .4s;
+
+        @include respond(tab-port) {
+            font-size: $link-font-size;
+        }
     }
 
     &:hover {

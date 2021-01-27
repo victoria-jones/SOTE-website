@@ -27,7 +27,7 @@
                 <a href="#">
                     <img src="img/SOTE_logo-mobile.png" alt="SOTE Nursery logo" class="nav-mobile__img" />
                 </a>
-                
+                <!--------------------->
 
                 <nav class="nav-main__header">
                     <div class="nav-main__img-holder">
@@ -64,7 +64,7 @@
                     
                     <ul class="site-nav__list">
                         <input type="checkbox" class="site-nav__checkbox" id="nav-droptoggle" />
-                        <li class="site-nav__item"><a href="#" class="site-nav__link">Home</a></li>
+                        <li class="site-nav__item"><a href="index.html" class="site-nav__link">Home</a></li>
                         <label for="nav-droptoggle" class="site-nav__dropbtn">
                             <li class="site-nav__item site-nav__link site-nav__droplist">About us <div class="site-nav__dropicon"></div>
                                 <ul class="site-nav__dropdown">
@@ -77,13 +77,13 @@
                         <li class="site-nav__item"><a href="#" class="site-nav__link">Merch</a></li>
                         <li class="site-nav__item"><a href="contact.html" class="site-nav__link">Contact Us</a></li>
                     </ul>
-                </nav>
+                </nav> 
             </div>
             
             <header class="header genetics__header alt-header">
-                <h1 class="page-header contact__page-header">Genetics</h1>
+                <h1 class="page-header genetics__page-header">Genetics</h1>
                 <div class="contact__header torn-edge margin-bottom-med margin-top-med">
-                    <div class="contact__header--wrapper">
+                    <div class="contact__header--wrapper genetics__header--wrapper">
                         <p class="contact__p">
                             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima reprehenderit fuga maiores et repudiandae? Corporis odio, omnis repellat ipsum ipsam magni! Repellat voluptatum praesentium numquam at reiciendis? Nulla, ab officiis!
                         </p>
@@ -125,7 +125,7 @@
                     <div class="genetics-filter">
                         <label for="genetics-filter-select" class="genetics-filter__label">Filter View:</label>
                         <select name="genetics-filter-select" id="genetics-filter-select" class="genetics-filter__menu">
-                            <option class="genetics-filter__option" value="none"></option>
+                            <option class="genetics-filter__option" value="none">Show all</option>
                             <option class="genetics-filter__option" value="indica">Indica</option>
                             <option class="genetics-filter__option" value="sativa">Sativa</option>
                             <option class="genetics-filter__option" value="option">option</option>
@@ -135,7 +135,14 @@
                     </div>
 
                     <nav class="genetics__side-menu">
-                        <h3 class="genetics__side-menu__header header-3">Strain List</h3>
+                        <!-- for mobile drop down-->
+                        <input type="checkbox" class="genetics__side-menu__checkbox" id="genetics__side-menu-toggle" />
+                        <label for="genetics__side-menu-toggle" class="genetics__side-menu__button">
+                            <span class="genetics__side-menu__icon">&nbsp;</span>
+                            <h3 class="genetics__side-menu__header header-3">Strain List</h3>
+                        </label>
+                        <!------------------------>
+                        
                         <ul class="genetics__side-menu--list">
                             <li class="genetics__side-menu--item"><a href="#" class="genetics__side-menu--link link--green">list item</a></li>
                             <li class="genetics__side-menu--item"><a href="#" class="genetics__side-menu--link link--green">list item</a></li>

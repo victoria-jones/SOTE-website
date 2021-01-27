@@ -23,6 +23,13 @@
            position: relative;
            z-index: 1;
            @include default-container-padding;
+
+           @include respond(phone) {
+                //padding-top: 1.5rem;
+                //padding-bottom: 0;
+                padding: 1.5rem 3rem 0 3rem;
+            }
+
        }
    }
 
@@ -31,6 +38,8 @@
            max-width: 95%;
        }
    }
+
+   
 }
 
 .contact__social-nav {
