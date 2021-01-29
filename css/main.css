@@ -282,12 +282,27 @@ p:not(:last-child) {
 }
 
 .component__contact {
-  background-image: url(../img/leaves2_bg-large.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
   display: flex;
   justify-content: center;
+}
+
+.home__contact {
+  background-image: url(../img/farm3_bg-large.jpg);
+}
+
+.whoweare__contact {
+  background-image: url(../img/roots_bg-large.jpg);
+}
+
+.meetthefamily__contact {
+  background-image: url(../img/family_bg-large.jpg);
+}
+
+.genetics__contact {
+  background-image: url(../img/buds2_bg-large.jpg);
 }
 
 .genetics__contact {
@@ -1099,7 +1114,7 @@ footer {
   }
 }
 .contact {
-  background-image: url(../img/leaves2_bg-large.jpg);
+  background-image: url(../img/farm2_bg-large.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -1167,7 +1182,7 @@ footer {
   padding-bottom: 20rem;
 }
 .genetics__header {
-  background-image: url(../img/leaves_bg-large.jpg);
+  background-image: url(../img/buds_bg-large.jpg);
   padding-bottom: 5rem;
 }
 @media only screen and (max-width: 37.5em) {
@@ -1596,7 +1611,7 @@ footer {
 }
 
 .meetthefamily {
-  background-image: url(../img/leaves_bg-large.jpg);
+  background-image: url(../img/farm4_bg-large.jpg);
 }
 
 .family-group {
@@ -1643,7 +1658,7 @@ footer {
 }
 
 .whoweare {
-  background-image: url(../img/leaves_bg-large.jpg);
+  background-image: url(../img/babies_bg-large.jpg);
   /*background-size: cover;
   background-attachment: fixed;
   display: flex;
