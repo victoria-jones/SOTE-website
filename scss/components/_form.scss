@@ -66,7 +66,7 @@
 }
 
 .component__contact {
-    background-image: url(../img/leaves2_bg-large.jpg);
+    //background-image: url(../img/leaves2_bg-large.jpg);
     background-repeat: no-repeat;
     background-size: cover; 
     background-attachment: fixed;
@@ -74,6 +74,11 @@
     justify-content: center;
     //@include default-section-container-padding;
 }
+
+.home__contact { background-image: url(../img/farm3_bg-large.jpg); }
+.whoweare__contact { background-image: url(../img/roots_bg-large.jpg); }
+.meetthefamily__contact { background-image: url(../img/family_bg-large.jpg); }
+.genetics__contact { background-image: url(../img/buds2_bg-large.jpg); }
 
 .genetics__contact {
     flex-direction: column;

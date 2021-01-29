@@ -1,7 +1,8 @@
 .container {
     display: grid;
     //10 columns for all pages
-    grid-template-rows: 10rem repeat(4, maxcontent) 20rem; 
+    //grid-template-rows: 10rem repeat(4, maxcontent) 20rem; 
+    grid-template-rows: 10rem repeat(2, maxcontent) 20rem; 
     grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem,1fr) [full-end];
 }
 
@@ -10,7 +11,30 @@
     grid-row: 1;
 }
 
-.header, 
+.header {
+    grid-row: 1 / 2;
+}
+
+.main-contact {
+    grid-row: 1 / 3;
+}
+
+main {
+    grid-row: 3;
+}
+
+footer {
+    grid-row: 4;
+}
+
+.header,
+main,
+.main-contact,
+footer {
+    grid-column: 1 / -1;
+}
+
+/*.header, 
 .clones, 
 .merch, 
 .home__contact,
@@ -75,7 +99,7 @@
 
 .meetthefamily__contact {
     grid-row: 5;
-}
+}*/
 
 
 //The Family grid (who we are & meet the family)

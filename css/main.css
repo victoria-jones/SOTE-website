@@ -282,12 +282,27 @@ p:not(:last-child) {
 }
 
 .component__contact {
-  background-image: url(../img/leaves2_bg-large.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
   display: flex;
   justify-content: center;
+}
+
+.home__contact {
+  background-image: url(../img/farm3_bg-large.jpg);
+}
+
+.whoweare__contact {
+  background-image: url(../img/roots_bg-large.jpg);
+}
+
+.meetthefamily__contact {
+  background-image: url(../img/family_bg-large.jpg);
+}
+
+.genetics__contact {
+  background-image: url(../img/buds2_bg-large.jpg);
 }
 
 .genetics__contact {
@@ -607,7 +622,7 @@ p:not(:last-child) {
 
 .container {
   display: grid;
-  grid-template-rows: 10rem repeat(4, maxcontent) 20rem;
+  grid-template-rows: 10rem repeat(2, maxcontent) 20rem;
   grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(-webkit-min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
   grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
 }
@@ -617,9 +632,32 @@ p:not(:last-child) {
   grid-row: 1;
 }
 
+.header {
+  grid-row: 1/2;
+}
+
+.main-contact {
+  grid-row: 1/3;
+}
+
+main {
+  grid-row: 3;
+}
+
+footer {
+  grid-row: 4;
+}
+
 .header,
-.clones,
-.merch,
+main,
+.main-contact,
+footer {
+  grid-column: 1/-1;
+}
+
+/*.header, 
+.clones, 
+.merch, 
 .home__contact,
 .seedtomed,
 .footer,
@@ -632,61 +670,57 @@ p:not(:last-child) {
 .meetthefamily__contact,
 .genetics__contact,
 .genetics {
-  grid-column: 1/-1;
+    grid-column: 1 / -1;
 }
 
 .header {
-  grid-row: 1/2;
+    grid-row: 1 / 2;
 }
-
 .clones {
-  grid-row: 3;
+    grid-row: 3;
 }
-
 .merch {
-  grid-row: 4;
+    grid-row: 4;
 }
-
 .home__contact {
-  grid-row: 5;
+    grid-row: 5;
 }
 
 .footer {
-  grid-row: 6;
+    grid-row: 6;
 }
 
 .contact {
-  grid-row: 1/-1;
+    grid-row: 1 / -1;
 }
 
 .seedtomed {
-  grid-row: 2;
+    grid-row: 2;
 }
 
 .thefamily {
-  grid-row: 3;
+    grid-row: 3;
 }
 
 .whoweare__contact {
-  grid-row: 4;
+    grid-row: 4;
 }
 
 .family-group--1 {
-  grid-row: 2;
+    grid-row: 2;
 }
 
 .family-group--2 {
-  grid-row: 3;
+    grid-row: 3;
 }
 
 .family-group--3 {
-  grid-row: 4;
+    grid-row: 4;
 }
 
 .meetthefamily__contact {
-  grid-row: 5;
-}
-
+    grid-row: 5;
+}*/
 .soilbox__grid {
   display: grid;
   grid-template-columns: repeat(5, minmax(12rem, 18rem));
@@ -1080,7 +1114,7 @@ p:not(:last-child) {
   }
 }
 .contact {
-  background-image: url(../img/leaves2_bg-large.jpg);
+  background-image: url(../img/farm2_bg-large.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -1148,7 +1182,7 @@ p:not(:last-child) {
   padding-bottom: 20rem;
 }
 .genetics__header {
-  background-image: url(../img/leaves_bg-large.jpg);
+  background-image: url(../img/buds_bg-large.jpg);
   padding-bottom: 5rem;
 }
 @media only screen and (max-width: 37.5em) {
@@ -1577,7 +1611,7 @@ p:not(:last-child) {
 }
 
 .meetthefamily {
-  background-image: url(../img/leaves_bg-large.jpg);
+  background-image: url(../img/farm4_bg-large.jpg);
 }
 
 .family-group {
@@ -1624,7 +1658,7 @@ p:not(:last-child) {
 }
 
 .whoweare {
-  background-image: url(../img/leaves_bg-large.jpg);
+  background-image: url(../img/babies_bg-large.jpg);
   /*background-size: cover;
   background-attachment: fixed;
   display: flex;
