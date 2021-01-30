@@ -178,9 +178,9 @@
                                 <option class="genetics-filter__option" value="none">Show all</option>
                                 <option class="genetics-filter__option" value="indica">Indica</option>
                                 <option class="genetics-filter__option" value="sativa">Sativa</option>
-                                <option class="genetics-filter__option" value="option">option</option>
-                                <option class="genetics-filter__option" value="option">option</option>
-                                <option class="genetics-filter__option" value="option">option</option>
+                                <option class="genetics-filter__option" value="option">Grows Indoors</option>
+                                <option class="genetics-filter__option" value="option">Grows Outdoors</option>
+                                <option class="genetics-filter__option" value="option">Available</option>
                             </select>
                         </div>
 
@@ -193,12 +193,11 @@
                             </label>
                             <!------------------------>
                             
-                            <ul class="genetics__side-menu--list">
-                                <li class="genetics__side-menu--item"><a href="#" class="genetics__side-menu--link link--green">list item</a></li>
-                                <li class="genetics__side-menu--item"><a href="#" class="genetics__side-menu--link link--green">list item</a></li>
-                                <li class="genetics__side-menu--item"><a href="#" class="genetics__side-menu--link link--green">list item</a></li>
-                                <li class="genetics__side-menu--item"><a href="#" class="genetics__side-menu--link link--green">list item</a></li>
-                                <li class="genetics__side-menu--item"><a href="#" class="genetics__side-menu--link link--green">list item</a></li>
+                            <ul class="genetics__side-menu--list" id="genetics-link-list">
+                                <!-- link commented out here for reference
+                                        links are added in by reading json object of strains
+                                    <li class="genetics__side-menu--item"><a href="#" class="genetics__side-menu--link link--green">list item</a></li>
+                                -->
                             </ul>
                         </nav>
 
@@ -482,5 +481,8 @@
             <!--which apparent only works when it feels like it...-->
             <script> </script>
         </footer>
+        <script src="js/genetics/strains-test.js"></script>
+        <script src="js/genetics/populate-strainlist.js"></script>
+        <script src ="js/genetics/create-strain-cards.js"></script>
     </body>
 </html>
