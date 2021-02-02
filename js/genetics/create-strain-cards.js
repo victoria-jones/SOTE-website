@@ -3,85 +3,209 @@
     //add all elements to the card from the object 
     //append to the card list 
 
+/******
+ *******Important********
+ *       
+ *      DO NOT change the order than elements are appended 
+ *      It would mess up the entire card layout
+ *      :)      
+******/
+
+//populate the Genetics cards into the card container
+function populateGeneticsCard(x) {
+    let cardContainer = document.getElementsByClassName("genetics-card__container")[0];
+    let geneticsCards = x;
+
+    for(i in geneticsCards) {
+        cardContainer.appendChild(geneticsCards[i]);
+        //console.log(geneticsCards[i]);
+    }
+}
+
 //Create the strain cards 
 function createCards () {
-    //create card div
-        //div wrapper
-            //div img wrapper 
-                //set background img
-            //div info  wrapper 
-                //h3 strain name header
-                //genetic type wrapper 
-                    //svg use icon/s
-                    //single span with name/s
-                //genetic grow wrapper 
-                    //svg use icon/s
-                    //single span with name/s
-                //genetic card btns
-                    //a contact us
-                    //a quick view
-    // JSON  strainsList 
-    let strains = strainList;
     
-    /*for(i in strains) {
-        //console.log(i + ": " + strains[i]);
-        let strain = strains[i];
-        console.log(strain);
-        
-    }*/
+    let strains = strainList;
 
-    //use foreach to start taking strain info for cards
-    strains.forEach(makeCards);
+    //make a card for each strain from the strain List:(strains-test.json)
+    let geneticsCardList = [];
+    //let createdCard;
+    //createdCard = strains.forEach(makeCards);
+    //geneticsCardList.push(createdCard);
+    for(i in strains) {
+        let newCard = makeCards(strains[i]);
+        geneticsCardList.push(newCard);
+    }
+    
+    //populate the genetics cards
+    populateGeneticsCard(geneticsCardList);
 
     function makeCards (x) {
-        //cardImg(x);
-        //cardInfo(x);
-        let cardButtons = cardBtns();
-        
-        card(cardButtons);
+        //create elements for the cards using strainList.json data
+        const cardImg = createCardImg(x);
+        const cardInfo = createCardInfo(x);
+        const cardBtns = createCardBtns();
+        //pass all the created elements to card
+        let geneticsCards = card(cardInfo, cardImg, cardBtns);
+
+        return geneticsCards;
     }
 
     //pass all the created elements that need to be placed in the divs
-    function card (cardButtons) {
+    function card (cardInfo, cardImg, cardBtns) {
         let cardDiv = document.createElement("div");
         let cardImgDiv = document.createElement("div");
         let cardInfoDiv = document.createElement("div");
-
-        let cardContainer = document.getElementsByClassName("genetics-card__container"[0]);
 
         cardDiv.classList.add("genetics-card");
         cardImgDiv.classList.add("genetics-card__img");
         cardInfoDiv.classList.add("genetics-card__info");
 
-        for(i in cardButtons) {
-            cardInfoDiv.appendChild(cardButtons[i]);
+        //populate divs with created elements using data from strainList.json
+        for(i in cardInfo) {
+            cardInfoDiv.append(cardInfo[i]);
         }
+        cardInfoDiv.appendChild(cardBtns);
+        cardImgDiv.appendChild(cardImg);
 
+        //append the sections to the card
         cardDiv.appendChild(cardImgDiv);
         cardDiv.appendChild(cardInfoDiv);
-
-        //console.log(cardButtons);
-        console.log(cardDiv);
-        //card div
-            //card wrapper
-                //img wrapper
-                //info wrapper
-                //btn wrapper 
+        
+        //console.log(cardDiv);
+        return cardDiv;
+    }
+    
+    //create the elements that will go into the cardImg div
+        //this will be replaced with a background css image when when get them
+    function createCardImg (x) {
+        let cardImg = document.createElement("span");
+        cardImg.innerHTML = x.photo;
+        return cardImg;
     }
 
-    function cardImg () {
-            //set img
+    //create all the elements that will go into the cardInfo div
+    function createCardInfo (x) {
+       
+        let cardTitle = document.createElement("h3");
+        let cardGenetic = createCardGenetic();
+        let cardGrow = createCardGrow();
+        let strainName;
+        let strainNameWords;
+
+        //creating the strain card name here
+        cardTitle.classList.add("genetics-card__header", "header-3");
+
+        //capitalize all first letters of the stain name
+        strainName = x.name;
+        strainNameWords = strainName.split(" ");
+        for(i in strainNameWords) {
+            strainNameWords[i] = strainNameWords[i].charAt(0).toUpperCase() + strainNameWords[i].substr(1);
+        }
+        strainName = strainNameWords.join(" ");
+        cardTitle.innerHTML = strainName;
+
+        //return all card info to populate the card
+        return [cardTitle, cardGenetic, cardGrow];
+
+        //create the svg and use elements and set the image depending on the strain type: x.type
+        //append the type text after
+        function createCardGenetic() {
+            let cardGeneticType = document.createElement("div");
+            let cardGeneticSvg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+            let cardGeneticSvgUse = document.createElementNS('http://www.w3.org/2000/svg', 'use');
+            let cardGeneticText = document.createElement("span");
+            let geneticType;
+
+            cardGeneticType.classList.add("genetics-card__type");
+            cardGeneticSvg.classList.add("genetics__key--icon");
+            cardGeneticText.classList.add("genetics__key--icon-name");
+
+            geneticType = x.type;
+            geneticType = geneticType.charAt(0).toUpperCase() + geneticType.substr(1);
+            cardGeneticText.innerHTML = geneticType;
+
+            //check type and add appropriate svg icon
+            if(x.type === "indica") {
+                cardGeneticSvg.classList.add("genetics-card__type--icon--1");
+                cardGeneticSvgUse.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href', 'img/sprite.svg#icon-arrow-with-circle-up');
+            } else {
+                cardGeneticSvg.classList.add("genetics-card__type--icon--2");
+                cardGeneticSvgUse.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href', 'img/sprite.svg#icon-arrow-with-circle-down');
+            }
+            cardGeneticSvg.appendChild(cardGeneticSvgUse);
+
+            //append svgs then append text
+            cardGeneticType.appendChild(cardGeneticSvg);
+            cardGeneticType.appendChild(cardGeneticText);
+
+            return cardGeneticType;
+        }
+
+        //create the svg and use elements for the grow type: x.grow
+        //append the grow text after
+        /**** confusing and worth noting
+         *      grow is linked to "grow" in the strainList
+         *      BUT is named "care" in the html 
+         *      (can be changed, but recommened json name change and change in variable names 
+         *          otherwise the css will need to be run through and fixed)
+        *****/
+        function createCardGrow () {
+            let cardGrowType = document.createElement("div");
+            let cardGrowSvgList = [];
+            let cardGrowSvg;
+            let cardGrowSvgUse;
+            let cardGrowText = document.createElement("span");
+            let growTypeString;
+            let growTypeStringList = [];
+
+            cardGrowType.classList.add("genetics-card__care");
+            cardGrowText.innerHTML = "Grows ";
+
+            cardGrowText.classList.add("genetics__key--icon-name");
+
+            //capitalize first letter in string add to string list
+            for(i in x.grow) {
+                growTypeString = x.grow[i];
+                growTypeString = growTypeString.charAt(0).toUpperCase() + growTypeString.substr(1);
+                growTypeStringList.push(growTypeString);
+            }
+
+            cardGrowText.innerHTML += growTypeStringList.join("/");
+
+            //check for grow types create appropriate svgs then add to svg lists
+            for(i in x.grow) {
+                cardGrowSvg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+                cardGrowSvgUse = document.createElementNS('http://www.w3.org/2000/svg', 'use');
+                if(x.grow[i] === "outdoors") {
+                    cardGrowSvg.classList.add("genetics__key--icon", "genetics-card__type--icon--3");
+                    cardGrowSvgUse.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href', 'img/sprite.svg#icon-home3');
+                } else {
+                    cardGrowSvg.classList.add("genetics__key--icon", "genetics-card__type--icon--4");
+                    cardGrowSvgUse.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href', 'img/sprite.svg#icon-sun');
+                }
+
+                cardGrowSvg.appendChild(cardGrowSvgUse);
+                cardGrowSvgList.push(cardGrowSvg);
+            }
+            
+            //append svgs
+            for(i in cardGrowSvgList) {
+                cardGrowType.appendChild(cardGrowSvgList[i]);
+            }
+            //append text
+            cardGrowType.appendChild(cardGrowText);
+            
+            return cardGrowType;
+        }
+
     }
 
-    function cardInfo () {
-        //h3
-        //genetic type
-        //genetic care
-    }
-
-    function cardBtns () {
+    function createCardBtns () {
         let cardContact = document.createElement("a");
         let cardQuickview = document.createElement("a");
+        let cardBtnContainer = document.createElement("div");
+
         cardContact.classList.add("card-btn");
         cardQuickview.classList.add("card-link");
         cardContact.href = "#";
@@ -89,7 +213,11 @@ function createCards () {
         cardContact.innerHTML = "Contact Us";
         cardQuickview.innerHTML = "Quick View";
 
-        return[cardContact, cardQuickview];
+        cardBtnContainer.classList.add("genetics-card__btns");
+        cardBtnContainer.appendChild(cardContact);
+        cardBtnContainer.appendChild(cardQuickview);
+
+        return cardBtnContainer;
     }
 
    
