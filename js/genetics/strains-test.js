@@ -20,7 +20,7 @@ var strainList = [
     {
         "name": "strain 3",
         "type": "indica",
-        "grow": ["indoors"],
+        "grow": ["outdoors"],
         "description": "blah blah description 3 hello! test test test",
         "photo": "img name here (img only not full address)",
         "available": true,
@@ -29,7 +29,7 @@ var strainList = [
     {
         "name": "strain 4",
         "type": "sativa",
-        "grow": ["indoors"],
+        "grow": ["indoors", "outdoors"],
         "description": "blah blah description 4 hello! test test test",
         "photo": "img name here (img only not full address)",
         "available": false,
@@ -47,7 +47,7 @@ var strainList = [
     {
         "name": "strain 6",
         "type": "indica",
-        "grow": ["indoors"],
+        "grow": ["indoors", "outdoors"],
         "description": "blah blah description 6 hello! test test test",
         "photo": "img name here (img only not full address)",
         "available": true,
