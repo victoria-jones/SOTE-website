@@ -19,49 +19,55 @@
             <!--<input type="checkbox" class="genetics-popup__checkbox popup__checkbox" id="popup-toggle" /> -->   
             <div class="genetics-popup popup">
                 <div class="genetics-popup--wrapper popup--wrapper">
-                   <!-- <label for="popup-toggle" class="genetics-popup__button popup__button">
-                        <span class="genetics-popup__icon popup__icon">&nbsp;</span>
-                    </label> -->
 
-                    <div class="genetics-popup__button popup__button">
+                    <div class="genetics-popup__close-btn popup__close-btn">
                         <span class="genetics-popup__icon popup__icon">&nbsp;</span>
                     </div>
 
-                    <div class="genetics-popup__img">
-                        img
-                    </div>
-
-                    <div class="genetics-popup__info">
-                        <h3 class="genetics-popup__header header-3">Strain Name</h3>
-
-                        <div class="genetics-popup__type">
-                            <svg class="genetics__key--icon genetics-card__type--icon--1">
-                                <use xlink:href="img/sprite.svg#icon-arrow-with-circle-up"></use>
-                            </svg>
-                            <span class="genetics__key--icon-name">Indica</span>
-                        </div>
-
-                        <div class="genetics-popup__care">
-                            <svg class="genetics__key--icon genetics-card__type--icon--3">
-                                <use xlink:href="img/sprite.svg#icon-home3"></use>
-                            </svg>
-                            <svg class="genetics__key--icon genetics-card__type--icon--4">
-                                <use xlink:href="img/sprite.svg#icon-sun"></use>
-                            </svg>
-                            <span class="genetics__key--icon-name">Grows Indoors/Outdoors</span>
-                        </div>
-
-                        <div class="genetics-popup__details">
-                            <p class="genetics-popup__p">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo distinctio tempore earum vel sunt, ipsa ad sequi mollitia, nobis eligendi ratione asperiores omnis incidunt dolorum nihil officiis! Quae, architecto neque! Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi voluptatem, iste magnam voluptate eligendi inventore culpa minima totam autem praesentium blanditiis consectetur in fugiat eos architecto numquam. Officiis, qui iure.
-                            </p>
-                            <p class="genetics-popup__p">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo cupiditate provident, dolorum unde ipsa eaque praesentium animi aspernatur quia saepe est corporis, inventore aliquid dolorem repellat eius laboriosam. Illum, numquam!
-                            </p>
+                    <div class="genetics-popup__quickview">
+                        <div class="genetics-popup__img">     
                         </div>
                         
-                        <a href="#" class="genetics-popup__btn btn">Contact Us</a>
+                        <div class="genetics-popup__info">
+                            <h3 class="genetics-popup__header header-3"></h3>
+    
+                            <div class="genetics-popup__type">
+                                <!-- kept here for reference
+                                <svg class="genetics__key--icon genetics-card__type--icon--1">
+                                    <use xlink:href="img/sprite.svg#icon-arrow-with-circle-up"></use>
+                                </svg>
+                                <span class="genetics__key--icon-name">Indica</span>
+                                -->
+                            </div>
+    
+                            <div class="genetics-popup__care">
+                                <!-- kept here for reference
+                                <svg class="genetics__key--icon genetics-card__type--icon--3">
+                                    <use xlink:href="img/sprite.svg#icon-home3"></use>
+                                </svg>
+                                <svg class="genetics__key--icon genetics-card__type--icon--4">
+                                    <use xlink:href="img/sprite.svg#icon-sun"></use>
+                                </svg>
+                                <span class="genetics__key--icon-name">Grows Indoors/Outdoors</span>
+                                 -->
+                            </div>
+    
+                            <div class="genetics-popup__details">
+                                <!-- left here for refence
+                                <p class="genetics-popup__p">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo distinctio tempore earum vel sunt, ipsa ad sequi mollitia, nobis eligendi ratione asperiores omnis incidunt dolorum nihil officiis! Quae, architecto neque! Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi voluptatem, iste magnam voluptate eligendi inventore culpa minima totam autem praesentium blanditiis consectetur in fugiat eos architecto numquam. Officiis, qui iure.
+                                </p>
+                                <p class="genetics-popup__p">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo cupiditate provident, dolorum unde ipsa eaque praesentium animi aspernatur quia saepe est corporis, inventore aliquid dolorem repellat eius laboriosam. Illum, numquam!
+                                </p>
+                                -->
+                            </div>
+                            
+                            <a href="#" class="genetics-popup__btn btn card-btn">Contact Us</a>
+                        </div>
                     </div>
+
+                    
                 </div>
             </div>
     
@@ -356,5 +362,6 @@
         <script src="js/genetics/populate-strainlist.js"></script>
         <script src="js/genetics/create-strain-cards.js"></script>
         <script src="js/genetics/filter-strains.js"></script>
+        <script src="js/genetics/populate-strain-quickview.js"></script>
     </body>
 </html>
