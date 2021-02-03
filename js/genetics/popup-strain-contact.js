@@ -58,7 +58,7 @@ function createEventListeners() {
          let popup = document.getElementsByClassName("popup--wrapper")[0];
          let contactView = document.getElementsByClassName("genetics-popup__contact")[0];
  
-         popupBackground.style.zIndex = "1000";
+         popupBackground.style.zIndex = "10000";
          popupBackground.style.opacity = "1";
  
          popup.style.height = "95vh";
@@ -75,12 +75,8 @@ function createEventListeners() {
         //hide the popup and clear the message
             //the rest of the hide pop-up functionality works with populate-strain-quickview.js
         let contactView = document.getElementsByClassName("genetics-popup__contact")[0];
-        let messageArea = document.getElementById("message-quickview");
-        messageArea.innerHTML = "";
-        contactView.style.display = "none"; 
-        //reset form
-        
-        
+
+        contactView.style.display = "none";      
     }
 
 }

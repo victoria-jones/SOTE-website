@@ -54,11 +54,23 @@ function createEventListeners () {
 
     function populateStrainImg(x) {
         //change this later to be an img bg
+        //remove any span children to strainImgDiv if there are any
+        removeCurrentImgSpan();
         let strainImg = x.photo;
         let strainImgDiv = document.getElementsByClassName("genetics-popup__img")[0];
         let strainImgSpan = document.createElement("span");
+        strainImgSpan.classList.add("imgSpan");
         strainImgSpan.innerHTML = strainImg;
         strainImgDiv.appendChild(strainImgSpan);
+    }
+
+    function removeCurrentImgSpan() {
+        let strainImgDiv = document.getElementsByClassName("genetics-popup__img")[0];
+        //check for children and remove them
+        while(strainImgDiv.lastElementChild) {
+            strainImgDiv.removeChild(strainImgDiv.lastElementChild);
+        }
+        
     }
 
     function populateName(x) {
@@ -177,7 +189,7 @@ function createEventListeners () {
     function removeCurrentHiddenTag() {
         let popupQuickview = document.getElementsByClassName("genetics-popup__quickview")[0];
         let popupInput = popupQuickview.getElementsByTagName("input");
-        if(popupInput) {
+        if(popupInput.length > 0) {
             for(i in popupInput) {
                 if(popupInput[i].type === "hidden") {
                     popupInput[i].remove();
@@ -192,7 +204,7 @@ function createEventListeners () {
         let popup = document.getElementsByClassName("popup--wrapper")[0];
         let quickview = document.getElementsByClassName("genetics-popup__quickview")[0];
 
-        popupBackground.style.zIndex = "1000";
+        popupBackground.style.zIndex = "10000";
         popupBackground.style.opacity = "1";
 
         popup.style.height = "95vh";
