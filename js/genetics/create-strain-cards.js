@@ -18,7 +18,6 @@ function populateGeneticsCard(x) {
 
     for(i in geneticsCards) {
         cardContainer.appendChild(geneticsCards[i]);
-        //console.log(geneticsCards[i]);
     }
 }
 

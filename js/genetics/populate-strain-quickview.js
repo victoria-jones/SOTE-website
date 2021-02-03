@@ -2,6 +2,7 @@
 function createEventListeners () {
     //popup listener
     let quickviewLink = document.getElementsByClassName("card-link");
+    let strainListLink = document.getElementsByClassName("genetics__side-menu--link");
     for(i in quickviewLink) {
         if(quickviewLink[i].addEventListener) {
             quickviewLink[i].addEventListener("click", (x) => { x.preventDefault(); populateQuickview(x); }, false);
@@ -9,6 +10,16 @@ function createEventListeners () {
             quickviewLink[i].attachEvent("onclick", (x) => { x.preventDefault(); populateQuickview(x); });
         }
     }
+
+    for(i in strainListLink) {
+        if(strainListLink[i].addEventListener) {
+            strainListLink[i].addEventListener("click", (x) => { x.preventDefault(); populateQuickview(x); }, false);
+        } else if (strainListLink[i].attachEvent) {
+            strainListLink[i].attachEvent("onclick", (x) => { x.preventDefault(); populateQuickview(x); });
+        }
+    }
+
+
     //close button listener 
     let quickviewClose = document.getElementsByClassName("popup__close-btn")[0];
     if(quickviewClose.addEventListener) {
@@ -18,10 +29,18 @@ function createEventListeners () {
     }
 
     function populateQuickview(x) {
-        //get selected card data
-        let selectedStrain = x.currentTarget.parentNode.parentNode.parentNode.querySelector('input[type=hidden]').value;
-        selectedStrain = JSON.parse(selectedStrain);
-        console.log(selectedStrain);
+        //get selected card data depending on which link was clicked
+        let selectedStrain;
+        let selectedStrainUnparsed;
+        //quick view link
+        if(x.currentTarget.className === "card-link") {
+            selectedStrainUnparsed = x.currentTarget.parentNode.parentNode.parentNode.querySelector('input[type=hidden]').value;
+        } else {    //strain list link
+            selectedStrainUnparsed = x.currentTarget.parentNode.querySelector('input[type=hidden]').value;
+        }
+
+        selectedStrain = JSON.parse(selectedStrainUnparsed);
+        
 
         //open popup after populating
         populateStrainImg(selectedStrain);
@@ -29,6 +48,7 @@ function createEventListeners () {
         populateStrainType(selectedStrain);
         populateStrainGrow(selectedStrain);
         populateStrainDescription(selectedStrain);
+        createTags(selectedStrain);
         showPopup();
     }
 
@@ -140,28 +160,60 @@ function createEventListeners () {
         popupDescriptionDiv.appendChild(popupDescriptionP);
     }
 
+    //create tags with card object info for searching and populating pop-ups
+    function createTags (x) {
+        //first remove hidden tag if there is one
+        removeCurrentHiddenTag();
+        //add hidden tag with selected strain data
+        let cardTag = document.createElement("input");
+        let popupQuickview = document.getElementsByClassName("genetics-popup__quickview")[0];
+        cardTag.type = "hidden";
+        cardTag.value = (JSON.stringify(x));
+        
+        //attach to parent
+        popupQuickview.appendChild(cardTag);
+    }
+
+    function removeCurrentHiddenTag() {
+        let popupQuickview = document.getElementsByClassName("genetics-popup__quickview")[0];
+        let popupInput = popupQuickview.getElementsByTagName("input");
+        if(popupInput) {
+            for(i in popupInput) {
+                if(popupInput[i].type === "hidden") {
+                    popupInput[i].remove();
+                }
+            }
+        }
+    }
+
     function showPopup() {
         //display the popup
         let popupBackground = document.getElementsByClassName("popup")[0];
         let popup = document.getElementsByClassName("popup--wrapper")[0];
+        let quickview = document.getElementsByClassName("genetics-popup__quickview")[0];
 
         popupBackground.style.zIndex = "1000";
         popupBackground.style.opacity = "1";
 
         popup.style.height = "95vh";
         popup.style.bottom = "0";
+
+        quickview.style.display = "flex";
     }
 
     function hidePopup() {
-        //display the popup
+        //hide the popup
         let popupBackground = document.getElementsByClassName("popup")[0];
         let popup = document.getElementsByClassName("popup--wrapper")[0];
+        let quickview = document.getElementsByClassName("genetics-popup__quickview")[0];
 
         popupBackground.style.zIndex = "-1000";
         popupBackground.style.opacity = "0";
 
         popup.style.height = "0";
         popup.style.bottom = "110%";
+
+        quickview.style.display = "none";
 
         //empty the fields too
         let popupType = document.getElementsByClassName("genetics-popup__type")[0];

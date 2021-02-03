@@ -15,6 +15,8 @@
     opacity: 0;
     z-index: -1000;
 
+    transition: opacity .5s;
+
     &--wrapper {
         position: relative;
         background-color: $color-white;
@@ -28,6 +30,8 @@
 
         height: 0;
         bottom: 110%;
+
+        transition: bottom .5s cubic-bezier(0.83, 0, 0.17, 1);
 
         @include respond(tab-port) {
             max-height: 95vh;
@@ -63,7 +67,16 @@
         flex-shrink: 0;
         transition: .2s;
 
-        @include respond(tab-port) {
+        top: 1.5rem;
+        right: 1.5rem;
+        @include box-shadow-light;
+
+        &:active {
+            @include box-shadow-pushed;
+            transform: translateY(1px);
+        }
+
+        /*@include respond(tab-port) {
             top: 1.5rem;
             right: 1.5rem;
             @include box-shadow-light;
@@ -72,7 +85,7 @@
                 @include box-shadow-pushed;
                 transform: translateY(1px);
             }
-        }
+        }*/
     }
     &__icon {
         position: relative;
