@@ -426,7 +426,6 @@ p:not(:last-child) {
   position: relative;
   background-color: #fff;
   width: 95vw;
-  height: 95vh;
   max-width: 100rem;
   max-height: 70rem;
   display: flex;
@@ -434,7 +433,7 @@ p:not(:last-child) {
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.5);
   height: 0;
   bottom: 110%;
-  transition: bottom 0.5s cubic-bezier(0.83, 0, 0.17, 1);
+  transition: bottom 0.8s cubic-bezier(0.83, 0, 0.17, 1);
 }
 @media only screen and (max-width: 56.25em) {
   .popup--wrapper {
