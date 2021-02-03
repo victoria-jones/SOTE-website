@@ -34,7 +34,7 @@ function createEventListeners () {
 
     function populateStrainImg(x) {
         //change this later to be an img bg
-        let strainImg = x.img;
+        let strainImg = x.photo;
         let strainImgDiv = document.getElementsByClassName("genetics-popup__img")[0];
         let strainImgSpan = document.createElement("span");
         strainImgSpan.innerHTML = strainImg;
