@@ -421,9 +421,6 @@ p:not(:last-child) {
       cursor: pointer;
   }*/
 }
-.popup__checkbox {
-  display: none;
-}
 .popup--wrapper {
   position: relative;
   background-color: #fff;
@@ -442,7 +439,7 @@ p:not(:last-child) {
     max-height: 95vh;
   }
 }
-.popup__button {
+.popup__close-btn {
   position: absolute;
   top: 0;
   right: 0;
@@ -456,12 +453,12 @@ p:not(:last-child) {
   transition: 0.2s;
 }
 @media only screen and (max-width: 56.25em) {
-  .popup__button {
+  .popup__close-btn {
     top: 1.5rem;
     right: 1.5rem;
     box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.5);
   }
-  .popup__button:active {
+  .popup__close-btn:active {
     box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.8);
     transform: translateY(1px);
   }
@@ -1426,9 +1423,14 @@ footer {
   justify-content: space-between;
 }
 
+.genetics-popup__quickview {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
 .genetics-popup__img {
   background-color: orange;
-  width: 220%;
+  width: 60%;
   margin-left: -16rem;
   transform: skew(-15deg, 0);
 }
@@ -1454,7 +1456,7 @@ footer {
   align-items: center;
 }
 @media only screen and (max-width: 56.25em) {
-  .genetics-popup--wrapper {
+  .genetics-popup--wrapper, .genetics-popup__quickview {
     flex-wrap: wrap;
   }
   .genetics-popup__info {

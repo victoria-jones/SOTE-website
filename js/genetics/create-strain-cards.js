@@ -45,14 +45,15 @@ function createCards () {
         const cardImg = createCardImg(x);
         const cardInfo = createCardInfo(x);
         const cardBtns = createCardBtns();
+        const cardTags = createTags(x);
         //pass all the created elements to card
-        let geneticsCards = card(cardInfo, cardImg, cardBtns);
+        let geneticsCards = card(cardInfo, cardImg, cardBtns, cardTags);
 
         return geneticsCards;
     }
 
     //pass all the created elements that need to be placed in the divs
-    function card (cardInfo, cardImg, cardBtns) {
+    function card (cardInfo, cardImg, cardBtns, cardTags) {
         let cardDiv = document.createElement("div");
         let cardImgDiv = document.createElement("div");
         let cardInfoDiv = document.createElement("div");
@@ -71,8 +72,8 @@ function createCards () {
         //append the sections to the card
         cardDiv.appendChild(cardImgDiv);
         cardDiv.appendChild(cardInfoDiv);
+        cardDiv.appendChild(cardTags);
         
-        //console.log(cardDiv);
         return cardDiv;
     }
     
@@ -177,7 +178,7 @@ function createCards () {
             for(i in x.grow) {
                 cardGrowSvg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
                 cardGrowSvgUse = document.createElementNS('http://www.w3.org/2000/svg', 'use');
-                if(x.grow[i] === "outdoors") {
+                if(x.grow[i] === "indoors") {
                     cardGrowSvg.classList.add("genetics__key--icon", "genetics-card__type--icon--3");
                     cardGrowSvgUse.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href', 'img/sprite.svg#icon-home3');
                 } else {
@@ -218,6 +219,16 @@ function createCards () {
         cardBtnContainer.appendChild(cardQuickview);
 
         return cardBtnContainer;
+    }
+
+    //create tags with card object info for searching and populating pop-ups
+    function createTags (x) {
+        let cardTag = document.createElement("input");
+        cardTag.type = "hidden";
+        cardTag.value = (JSON.stringify(x));
+        
+
+        return cardTag;  
     }
 
    

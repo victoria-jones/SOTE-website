@@ -14,11 +14,6 @@
     
     opacity: 0;
     z-index: -1000;
-    
-
-    &__checkbox {
-        display: none;
-    }
 
     &--wrapper {
         position: relative;
@@ -55,7 +50,7 @@
         cursor: pointer;
     }*/
 
-    &__button {
+    &__close-btn {
         position: absolute;
         top: 0;
         right: 0;
