@@ -13,13 +13,19 @@ function getStrains () {
         let linkList = document.getElementById("genetics-link-list");
         let strainLink = document.createElement("a");
         let strainListItem = document.createElement("li");
+        let strainHiddenInput = document.createElement("input");
 
         strainListItem.className = "genetics__side-menu--item";
         strainLink.className = "genetics__side-menu--link link--green";
         strainLink.href = "#";
         strainLink.innerHTML = strainName;
 
+        //hidden input for strain info to populat popup
+        strainHiddenInput.type = "hidden";
+        strainHiddenInput.value = (JSON.stringify(x));
+
         strainListItem.appendChild(strainLink);
+        strainListItem.appendChild(strainHiddenInput);
         linkList.appendChild(strainListItem);
     }
 }

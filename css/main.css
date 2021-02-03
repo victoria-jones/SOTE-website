@@ -405,6 +405,7 @@ p:not(:last-child) {
   align-items: center;
   opacity: 0;
   z-index: -1000;
+  transition: opacity 0.5s;
   /*&__button {
       height: 6rem;
       width: 6rem;
@@ -433,6 +434,7 @@ p:not(:last-child) {
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.5);
   height: 0;
   bottom: 110%;
+  transition: bottom 0.5s cubic-bezier(0.83, 0, 0.17, 1);
 }
 @media only screen and (max-width: 56.25em) {
   .popup--wrapper {
@@ -451,17 +453,23 @@ p:not(:last-child) {
   cursor: pointer;
   flex-shrink: 0;
   transition: 0.2s;
+  top: 1.5rem;
+  right: 1.5rem;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.5);
+  /*@include respond(tab-port) {
+      top: 1.5rem;
+      right: 1.5rem;
+      @include box-shadow-light;
+
+      &:active {
+          @include box-shadow-pushed;
+          transform: translateY(1px);
+      }
+  }*/
 }
-@media only screen and (max-width: 56.25em) {
-  .popup__close-btn {
-    top: 1.5rem;
-    right: 1.5rem;
-    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.5);
-  }
-  .popup__close-btn:active {
-    box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.8);
-    transform: translateY(1px);
-  }
+.popup__close-btn:active {
+  box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.8);
+  transform: translateY(1px);
 }
 .popup__icon {
   position: relative;
@@ -1426,7 +1434,7 @@ footer {
 .genetics-popup__quickview {
   width: 100%;
   height: 100%;
-  display: flex;
+  display: none;
 }
 .genetics-popup__img {
   background-color: orange;
@@ -1454,6 +1462,14 @@ footer {
 .genetics-popup__type, .genetics-popup__care {
   display: flex;
   align-items: center;
+}
+.genetics-popup__contact {
+  display: none;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  background-image: url(../img/buds2_bg-large.jpg);
 }
 @media only screen and (max-width: 56.25em) {
   .genetics-popup--wrapper, .genetics-popup__quickview {
