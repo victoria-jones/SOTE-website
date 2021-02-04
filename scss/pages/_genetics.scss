@@ -5,6 +5,10 @@
         background-image: url(../img/buds_bg-large.jpg);
         padding-bottom: 5rem;
 
+        @include respond(phone) {
+            background-image: url(../img/buds_bg-small.jpg);
+        }
+
         &--wrapper {
             @include respond(phone) {
                 padding: 1.5rem;
@@ -336,6 +340,14 @@
         justify-content: center;
         align-items: center;
         background-image: url(../img/buds2_bg-large.jpg);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+
+        @include respond(phone) {
+            background-image: url(../img/buds2_bg-small.jpg);
+        }
     }
 
     @include respond(tab-port) {

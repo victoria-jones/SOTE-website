@@ -1,5 +1,8 @@
 .meetthefamily {
     background-image: url(../img/farm4_bg-large.jpg);
+    @include respond(phone) {
+        background-image: url(../img/farm4_bg-small.jpg);
+    }
 }
 
 .family-group {

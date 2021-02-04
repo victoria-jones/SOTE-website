@@ -1,39 +1,8 @@
 .whoweare {
     background-image: url(../img/babies_bg-large.jpg);
-
-    //moved to a reusable header layout
-    /*background-size: cover;
-    background-attachment: fixed;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: auto;*/
-
-    /*&__p-container {
-        background-color: $color-white;
-        padding: 9rem 7rem;
-        @include default-container-max-width;
-        @include box-shadow-light;
-    }
-
-    @include respond(tab-port) {
-        &__p-container {
-            max-width: 95%;
-        }
-    }
-
     @include respond(phone) {
-        &__p-container {
-            padding: 6rem 4rem;  
-            margin-bottom: 10rem; 
-        }
+        background-image: url(../img/babies_bg-small.jpg);
     }
-
-    @include respond(phone-med) {
-        &__p-container {
-            margin-bottom: 15rem;
-        }
-    }*/
 }
 
 .seedtomed {

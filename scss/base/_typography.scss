@@ -37,6 +37,7 @@ body {
     font-size: $title-font-size;
     color: $color-white;
     margin-top: 20rem;
+    @include text-shadow;
     @include respond(phone) {
         margin-top: 12rem !important;
     }
