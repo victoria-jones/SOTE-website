@@ -6,6 +6,10 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    @include respond(phone) {
+        background-image: url(../img/leaves_bg-small.jpg);
+    }
 }
 
 .clones {

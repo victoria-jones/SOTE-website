@@ -108,6 +108,7 @@ body {
   font-size: 4.5rem;
   color: #fff;
   margin-top: 20rem;
+  text-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.7);
 }
 @media only screen and (max-width: 37.5em) {
   .page-header {
@@ -285,6 +286,7 @@ p:not(:last-child) {
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
+  background-position: center;
   display: flex;
   justify-content: center;
 }
@@ -292,17 +294,37 @@ p:not(:last-child) {
 .home__contact {
   background-image: url(../img/farm3_bg-large.jpg);
 }
+@media only screen and (max-width: 37.5em) {
+  .home__contact {
+    background-image: url(../img/farm3_bg-small.jpg);
+  }
+}
 
 .whoweare__contact {
   background-image: url(../img/roots_bg-large.jpg);
+}
+@media only screen and (max-width: 37.5em) {
+  .whoweare__contact {
+    background-image: url(../img/roots_bg-small.jpg);
+  }
 }
 
 .meetthefamily__contact {
   background-image: url(../img/family_bg-large.jpg);
 }
+@media only screen and (max-width: 37.5em) {
+  .meetthefamily__contact {
+    background-image: url(../img/family_bg-small.jpg);
+  }
+}
 
 .genetics__contact {
   background-image: url(../img/buds2_bg-large.jpg);
+}
+@media only screen and (max-width: 37.5em) {
+  .genetics__contact {
+    background-image: url(../img/buds2_bg-small.jpg);
+  }
 }
 
 .genetics__contact {
@@ -779,6 +801,10 @@ footer {
 .header {
   min-height: 110vh;
 }
+.header__img {
+  filter: drop-shadow(0 1rem 1rem rgba(0, 0, 0, 0.7));
+  -webkit-filter: drop-shadow(0 1rem 1rem rgba(0, 0, 0, 0.7));
+}
 @media only screen and (max-width: 56.25em) {
   .header__img {
     transform: scale(0.6);
@@ -798,6 +824,7 @@ footer {
 .alt-header {
   background-size: cover;
   background-attachment: fixed;
+  background-position: center;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -854,6 +881,8 @@ footer {
 .nav-main__img {
   height: 7rem;
   display: inline-block;
+  filter: drop-shadow(0 1rem 1rem rgba(0, 0, 0, 0.7));
+  -webkit-filter: drop-shadow(0 1rem 1rem rgba(0, 0, 0, 0.7));
 }
 .nav-main__social-nav {
   flex-grow: 1;
@@ -883,6 +912,7 @@ footer {
 .site-nav__link {
   display: inline-block;
   transition: all 0.2s;
+  text-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.7);
   cursor: pointer;
 }
 .site-nav__link, .site-nav__link:link, .site-nav__link:visited {
@@ -945,6 +975,8 @@ footer {
   width: 2rem;
   fill: #fff;
   cursor: pointer;
+  filter: drop-shadow(0 1rem 1rem rgba(0, 0, 0, 0.7));
+  -webkit-filter: drop-shadow(0 1rem 1rem rgba(0, 0, 0, 0.7));
 }
 .social-nav__list {
   width: 100%;
@@ -994,6 +1026,9 @@ footer {
   }
   .site-nav__item:not(:last-child) {
     margin-bottom: 1.5rem;
+  }
+  .site-nav__link {
+    text-shadow: none;
   }
   .site-nav__droplist {
     margin-right: -4rem;
@@ -1064,12 +1099,16 @@ footer {
 
   .nav-mobile__img {
     height: 4rem;
+    width: 12.5rem;
     position: fixed;
     top: 0;
     left: 0;
     margin-left: 1rem;
     margin-top: 2rem;
     z-index: 2;
+    fill: #fff;
+    filter: drop-shadow(0 1rem 1rem rgba(0, 0, 0, 0.7));
+    -webkit-filter: drop-shadow(0 1rem 1rem rgba(0, 0, 0, 0.7));
   }
 
   .nav-mobile__background {
@@ -1127,6 +1166,11 @@ footer {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+@media only screen and (max-width: 37.5em) {
+  .contact {
+    background-image: url(../img/farm2_bg-small.jpg);
+  }
 }
 .contact__header, .contact__form-wrapper {
   max-width: 80rem;
@@ -1188,6 +1232,11 @@ footer {
 .genetics__header {
   background-image: url(../img/buds_bg-large.jpg);
   padding-bottom: 5rem;
+}
+@media only screen and (max-width: 37.5em) {
+  .genetics__header {
+    background-image: url(../img/buds_bg-small.jpg);
+  }
 }
 @media only screen and (max-width: 37.5em) {
   .genetics__header--wrapper {
@@ -1469,6 +1518,15 @@ footer {
   justify-content: center;
   align-items: center;
   background-image: url(../img/buds2_bg-large.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+@media only screen and (max-width: 37.5em) {
+  .genetics-popup__contact {
+    background-image: url(../img/buds2_bg-small.jpg);
+  }
 }
 @media only screen and (max-width: 56.25em) {
   .genetics-popup--wrapper, .genetics-popup__quickview {
@@ -1534,6 +1592,11 @@ footer {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+@media only screen and (max-width: 37.5em) {
+  .home__header {
+    background-image: url(../img/leaves_bg-small.jpg);
+  }
 }
 
 .clones {
@@ -1630,6 +1693,11 @@ footer {
 .meetthefamily {
   background-image: url(../img/farm4_bg-large.jpg);
 }
+@media only screen and (max-width: 37.5em) {
+  .meetthefamily {
+    background-image: url(../img/farm4_bg-small.jpg);
+  }
+}
 
 .family-group {
   display: flex;
@@ -1676,37 +1744,11 @@ footer {
 
 .whoweare {
   background-image: url(../img/babies_bg-large.jpg);
-  /*background-size: cover;
-  background-attachment: fixed;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  height: auto;*/
-  /*&__p-container {
-      background-color: $color-white;
-      padding: 9rem 7rem;
-      @include default-container-max-width;
-      @include box-shadow-light;
+}
+@media only screen and (max-width: 37.5em) {
+  .whoweare {
+    background-image: url(../img/babies_bg-small.jpg);
   }
-
-  @include respond(tab-port) {
-      &__p-container {
-          max-width: 95%;
-      }
-  }
-
-  @include respond(phone) {
-      &__p-container {
-          padding: 6rem 4rem;  
-          margin-bottom: 10rem; 
-      }
-  }
-
-  @include respond(phone-med) {
-      &__p-container {
-          margin-bottom: 15rem;
-      }
-  }*/
 }
 
 .seedtomed {

@@ -70,15 +70,36 @@
     background-repeat: no-repeat;
     background-size: cover; 
     background-attachment: fixed;
+    background-position: center;
     display: flex;
     justify-content: center;
     //@include default-section-container-padding;
 }
 
-.home__contact { background-image: url(../img/farm3_bg-large.jpg); }
-.whoweare__contact { background-image: url(../img/roots_bg-large.jpg); }
-.meetthefamily__contact { background-image: url(../img/family_bg-large.jpg); }
-.genetics__contact { background-image: url(../img/buds2_bg-large.jpg); }
+.home__contact { 
+    background-image: url(../img/farm3_bg-large.jpg); 
+    @include respond(phone) {
+        background-image: url(../img/farm3_bg-small.jpg);
+    }
+}
+.whoweare__contact { 
+    background-image: url(../img/roots_bg-large.jpg); 
+    @include respond(phone) {
+        background-image: url(../img/roots_bg-small.jpg);  
+    }
+}
+.meetthefamily__contact { 
+    background-image: url(../img/family_bg-large.jpg); 
+    @include respond(phone) {
+        background-image: url(../img/family_bg-small.jpg);  
+    }
+}
+.genetics__contact { 
+    background-image: url(../img/buds2_bg-large.jpg); 
+    @include respond(phone) {
+        background-image: url(../img/buds2_bg-small.jpg);
+    }
+}
 
 .genetics__contact {
     flex-direction: column;

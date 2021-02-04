@@ -34,6 +34,7 @@
     &__img {
         height: 7rem;
         display: inline-block;
+        @include drop-shadow;
     }
 
     &__social-nav {
@@ -70,6 +71,7 @@
     &__link {
         display: inline-block;
         transition: all .2s;
+        @include text-shadow;
         cursor: pointer;
         &,
         &:link,
@@ -151,6 +153,7 @@
         width: 2rem;
         fill: $color-white;
         cursor: pointer;
+        @include drop-shadow;
     }
     &__list {
         width: 100%;
@@ -214,6 +217,9 @@
             &:not(:last-child) {
                 margin-bottom: 1.5rem;
             }
+        }
+        &__link {
+            text-shadow: none;
         }
 
         &__droplist {
@@ -295,12 +301,16 @@
 
     .nav-mobile__img {
         height: 4rem;
+        width: 12.5rem;
         position: fixed;
         top: 0;
         left: 0;
+        //padding: 0;
         margin-left: 1rem;
         margin-top: 2rem;
         z-index: 2;
+        fill: $color-white;
+        @include drop-shadow;
     }
 
     .nav-mobile__background {
