@@ -6,22 +6,14 @@ function createEventListeners () {
         //run filter 
     let filterMenu = document.getElementById("genetics-filter-select");
     if (filterMenu.addEventListener) {
-        filterMenu.addEventListener("change", (x) => {filterCards(x);}, false);
+        filterMenu.addEventListener("change", filterCards, false);
     } else if (filterMenu.attachEvent){
-        filterMenu.attachEvent("onchange", (x) => {filterCards(x);});
+        filterMenu.attachEvent("onchange", filterCards);
     }
 }
 
 function filterCards(x) {
     let selectedFilterOption = x.target.value;
-    let filterOptions = [
-        "none",
-        "indica",
-        "sativa",
-        "indoors",
-        "outdoors",
-        "available"
-    ];
     let geneticsCards = document.getElementsByClassName("genetics-card");
     let cardsToFilter = [];
 

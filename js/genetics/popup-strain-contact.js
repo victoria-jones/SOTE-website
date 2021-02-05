@@ -5,7 +5,7 @@ function createEventListeners() {
         if(strainContactButton[i].addEventListener) {
             strainContactButton[i].addEventListener("click", (x) => { x.preventDefault(); showPopupContact(x); }, false);
         } else if (strainContactButton[i].attachEvent) {
-            strainContactButton[i].attachEvent("onclick", (x) => { x.preventDefault(); showPopupContact(x);});
+            strainContactButton[i].attachEvent("onclick", (x) => { x.preventDefault(); showPopupContact(x); });
         }
     }
 
@@ -28,13 +28,11 @@ function createEventListeners() {
         let selectedStrain;
         //check which contact button was selected and set selectedStrain appropriately
         if(x.currentTarget.className === "genetics-popup__btn btn card-btn") {
-            //console.log(x.currentTarget.parentNode.parentNode.querySelector('input[type=hidden]').value);
             selectedStrain = x.currentTarget.parentNode.parentNode.querySelector('input[type=hidden]').value;
         } else {
             selectedStrain = x.currentTarget.parentNode.parentNode.parentNode.querySelector('input[type=hidden]').value;
         }
  
-        //let selectedStrain = x.currentTarget.parentNode.parentNode.parentNode.querySelector('input[type=hidden]').value;
         selectedStrain = JSON.parse(selectedStrain);
         selectedStrain = selectedStrain.name;
         let strainWords = selectedStrain.split(" ");
