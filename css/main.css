@@ -108,6 +108,7 @@ body {
   font-size: 4.5rem;
   color: #fff;
   margin-top: 20rem;
+  text-align: center;
   text-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.7);
 }
 @media only screen and (max-width: 37.5em) {
@@ -801,9 +802,13 @@ footer {
 .header {
   min-height: 110vh;
 }
+.header__img--small {
+  display: none;
+}
 .header__img {
   filter: drop-shadow(0 1rem 1rem rgba(0, 0, 0, 0.7));
   -webkit-filter: drop-shadow(0 1rem 1rem rgba(0, 0, 0, 0.7));
+  width: 800px;
 }
 @media only screen and (max-width: 56.25em) {
   .header__img {
@@ -812,12 +817,27 @@ footer {
 }
 @media only screen and (max-width: 37.5em) {
   .header__img {
-    transform: scale(0.4);
+    transform: scale(0.3);
+    margin-top: -10rem;
+    margin-bottom: -30rem;
+  }
+  .header__img--big {
+    display: none;
+  }
+  .header__img--small {
+    display: block;
   }
 }
 @media only screen and (max-width: 30em) {
   .header__img {
-    transform: scale(0.3);
+    transform: scale(0.2);
+    margin-top: -20rem;
+    margin-bottom: -35rem;
+  }
+}
+@media only screen and (max-width: 18.75em) {
+  .header__img {
+    margin-top: -25rem;
   }
 }
 
@@ -1126,32 +1146,43 @@ footer {
             backface-visibility: hidden;
     transition: 1s cubic-bezier(0.83, 0, 0.17, 1);
   }
-
+}
+@media only screen and (max-width: 37.5em) and (max-width: 18.75em) {
+  .nav-mobile__background {
+    background-size: 280%;
+  }
+}
+@media only screen and (max-width: 37.5em) {
   .nav-mobile__checkbox:checked ~ .nav-mobile__background {
     width: 170%;
     background-position: 100%;
   }
-
+}
+@media only screen and (max-width: 37.5em) {
   .nav-mobile__checkbox:checked ~ .site-nav,
 .nav-mobile__checkbox:checked ~ .nav-main__header {
     width: 100%;
     opacity: 1;
   }
-
+}
+@media only screen and (max-width: 37.5em) {
   .nav-mobile__checkbox:checked ~ .nav-mobile__button .nav-mobile__icon {
     background-color: transparent;
   }
-
+}
+@media only screen and (max-width: 37.5em) {
   .nav-mobile__checkbox:checked ~ .nav-mobile__button .nav-mobile__icon::before {
     top: 0;
     transform: rotate(135deg) scale(1.5, 1);
   }
-
+}
+@media only screen and (max-width: 37.5em) {
   .nav-mobile__checkbox:checked ~ .nav-mobile__button .nav-mobile__icon::after {
     top: 0;
     transform: rotate(-135deg) scale(1.5, 1);
   }
-
+}
+@media only screen and (max-width: 37.5em) {
   .nav-mobile__checkbox:checked ~ .site-nav .site-nav__list {
     margin-left: 0;
   }

@@ -1,8 +1,13 @@
 .header {
     min-height: 110vh;
 
+    &__img--small {
+        display: none;
+    }
+
     &__img {
         @include drop-shadow;
+        width: 800px;
     }
 
     @include respond(tab-port) {
@@ -13,7 +18,15 @@
 
     @include respond(phone) {
         &__img {
-            transform: scale(.4);
+            transform: scale(.3);
+            margin-top: -10rem;
+            margin-bottom: -30rem;
+        }
+        &__img--big {
+            display: none;
+        }
+        &__img--small {
+            display: block;
         }
     }
 
@@ -21,7 +34,14 @@
         &__img {
             //swap this image out with one that wraps instead, its getting too small
                 //for now its fine
-            transform: scale(.3);
+            transform: scale(.2);
+            margin-top: -20rem;
+            margin-bottom: -35rem;
+        }
+    }
+    @include respond(phone-small) {
+        &__img {
+            margin-top: -25rem;
         }
     }
 }
