@@ -327,6 +327,10 @@
         background-position: -30%;
         backface-visibility: hidden;
         transition: 1s cubic-bezier(0.83, 0, 0.17, 1);
+
+        @include respond(phone-small) {
+            background-size: 280%;
+        }
     }
 
     //scroll out background
