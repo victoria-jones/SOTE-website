@@ -100,7 +100,7 @@ function createEventListeners () {
         popupStrainSpan.innerHTML = strainType;
 
         //check type for svg icon and set classname/attributes
-        if(x.type === "indica") {
+        if(x.type === "sativa") {
             popupStrainSvg.classList.add("genetics__key--icon", "genetics-card__type--icon--1");
             popupStrainSvgUse.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href', 'img/sprite.svg#icon-arrow-with-circle-up');
         } else {

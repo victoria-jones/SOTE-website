@@ -126,7 +126,7 @@ function createCards () {
             cardGeneticText.innerHTML = geneticType;
 
             //check type and add appropriate svg icon
-            if(x.type === "indica") {
+            if(x.type === "sativa") {
                 cardGeneticSvg.classList.add("genetics-card__type--icon--1");
                 cardGeneticSvgUse.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href', 'img/sprite.svg#icon-arrow-with-circle-up');
             } else {
@@ -191,7 +191,7 @@ function createCards () {
             
             //append svgs
             for(i in cardGrowSvgList) {
-                cardGrowType.appendChild(cardGrowSvgList[i]);
+                cardGrowType.appendChild(cardGrowSvgList[i]); 
             }
             //append text
             cardGrowType.appendChild(cardGrowText);
