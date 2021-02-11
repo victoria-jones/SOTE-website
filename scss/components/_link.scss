@@ -111,3 +111,12 @@
         transform: scale(.9);
     }
 }
+
+.link-small {
+    padding: 0;
+    &,
+    &:link,
+    &:visited {
+        font-size: inherit;
+    }
+}
