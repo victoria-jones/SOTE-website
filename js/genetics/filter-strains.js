@@ -25,14 +25,31 @@ function filterCards(x) {
         let cardValue = geneticsCards[i].querySelector('input[type=hidden]');
         cardValue = JSON.parse(cardValue.value);
 
+        //check indoor/outdoor array value
         if(selectedFilterOption === "indoors" || selectedFilterOption === "outdoors") {
             for(grow = 0; grow < cardValue.grow.length; grow++) {
                 if(cardValue.grow[grow] === selectedFilterOption) {
                     hideCard = false;
-                    break;
                 } else {
                     hideCard = true;
                 }
+            }
+        //check if strain is ONLY sativa or indica
+        } else if(selectedFilterOption === "sativa" || selectedFilterOption === "indica") {
+            for(genetic = 0; genetic < cardValue.type.length; genetic++) {
+                if (cardValue.type[genetic] === selectedFilterOption) {
+                    hideCard = false;
+                } else {
+                    hideCard = true;
+                    break;
+                }
+            }
+        //check if strain has more than 1 type (equalling a hybrid)
+        } else if (selectedFilterOption === "hybrid") { 
+            if (cardValue.type.length > 1) {
+                hideCard = false;
+            } else {
+                hideCard = true;
             }
         } else if (selectedFilterOption === "available") {
             if(cardValue.available) {
@@ -43,6 +60,9 @@ function filterCards(x) {
         } else if (selectedFilterOption === "none") {
             hideCard = false;
         }else {
+            //this is a basic cover for other types added to the select menu
+                //a general check to see if cardvalues are equivalent to the selected filter option
+                //does NOT work for arrays
             for(j in cardValue) {
                 if(cardValue[j] === selectedFilterOption) {
                     hideCard = false;

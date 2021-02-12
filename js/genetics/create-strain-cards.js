@@ -120,18 +120,29 @@ function createCards () {
             let cardGeneticSvg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
             let cardGeneticSvgUse = document.createElementNS('http://www.w3.org/2000/svg', 'use');
             let cardGeneticText = document.createElement("span");
-            let geneticType;
+            let geneticTypeString;
+            let geneticTypeStringList = [];
+            const geneticTypeRegex = /^(Sativa|sativa)/;
 
             cardGeneticType.classList.add("genetics-card__type");
             cardGeneticSvg.classList.add("genetics__key--icon");
             cardGeneticText.classList.add("genetics__key--icon-name");
 
-            geneticType = x.type;
-            geneticType = geneticType.charAt(0).toUpperCase() + geneticType.substr(1);
-            cardGeneticText.innerHTML = geneticType;
+            //geneticType = x.type;
+            //geneticType = geneticType.charAt(0).toUpperCase() + geneticType.substr(1);
+            //cardGeneticText.innerHTML = geneticTypeString;
 
-            //check type and add appropriate svg icon
-            if(x.type === "sativa") {
+            for(i in x.type) {
+                geneticTypeString = x.type[i];
+                geneticTypeString = geneticTypeString.charAt(0).toUpperCase() + geneticTypeString.substr(1);
+                geneticTypeStringList.push(geneticTypeString);
+            }
+
+            //cardGeneticText.innerHTML = geneticTypeString;
+            cardGeneticText.innerHTML += geneticTypeStringList.join("-");
+
+            //check dominate type (by whichever type is listed first) and add dominate icon
+            if(geneticTypeRegex.test(geneticTypeStringList)) {
                 cardGeneticSvg.classList.add("genetics-card__type--icon--1");
                 cardGeneticSvgUse.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href', 'img/sprite.svg#icon-arrow-with-circle-up');
             } else {
