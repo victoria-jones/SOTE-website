@@ -54,11 +54,11 @@ function createCards () {
     //pass all the created elements that need to be placed in the divs
     function card (cardInfo, cardImg, cardBtns, cardTags) {
         let cardDiv = document.createElement("div");
-        let cardImgDiv = document.createElement("div");
+        let cardImgDiv = cardImg;
         let cardInfoDiv = document.createElement("div");
 
         cardDiv.classList.add("genetics-card");
-        cardImgDiv.classList.add("genetics-card__img");
+        //cardImgDiv.classList.add("genetics-card__img");
         cardInfoDiv.classList.add("genetics-card__info");
 
         //populate divs with created elements using data from strainList.json
@@ -66,7 +66,7 @@ function createCards () {
             cardInfoDiv.append(cardInfo[i]);
         }
         cardInfoDiv.appendChild(cardBtns);
-        cardImgDiv.appendChild(cardImg);
+        //cardImgDiv.appendChild(cardImg);
 
         //append the sections to the card
         cardDiv.appendChild(cardImgDiv);
@@ -79,9 +79,14 @@ function createCards () {
     //create the elements that will go into the cardImg div
         //this will be replaced with a background css image when when get them
     function createCardImg (x) {
-        let cardImg = document.createElement("span");
-        cardImg.innerHTML = x.photo;
-        return cardImg;
+        //let cardImg = document.createElement("span");
+        let cardImg = x.photo;
+        let cardImgDiv = document.createElement("div"); 
+        cardImgDiv.classList.add("genetics-card__img");
+
+        cardImgDiv.style.backgroundImage = `url(../img/${cardImg})`;
+        //cardImg.innerHTML = x.photo;
+        return cardImgDiv;
     }
 
     //create all the elements that will go into the cardInfo div

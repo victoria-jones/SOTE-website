@@ -58,10 +58,11 @@ function createEventListeners () {
         removeCurrentImgSpan();
         let strainImg = x.photo;
         let strainImgDiv = document.getElementsByClassName("genetics-popup__img")[0];
-        let strainImgSpan = document.createElement("span");
-        strainImgSpan.classList.add("imgSpan");
-        strainImgSpan.innerHTML = strainImg;
-        strainImgDiv.appendChild(strainImgSpan);
+        //let strainImgSpan = document.createElement("span");
+        //strainImgSpan.classList.add("imgSpan");
+        //strainImgSpan.innerHTML = strainImg;
+        //strainImgDiv.appendChild(strainImgSpan);
+        strainImgDiv.style.backgroundImage = `url(../img/${strainImg})`;
     }
 
     function removeCurrentImgSpan() {
