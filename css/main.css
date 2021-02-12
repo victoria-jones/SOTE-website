@@ -1482,6 +1482,8 @@ footer {
   height: 17rem;
   margin-top: -2rem;
   transform: skew(0, 7deg);
+  background-size: cover;
+  background-position: center;
 }
 .genetics-card__header {
   margin-bottom: 0;
@@ -1527,6 +1529,8 @@ footer {
   width: 60%;
   margin-left: -16rem;
   transform: skew(-15deg, 0);
+  background-size: cover;
+  background-position: center;
 }
 .genetics-popup__info {
   margin-left: 8rem;
@@ -1924,6 +1928,17 @@ footer {
 }
 .innovating__p--2 {
   order: 2;
+}
+@media only screen and (max-width: 56.25em) {
+  .innovating__p, .innovating__img {
+    width: 100%;
+  }
+  .innovating__p--2 {
+    order: 0;
+  }
+  .innovating__img--1 {
+    margin-bottom: 2rem;
+  }
 }
 
 .thefamily {
