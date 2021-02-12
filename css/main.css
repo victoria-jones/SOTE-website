@@ -414,6 +414,13 @@ p:not(:last-child) {
   transform: scale(0.9);
 }
 
+.link-small {
+  padding: 0;
+}
+.link-small, .link-small:link, .link-small:visited {
+  font-size: inherit;
+}
+
 .popup {
   position: fixed;
   top: 0;
