@@ -131,9 +131,34 @@
     }
 }
 
-.thefamily {
+.innovating {
     background-color: $color-primary-green-med;
     color: $color-grey-light;
+    display: flex;
+    justify-content: center;
+
+    &__container {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        @include default-container-max-width-large;
+        @include default-section-container-padding;
+    }
+    &__header { width: 100%; }
+
+    &__p, &__img { 
+        width: 50%;
+        flex-grow: 1; 
+    }
+
+    &__p--2 {
+        order: 2;
+    }
+}
+
+.thefamily {
+    background-color: $color-white;
+    //color: $color-grey-light;
     display: flex;
     flex-direction: column;
     align-items: center;
