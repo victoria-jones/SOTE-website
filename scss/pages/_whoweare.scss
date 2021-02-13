@@ -89,7 +89,22 @@
         max-height: 100%;
         background-color: orange;
         margin-left: -4rem;
+        background-size: cover;
+        background-position: center;
     }
+
+    &__img--1 {
+        //background-image: url(../img/imgname);
+     }
+
+    &__img--2 {
+        //background-image: url(../img/imgname);
+     }
+
+    &__img--3 { 
+        //background-image: url(../img/imgname);
+    }
+
     &__container {
         display: flex;
         @include default-unskew-vertical; 
