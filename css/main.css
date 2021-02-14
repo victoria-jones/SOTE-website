@@ -1859,11 +1859,26 @@ footer {
 .step:not(:last-child) {
   margin-bottom: 10rem;
 }
+.step__p {
+  min-height: 10rem;
+}
 .step__img {
   min-width: 30rem;
   max-height: 100%;
-  background-color: orange;
+  background-color: #fff;
   margin-left: -4rem;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.step__img--1 {
+  background-image: url(../img/momplant.jpg);
+}
+.step__img--2 {
+  background-image: url(../img/cleanclones.jpg);
+}
+.step__img--3 {
+  background-image: url(../img/teenplant.jpg);
 }
 .step__container {
   display: flex;
@@ -1887,9 +1902,17 @@ footer {
     flex-direction: column;
   }
   .step__img {
-    height: 30rem;
+    height: 35rem;
     margin-top: -5rem;
+    margin-bottom: -5rem;
+    background-position: center 4rem;
+  }
+  .step--wrapper {
     transform: skew(0, 7deg);
+    background-color: #2b4220;
+  }
+  .step--wrapper > * {
+    transform: skew(0, -7deg);
   }
 }
 @media only screen and (max-width: 37.5em) {
