@@ -83,26 +83,33 @@
     &:not(:last-child) {
         margin-bottom: 10rem;
     }
+
+    //help the images be more visible if there isn't a lot of text
+    &__p {
+        min-height: 10rem;
+    }
     
     &__img {
         min-width: 30rem;
         max-height: 100%;
-        background-color: orange;
+        background-color: $color-white;
         margin-left: -4rem;
-        background-size: cover;
+        //background-size: cover;
+        background-size: contain;
         background-position: center;
+        background-repeat: no-repeat;
     }
 
     &__img--1 {
-        //background-image: url(../img/imgname);
+        background-image: url(../img/momplant.jpg);
      }
 
     &__img--2 {
-        //background-image: url(../img/imgname);
+        background-image: url(../img/cleanclones.jpg);
      }
 
     &__img--3 { 
-        //background-image: url(../img/imgname);
+        background-image: url(../img/teenplant.jpg);
     }
 
     &__container {
@@ -128,9 +135,19 @@
          }
 
          &__img {
-             height: 30rem;
+             height: 35rem;
              margin-top: -5rem;
+             margin-bottom: -5rem;
+             background-position: center 4rem;
+         }
+
+         &--wrapper {
              @include default-skew-horizontal;
+             background-color: $color-primary-green-med;
+
+             & > * {
+                 @include default-unskew-horizontal;
+             }
          }
     }
 
