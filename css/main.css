@@ -897,13 +897,15 @@ footer {
 .nav-main__header {
   color: #efefef;
   padding: 3rem 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  margin-bottom: 2rem;
 }
 .nav-main__img-holder {
-  flex-grow: 1.33;
+  width: 100%;
   text-align: right;
+  position: absolute;
+  top: 1rem;
+  display: flex;
+  justify-content: center;
 }
 .nav-main__img {
   height: 7rem;
@@ -912,15 +914,12 @@ footer {
   -webkit-filter: drop-shadow(0 1rem 1rem rgba(0, 0, 0, 0.7));
 }
 .nav-main__social-nav {
-  flex-grow: 1;
+  justify-self: end;
   text-align: right;
 }
 @media only screen and (max-width: 56.25em) {
-  .nav-main__social-nav, .nav-main__img-holder {
-    flex-grow: 1;
-  }
   .nav-main__img-holder {
-    text-align: left;
+    justify-content: flex-start;
   }
 }
 @media only screen and (max-width: 37.5em) {
@@ -1066,8 +1065,13 @@ footer {
     bottom: -70vh;
   }
   .nav-main__social-nav {
-    text-align: center;
     position: fixed;
+    width: 100%;
+  }
+  .nav-main .social-nav__list {
+    display: flex;
+    justify-content: center;
+    margin-left: -6.1rem;
   }
   .nav-main .social-nav__icon {
     height: 2.5rem;
@@ -1873,12 +1877,15 @@ footer {
 }
 .step__img--1 {
   background-image: url(../img/momplant.jpg);
+  background-position: 7rem center;
 }
 .step__img--2 {
   background-image: url(../img/cleanclones.jpg);
+  background-position: 4rem center;
 }
 .step__img--3 {
   background-image: url(../img/teenplant.jpg);
+  background-position: 5rem center;
 }
 .step__container {
   display: flex;
@@ -1948,6 +1955,10 @@ footer {
 .innovating__p, .innovating__img {
   width: 50%;
   flex-grow: 1;
+}
+.innovating__p {
+  padding: 1rem;
+  align-self: center;
 }
 .innovating__p--2 {
   order: 2;
