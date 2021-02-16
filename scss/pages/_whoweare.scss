@@ -102,14 +102,17 @@
 
     &__img--1 {
         background-image: url(../img/momplant.jpg);
+        background-position: 7rem center;
      }
 
     &__img--2 {
         background-image: url(../img/cleanclones.jpg);
+        background-position: 4rem center;
      }
 
     &__img--3 { 
         background-image: url(../img/teenplant.jpg);
+        background-position: 5rem center;
     }
 
     &__container {
@@ -181,6 +184,11 @@
     &__p, &__img { 
         width: 50%;
         flex-grow: 1; 
+    }
+
+    &__p {
+        padding: 1rem;
+        align-self: center;
     }
 
     &__p--2 {

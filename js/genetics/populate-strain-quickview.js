@@ -89,19 +89,29 @@ function createEventListeners () {
 
     function populateStrainType(x) {
         let strainType = x.type;
+        let strainTypeList = [];
+        let strainTypeString;
         let popupStrainDiv = document.getElementsByClassName("genetics-popup__type")[0];
         let popupStrainSvg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
         let popupStrainSvgUse = document.createElementNS('http://www.w3.org/2000/svg', 'use');
         let popupStrainSpan = document.createElement("span");
+        const strainTypeRegex = /^(Sativa|sativa)/;
 
         //set span class and add name
         popupStrainSpan.classList.add("genetics__key--icon-name");
         //make the type name uppercase
-        strainType = strainType.charAt(0).toUpperCase() + strainType.substr(1);
-        popupStrainSpan.innerHTML = strainType;
+        //strainType = strainType.charAt(0).toUpperCase() + strainType.substr(1);
+
+        for(i in strainType) {
+            strainTypeString = strainType[i];
+            strainTypeString = strainTypeString.charAt(0).toUpperCase() + strainTypeString.substr(1);
+            strainTypeList.push(strainTypeString);
+        }
+
+        popupStrainSpan.innerHTML += strainTypeList.join("-");
 
         //check type for svg icon and set classname/attributes
-        if(x.type === "sativa") {
+        if(strainTypeRegex.test(strainTypeList)) {
             popupStrainSvg.classList.add("genetics__key--icon", "genetics-card__type--icon--1");
             popupStrainSvgUse.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href', 'img/sprite.svg#icon-arrow-with-circle-up');
         } else {
@@ -110,7 +120,7 @@ function createEventListeners () {
         }
         popupStrainSvg.appendChild(popupStrainSvgUse);
 
-        //append svg and text to div
+        //append svgs then append text
         popupStrainDiv.appendChild(popupStrainSvg);
         popupStrainDiv.appendChild(popupStrainSpan);
     }
