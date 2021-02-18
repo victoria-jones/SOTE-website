@@ -38,9 +38,10 @@
         &:focus {
             outline: none;
             @include box-shadow-lightest;
+            border-bottom: 3px solid $color-primary-yellow;
 
             &:invalid {
-                border-bottom: 3px solid $color-primary-yellow;
+                border-bottom: 3px solid $color-secondary-red;
             }
         }
 
@@ -49,11 +50,29 @@
         }
     }
 
-    &__label {
-        margin-left: 1.8rem;
+    &__label,
+    &__error {
         font-weight: bold;
-        display: block;
         transition: all .3s;
+    }
+
+    &__label {
+        font-weight: bold;
+        display: inline-block;
+        margin-left: 1.8rem;
+    }
+
+    &__error {
+        color: $color-secondary-red;
+        display: inline-block;
+        margin-left: 2rem;
+        transform: translateY(-4rem);
+        opacity: 0;
+    }
+
+    &__error--visible {
+        transform: translateY(0);
+        opacity: 1;
     }
 
     //drop label into view when input is focused 

@@ -262,20 +262,35 @@ p:not(:last-child) {
 .form__input:focus, .form__textarea:focus {
   outline: none;
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+  border-bottom: 3px solid #e0c15a;
 }
 .form__input:focus:invalid, .form__textarea:focus:invalid {
-  border-bottom: 3px solid #e0c15a;
+  border-bottom: 3px solid #ED3D53;
 }
 @media only screen and (max-width: 37.5em) {
   .form__input, .form__textarea {
     width: 100%;
   }
 }
-.form__label {
-  margin-left: 1.8rem;
+.form__label, .form__error {
   font-weight: bold;
-  display: block;
   transition: all 0.3s;
+}
+.form__label {
+  font-weight: bold;
+  display: inline-block;
+  margin-left: 1.8rem;
+}
+.form__error {
+  color: #ED3D53;
+  display: inline-block;
+  margin-left: 2rem;
+  transform: translateY(-4rem);
+  opacity: 0;
+}
+.form__error--visible {
+  transform: translateY(0);
+  opacity: 1;
 }
 .form__input:placeholder-shown + .form__label, .form__textarea:placeholder-shown + .form__label {
   opacity: 0;

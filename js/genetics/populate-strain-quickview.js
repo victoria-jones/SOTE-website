@@ -58,10 +58,6 @@ function createEventListeners () {
         removeCurrentImgSpan();
         let strainImg = x.photo;
         let strainImgDiv = document.getElementsByClassName("genetics-popup__img")[0];
-        //let strainImgSpan = document.createElement("span");
-        //strainImgSpan.classList.add("imgSpan");
-        //strainImgSpan.innerHTML = strainImg;
-        //strainImgDiv.appendChild(strainImgSpan);
         strainImgDiv.style.backgroundImage = `url(../img/${strainImg})`;
     }
 
@@ -99,9 +95,8 @@ function createEventListeners () {
 
         //set span class and add name
         popupStrainSpan.classList.add("genetics__key--icon-name");
+        
         //make the type name uppercase
-        //strainType = strainType.charAt(0).toUpperCase() + strainType.substr(1);
-
         for(i in strainType) {
             strainTypeString = strainType[i];
             strainTypeString = strainTypeString.charAt(0).toUpperCase() + strainTypeString.substr(1);
