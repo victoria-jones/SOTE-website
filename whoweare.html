@@ -139,16 +139,16 @@
                         <h2 class="innovating__header header-2">SOTE is always innovating</h2>
 
                         <p class="innovating__p innovating__p--1">
-                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Delectus, placeat iusto doloribus odio, dolores similique ab nam quae fuga ad dolore! Consectetur quo beatae doloremque ipsa fugit repellendus facere. Cum? Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt tempore itaque delectus sint dolorum iure quos nostrum reprehenderit?
+                            Our SOTE family takes pride in staying up to date on the latest tech and state guidelines while remaining true to our grass roots. We are constantly innovating what needs improvement around the farm. <br>Be sure to check out our socials to stay up to date on the farms progress.
                         </p>
                         
-                        <div class="innovating__img innovating__img--1">replace with img later</div>
+                        <div class="innovating__img innovating__img--1"><../img/SOTEinnovatinggif.MOV></div>
 
                         <p class="innovating__p innovating__p--2">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt tempore itaque delectus sint dolorum iure quos nostrum reprehenderit, laudantium debitis praesentium ipsa placeat corrupti facilis dolor, odio pariatur nemo excepturi?
+                            We work around the clock to produce superb clones, and while this is no easy daily task, it takes a hardworking dedicated team to achieve the goal of clean, organic cannabis clones. 
                         </p>
 
-                        <div class="innovating__img innovating__img--2">replace with img later</div>
+                        <div class="innovating__img innovating__img--2"> social links/mini instagram </div>
 
                     </div>
                 </section>
@@ -222,22 +222,22 @@
                         <h2 class="margin-bottom-sml">Contact Us</h2>
                         <form action="#" class="contact__form form">
                             <div class="form__group">
-                                <input type="text" class="form__input" placeholder="Name" id="name" required />
-                                <label for="name" class="form__label">Name</label>
+                                <input type="text" class="form__input" placeholder="Name" id="name"  name="user_name" maxlength="30" required />
+                                <label for="name" class="form__label">Name</label><span class="form__error"></span>
                             </div>
 
                             <div class="form__group">
-                                <input type="email" class="form__input" placeholder="Email" id="email" required />
-                                <label for="name" class="form__label">Email</label>
+                                <input type="email" class="form__input" placeholder="Email" id="email"  name="user_email" maxlength="100" required />
+                                <label for="email" class="form__label">Email</label><span class="form__error"></span>
                             </div>
 
                             <div class="form__group">
-                                <textarea class="form__textarea" placeholder="Message" id="message"></textarea>
-                                <label for="message" class="form__label">Message</label>
+                                <textarea class="form__textarea" placeholder="Message" id="message" name="message" maxlength="1500" minlength="10" required></textarea>
+                                <label for="message" class="form__label">Message</label><span class="form__error"></span>
                             </div>
 
                             <div class="form__group">
-                                <button class="btn">Send</button>
+                                <button class="btn contact_btn">Send</button>
                             </div>
                         </form>
                     </div>
@@ -279,6 +279,7 @@
             <!--chrome animation on load glitch fix-->
             <script> </script>
             <script src="js/utilities/close-menus.js"></script>
+            <script src="js/email/sendemail.js"></script>
         </footer>
     </body>
 </html>
