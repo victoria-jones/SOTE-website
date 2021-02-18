@@ -174,39 +174,72 @@
 
     &__container {
         width: 100%;
-        display: flex;
-        flex-wrap: wrap;
+        justify-self: center;
         @include default-container-max-width-large;
         @include default-section-container-padding;
-    }
-    &__header { width: 100%; }
 
-    &__p, &__img { 
-        width: 50%;
-        flex-grow: 1; 
-    }
-
-    &__p {
-        padding: 1rem;
-        align-self: center;
-    }
-
-    &__p--2 {
-        order: 2;
-    }
-
-    @include respond(tab-port) {
-        &__p, &__img {
-            width: 100%;
+        @include respond(phone) {
+            padding-left: 2rem;
+            padding-right: 2rem;
         }
-        &__p--2 {
-            order: 0;
-        }
+    }
 
-        &__img--1 {
+    &__section {
+        &:not(:last-child) {
             margin-bottom: 2rem;
         }
     }
+
+    &__section--1 {
+        display: flex;
+        @include respond(tab-port) {
+            flex-direction: column;
+        }
+    }
+    &__p--1 {
+        width: 50%;
+        margin-right: 2rem;
+
+        @include respond(tab-port) {
+            width: 100%;
+            margin-right: 0;
+        }
+    }
+
+    &__section--2 {
+        text-align: center;
+    }
+
+    &__subheader {
+        margin-bottom: 1rem;
+    }
+
+    &__social-name {
+        display: flex;
+        justify-content: center;
+        font-size: $display-font-size-small;
+        color: $color-primary-yellow;
+        font-weight: bold;
+        margin-right: 2rem;
+    }    
+
+    &__social-nav {
+        margin-bottom: 2rem;
+        display: flex;
+        justify-content: center;
+    }
+
+    &__social-nav__icon {
+        width: 3rem;
+        height: 3rem;
+    }
+
+    &__social-nav__list {
+        text-align: left;
+        width: inherit;
+        align-self: flex-end;
+    }
+    
 }
 
 .thefamily {
