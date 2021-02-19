@@ -56,7 +56,7 @@ function createEventListeners () {
         //change this later to be an img bg
         //remove any span children to strainImgDiv if there are any
         removeCurrentImgSpan();
-        let strainImg = x.photo;
+        let strainImg = x.photo[1];
         let strainImgDiv = document.getElementsByClassName("genetics-popup__img")[0];
         strainImgDiv.style.backgroundImage = `url(../img/${strainImg})`;
     }
