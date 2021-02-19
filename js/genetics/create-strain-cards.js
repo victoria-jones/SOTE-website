@@ -80,7 +80,7 @@ function createCards () {
         //this will be replaced with a background css image when when get them
     function createCardImg (x) {
         //let cardImg = document.createElement("span");
-        let cardImg = x.photo;
+        let cardImg = x.photo[0];
         let cardImgDiv = document.createElement("div"); 
         cardImgDiv.classList.add("genetics-card__img");
 
