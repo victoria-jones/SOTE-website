@@ -113,7 +113,7 @@
     
                 <div class="contact__form-wrapper form-wrapper margin-bottom-sml margin-top-sml">
                     <h2 class="margin-bottom-sml">Contact Us</h2>
-                    <form action="#" class="contact__form form">
+                    <form class="contact__form form">
                         <div class="form__group">
                             <input type="text" class="form__input" placeholder="Name" id="name" name="user_name" maxlength="30" required />
                             <label for="name" class="form__label">Name</label><span class="form__error"></span>
@@ -172,6 +172,8 @@
             <!--chrome animation on load glitch fix-->
             <script> </script>
             <script src="js/utilities/close-menus.js"></script>
+            <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+            <script type="text/javascript">emailjs.init('user_M6X9wAuGQeT3M2XpZlbmN')</script>
             <script src="js/email/sendemail.js"></script>
         </footer>
     </body>
