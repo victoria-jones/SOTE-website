@@ -41,8 +41,24 @@
     //check if email can send by making sure there are no false values present
     if(sendCheck(formFields)) {
         console.log("the email can send!");
+  
+        //send the emeail 
+        const serviceID = 'default_service';
+        const templateID = 'contact_form';
+        const formID = this.parentNode.parentNode;
+
+        /*emailjs.sendForm(serviceID, templateID, formID)
+            .then(() => {
+                alert('sent!');
+            }, (err) => {
+                alert(JSON.stringify(err));
+            });*/
+        
+        // empty the contact form and show a sent pop-up
+
     } else {
         console.log("DO NOT SEND THE EMAIL");
+        return;
     }
 
  }
