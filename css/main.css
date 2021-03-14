@@ -1646,7 +1646,7 @@ footer {
 }
 
 .home__header {
-  background-image: url(../img/leaves_bg-large.jpg);
+  background-image: url(../img/SOTEwebsitevideo.mp4);
   background-size: cover;
   background-attachment: fixed;
   display: flex;
@@ -1656,7 +1656,7 @@ footer {
 }
 @media only screen and (max-width: 37.5em) {
   .home__header {
-    background-image: url(../img/leaves_bg-small.jpg);
+    background-image: url(../img/SOTEwebsitevideo.mp4);
   }
 }
 
