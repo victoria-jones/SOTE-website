@@ -46,17 +46,12 @@
         }
     }
 
-    @include respond (tab-port) {
+    @include respond(tab-port) {
 
-        &__container {
-            //display: block;
-            //width: 100%;
-        }
         &__img {
             position: absolute;
             left: -14rem;
             top: 18rem;
-            //transform: scale(.7);
         }
         &__info {
             position: relative;
