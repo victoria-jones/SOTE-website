@@ -2,11 +2,11 @@
     background-color: $color-white;
     padding-bottom: 20rem;
     &__header {
-        background-image: url(../img/buds_bg-large.jpg);
+        background-image: url(../img/buds01_bg-large.jpg);
         padding-bottom: 5rem;
 
         @include respond(phone) {
-            background-image: url(../img/buds_bg-small.jpg);
+            background-image: url(../img/buds01_bg-small.jpg);
         }
 
         &--wrapper {

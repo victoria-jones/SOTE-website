@@ -335,11 +335,11 @@ p:not(:last-child) {
 }
 
 .genetics__contact {
-  background-image: url(../img/buds2_bg-large.jpg);
+  background-image: url(../img/buds3_bg-large.jpg);
 }
 @media only screen and (max-width: 37.5em) {
   .genetics__contact {
-    background-image: url(../img/buds2_bg-small.jpg);
+    background-image: url(../img/buds3_bg-small.jpg);
   }
 }
 
@@ -1221,12 +1221,12 @@ footer {
   padding-bottom: 20rem;
 }
 .genetics__header {
-  background-image: url(../img/buds_bg-large.jpg);
+  background-image: url(../img/buds01_bg-large.jpg);
   padding-bottom: 5rem;
 }
 @media only screen and (max-width: 37.5em) {
   .genetics__header {
-    background-image: url(../img/buds_bg-small.jpg);
+    background-image: url(../img/buds01_bg-small.jpg);
   }
 }
 @media only screen and (max-width: 37.5em) {
@@ -1580,9 +1580,9 @@ footer {
 }
 
 .home__header {
-  background-image: url(../img/leaves_bg-large.jpg);
+  /*background-image: url(../img/leaves_bg-large.jpg);
   background-size: cover;
-  background-attachment: fixed;
+  background-attachment: fixed;*/
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -1886,12 +1886,34 @@ footer {
 }
 
 .innovating {
+  position: relative;
   background-color: #2b4220;
   color: #efefef;
   display: flex;
   justify-content: center;
 }
+.innovating::after {
+  opacity: 0.2;
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  background-image: url(../img/leaves_bg-large.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+@media only screen and (max-width: 37.5em) {
+  .innovating::after {
+    background-image: url(../img/leaves_bg-small.jpg);
+  }
+}
 .innovating__container {
+  position: relative;
+  z-index: 1;
   width: 100%;
   justify-self: center;
   max-width: 100rem;
