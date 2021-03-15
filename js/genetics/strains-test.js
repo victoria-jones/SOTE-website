@@ -4,7 +4,7 @@ var strainList = [
         "type": ["sativa"],
         "grow": ["indoors", "outdoors"],
         "description": "High Yield - ____ buds. This strain is ideal for those seeking relief from anxiety and stress.", 
-        "photo": ["cherrypunchbud2.jpg", "cherry.jpg"],
+        "photo": ["cherrypunch-tb.jpg", "cherry.jpg"],
         "available": false,
         "section": "featured"
     },
@@ -13,7 +13,7 @@ var strainList = [
         "type": ["sativa", "indica"],
         "grow": ["indoors"],
         "description": "Medium Yield - _______ buds. Euphoric, calming and energizing state. Soothing the body while enhancing creativity.",
-        "photo": ["cerealmilkbud.jpg", "cerealmilk18.jpg"],
+        "photo": ["cerealmilk-tb.jpg", "cerealmilk18.jpg"],
         "available": true,
         "section": "featured"
     },
@@ -22,7 +22,7 @@ var strainList = [
         "type": ["indica"],
         "grow": ["indoors"],
         "description": "High Yield - Extreme Trichome Production - Helps patients with managing nausea, stress, minor body aches, and sleeplessness.",
-        "photo": ["purplepunchbud.jpg", "purplepunch4.jpg"],
+        "photo": ["purplepunch-tb.jpg", "purplepunch4.jpg"],
         "available": true,
         "section": "featured"
     },
@@ -31,7 +31,7 @@ var strainList = [
         "type": ["sativa", "indica"],
         "grow": ["indoors", "outdoors"],
         "description": "High Yield but requires more deleafing, High Trichome Production - creative effects that are happy and uplifting",
-        "photo": ["projectxbud.jpg", "projectX52.jpg"],
+        "photo": ["projectx-tb.jpg", "projectX52.jpg"],
         "available": false,
         "section": "featured"
     },
@@ -40,7 +40,7 @@ var strainList = [
         "type": ["indica"],
         "grow": ["indoors, outdoors"],
         "description": "Medium to High Yield - ____ Buds. Full relaxation. Euphoric effects followed by full-body relaxation.",
-        "photo": ["sundaydriverbud.jpg", "sundaydriver2.jpg"],
+        "photo": ["sundaydriver-tb.jpg", "sundaydriver2.jpg"],
         "available": true,
         "section": "featured"
     },
@@ -49,7 +49,7 @@ var strainList = [
         "type": ["indica"],
         "grow": ["indoors", "outdoors"],
         "description": " Medium Yield - Dense Buds. Genetics hold relief for chronic pain, stress and anxiety.",
-        "photo": ["lavacakebud.jpg", "lavacake3.jpg"],
+        "photo": ["lavacake-tb.jpg", "lavacake3.jpg"],
         "available": true,
         "section": "featured"
     }
