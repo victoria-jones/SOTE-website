@@ -90,11 +90,13 @@ function createCards () {
     }
 
     //create all the elements that will go into the cardInfo div
-    function createCardInfo (x) {
+    function createCardInfo (x) { 
        
         let cardTitle = document.createElement("h3");
         let cardGenetic = createCardGenetic();
         let cardGrow = createCardGrow();
+        //let cardGrowTime = createCardGrowTime();
+        //let cardYield = createCardYield();
         let strainName;
         let strainNameWords;
 

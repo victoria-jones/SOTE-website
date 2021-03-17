@@ -187,7 +187,7 @@
 @include respond(phone) {
 
     .site-nav, .nav-main__header {
-        z-index: 2;
+        z-index: 4;
         width: 0;
         opacity: 0;
         //right: 0;
@@ -306,12 +306,12 @@
         height: 4rem;
         width: 12.5rem;
         position: fixed;
+        z-index: 4;
         top: 0;
         left: 0;
         //padding: 0;
         margin-left: 1rem;
         margin-top: 2rem;
-        z-index: 2;
         fill: $color-white;
         @include drop-shadow;
     }
@@ -322,7 +322,7 @@
         position: fixed;
         right: -10rem;
         top: -100vh;
-        z-index: 2;
+        z-index: 3;
         //background-color: $color-primary-green-med;
         background-image: linear-gradient(60deg, transparent 0%, transparent 50%, $color-primary-green-med 50%, $color-primary-green-med 100%);
         background-repeat: no-repeat;

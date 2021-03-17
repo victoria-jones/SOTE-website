@@ -38,22 +38,6 @@
         }
     }
 
-    /*&__button {
-        height: 6rem;
-        width: 6rem;
-        position: relative;
-        top: 0;
-        right: 0;
-        margin-top: 1rem;
-        margin-right: 1rem;
-        //z-index: 9999;
-        border-radius: 50%;
-        background-color: $color-white;
-        @include box-shadow-light;
-        text-align: center;
-        cursor: pointer;
-    }*/
-
     &__close-btn {
         position: absolute;
         top: 0;
@@ -75,17 +59,6 @@
             @include box-shadow-pushed;
             transform: translateY(1px);
         }
-
-        /*@include respond(tab-port) {
-            top: 1.5rem;
-            right: 1.5rem;
-            @include box-shadow-light;
-
-            &:active {
-                @include box-shadow-pushed;
-                transform: translateY(1px);
-            }
-        }*/
     }
     &__icon {
         position: relative;

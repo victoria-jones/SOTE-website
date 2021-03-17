@@ -78,7 +78,7 @@
 
         @include respond(phone-med) {
             &__list {
-                justify-content: space-between;
+                justify-content: space-around;
             }
             &__item {
                 &:not(:last-child) {

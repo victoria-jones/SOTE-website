@@ -167,34 +167,13 @@
 }
 
 .innovating {
-    position: relative;
     background-color: $color-primary-green-med;
     color: $color-grey-light;
     display: flex;
     justify-content: center;
-    &::after {
-        opacity: .2;
-        width: 100%;
-        height: 100%;
-        display: block;
-        //z-index: -1;
-        position: absolute;
-        top: 0;
-        left: 0;
-        content: "";
-        background-image: url(../img/leaves_bg-large.jpg);
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;
-
-        @include respond(phone) {
-            background-image: url(../img/leaves_bg-small.jpg);
-        }
-    }
+    
 
     &__container {
-        position: relative;
-        z-index: 1;
         width: 100%;
         justify-self: center;
         @include default-container-max-width-large;

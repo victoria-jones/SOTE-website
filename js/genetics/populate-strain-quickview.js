@@ -47,6 +47,8 @@ function createEventListeners () {
         populateName(selectedStrain);
         populateStrainType(selectedStrain);
         populateStrainGrow(selectedStrain);
+        populateStrainGrowTime(selectedStrain);
+        populateStrainYield(selectedStrain);
         populateStrainDescription(selectedStrain);
         createTags(selectedStrain);
         showPopup();
@@ -165,6 +167,59 @@ function createEventListeners () {
         popupGrowDiv.appendChild(popupGrowSpan);
     }
 
+    function populateStrainGrowTime(x) {
+        let popupGrowTimeDiv = document.getElementsByClassName("genetics-popup__growtime")[0];
+        let popupGrowTimeSvg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+        let popupGrowTimeSvgUse = document.createElementNS('http://www.w3.org/2000/svg', 'use');
+        let popupGrowTimeSpan = document.createElement("span");
+        let growTimeString = x.growtime;
+
+        //set span class and add name
+        popupGrowTimeSpan.classList.add("genetics__key-icon-name");
+
+        //add the grow time to the span
+        popupGrowTimeSpan.innerHTML = `${growTimeString} Weeks`;
+
+        //create the svg for grow time
+        popupGrowTimeSvg.classList.add("genetics__key--icon", "genetics-card__type--icon--5");
+        popupGrowTimeSvgUse.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href', 'img/sprite.svg#icon-clock');
+
+        popupGrowTimeSvg.appendChild(popupGrowTimeSvgUse);
+
+        //append svgs then append text
+        popupGrowTimeDiv.appendChild(popupGrowTimeSvg);
+        popupGrowTimeDiv.appendChild(popupGrowTimeSpan);
+    }
+
+    function populateStrainYield(x) {
+        let popupYieldDiv = document.getElementsByClassName("genetics-popup__yield")[0];
+        let popupYieldSvg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+        let popupYieldSvgUse = document.createElementNS('http://www.w3.org/2000/svg', 'use');
+        let popupYieldSpan = document.createElement("span");
+        let strainYield = x.yield;
+        let strainYieldString;
+
+        //set span class and add name
+        popupYieldSpan.classList.add("genetics__key-icon-name");
+
+        //set first letter of yield to uppercase 
+        strainYieldString = strainYield;
+        strainYieldString = strainYieldString.charAt(0).toUpperCase() + strainYieldString.substr(1);
+
+        //add the yield to the span
+        popupYieldSpan.innerHTML = `${strainYieldString} Yield`;
+
+        //create the svg for yield
+        popupYieldSvg.classList.add("genetics__key--icon", "genetics-card__type--icon--6");
+        popupYieldSvgUse.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href', 'img/sprite.svg#icon-leaf');
+
+        popupYieldSvg.appendChild(popupYieldSvgUse);
+
+        //append svgs then append text
+        popupYieldDiv.appendChild(popupYieldSvg);
+        popupYieldDiv.appendChild(popupYieldSpan);
+    }
+
     function populateStrainDescription(x) {
         let strainDescription = x.description;
         let popupDescriptionDiv = document.getElementsByClassName("genetics-popup__details")[0];
@@ -237,10 +292,14 @@ function createEventListeners () {
         let popupType = document.getElementsByClassName("genetics-popup__type")[0];
         let popupGrow = document.getElementsByClassName("genetics-popup__care")[0];
         let popupDescription = document.getElementsByClassName("genetics-popup__details")[0];
+        let popupGrowTime = document.getElementsByClassName("genetics-popup__growtime")[0];
+        let popupYield = document.getElementsByClassName("genetics-popup__yield")[0];
         let popupDivFields = [
             popupType,
             popupGrow,
-            popupDescription
+            popupDescription,
+            popupGrowTime,
+            popupYield
         ];
 
         for(i in popupDivFields) {

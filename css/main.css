@@ -348,6 +348,35 @@ p:not(:last-child) {
   align-items: center;
 }
 
+.green-container {
+  position: relative;
+  z-index: 1;
+}
+.green-container::after {
+  opacity: 0.2;
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  content: "";
+  background-image: url(../img/leaves_bg-large.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+@media only screen and (max-width: 37.5em) {
+  .green-container::after {
+    background-image: url(../img/leaves_bg-small.jpg);
+  }
+}
+.green-container > * {
+  position: relative;
+  z-index: 2;
+}
+
 .link {
   padding: 0 0.3rem;
 }
@@ -451,21 +480,6 @@ p:not(:last-child) {
   opacity: 0;
   z-index: -1000;
   transition: opacity 0.5s;
-  /*&__button {
-      height: 6rem;
-      width: 6rem;
-      position: relative;
-      top: 0;
-      right: 0;
-      margin-top: 1rem;
-      margin-right: 1rem;
-      //z-index: 9999;
-      border-radius: 50%;
-      background-color: $color-white;
-      @include box-shadow-light;
-      text-align: center;
-      cursor: pointer;
-  }*/
 }
 .popup--wrapper {
   position: relative;
@@ -500,16 +514,6 @@ p:not(:last-child) {
   top: 1.5rem;
   right: 1.5rem;
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.5);
-  /*@include respond(tab-port) {
-      top: 1.5rem;
-      right: 1.5rem;
-      @include box-shadow-light;
-
-      &:active {
-          @include box-shadow-pushed;
-          transform: translateY(1px);
-      }
-  }*/
 }
 .popup__close-btn:active {
   box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.8);
@@ -634,6 +638,7 @@ p:not(:last-child) {
   display: block;
   align-self: flex-end;
   position: relative;
+  z-index: 2;
   bottom: 8rem;
   margin-bottom: -20rem;
 }
@@ -980,7 +985,7 @@ footer {
 
 @media only screen and (max-width: 37.5em) {
   .site-nav, .nav-main__header {
-    z-index: 2;
+    z-index: 4;
     width: 0;
     opacity: 0;
     transition: 0.8s cubic-bezier(0.83, 0, 0.17, 1) 0.2s;
@@ -1081,11 +1086,11 @@ footer {
     height: 4rem;
     width: 12.5rem;
     position: fixed;
+    z-index: 4;
     top: 0;
     left: 0;
     margin-left: 1rem;
     margin-top: 2rem;
-    z-index: 2;
     fill: #fff;
     filter: drop-shadow(0 1rem 1rem rgba(0, 0, 0, 0.7));
     -webkit-filter: drop-shadow(0 1rem 1rem rgba(0, 0, 0, 0.7));
@@ -1097,7 +1102,7 @@ footer {
     position: fixed;
     right: -10rem;
     top: -100vh;
-    z-index: 2;
+    z-index: 3;
     background-image: linear-gradient(60deg, transparent 0%, transparent 50%, #2b4220 50%, #2b4220 100%);
     background-repeat: no-repeat;
     background-size: 270%;
@@ -1209,7 +1214,7 @@ footer {
 }
 @media only screen and (max-width: 30em) {
   .contact__social-nav .social-nav__list {
-    justify-content: space-between;
+    justify-content: space-around;
   }
   .contact__social-nav .social-nav__item:not(:last-child) {
     margin-right: 0;
@@ -1328,7 +1333,8 @@ footer {
   list-style-type: none;
   display: flex;
   margin-top: 1rem;
-  justify-content: space-between;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 @media only screen and (max-width: 37.5em) {
   .genetics__key--list {
@@ -1347,9 +1353,15 @@ footer {
   display: flex;
   align-items: center;
 }
+.genetics__key--item:not(:first-child) {
+  margin-left: 1rem;
+}
 @media only screen and (max-width: 37.5em) {
   .genetics__key--item {
     flex: 0 50%;
+  }
+  .genetics__key--item:not(:first-child) {
+    margin-left: 0;
   }
 }
 @media only screen and (max-width: 30em) {
@@ -1372,6 +1384,14 @@ footer {
 .genetics__key--item--4 {
   color: #e0c15a;
   fill: #e0c15a;
+}
+.genetics__key--item--5 {
+  color: #96813c;
+  fill: #96813c;
+}
+.genetics__key--item--6 {
+  color: #546b34;
+  fill: #546b34;
 }
 .genetics__key--icon {
   width: 2rem;
@@ -1466,6 +1486,12 @@ footer {
 .genetics-card__type--icon--4 {
   fill: #e0c15a;
 }
+.genetics-card__type--icon--5 {
+  fill: #96813c;
+}
+.genetics-card__type--icon--6 {
+  fill: #546b34;
+}
 .genetics-card__btns {
   display: flex;
   align-items: center;
@@ -1502,7 +1528,7 @@ footer {
   max-height: 30rem;
   overflow-y: scroll;
 }
-.genetics-popup__type, .genetics-popup__care {
+.genetics-popup__type, .genetics-popup__care, .genetics-popup__growtime, .genetics-popup__yield {
   display: flex;
   align-items: center;
 }
@@ -1547,7 +1573,7 @@ footer {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
   }
-  .genetics-popup__header, .genetics-popup__type, .genetics-popup__care {
+  .genetics-popup__header, .genetics-popup__type, .genetics-popup__care, .genetics-popup__growtime, .genetics-popup__yield {
     padding-left: 2rem;
     padding-right: 2rem;
   }
@@ -1886,34 +1912,12 @@ footer {
 }
 
 .innovating {
-  position: relative;
   background-color: #2b4220;
   color: #efefef;
   display: flex;
   justify-content: center;
 }
-.innovating::after {
-  opacity: 0.2;
-  width: 100%;
-  height: 100%;
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  content: "";
-  background-image: url(../img/leaves_bg-large.jpg);
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-@media only screen and (max-width: 37.5em) {
-  .innovating::after {
-    background-image: url(../img/leaves_bg-small.jpg);
-  }
-}
 .innovating__container {
-  position: relative;
-  z-index: 1;
   width: 100%;
   justify-self: center;
   max-width: 100rem;
