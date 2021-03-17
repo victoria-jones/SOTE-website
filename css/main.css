@@ -348,6 +348,35 @@ p:not(:last-child) {
   align-items: center;
 }
 
+.green-container {
+  position: relative;
+  z-index: 1;
+}
+.green-container::after {
+  opacity: 0.2;
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  content: "";
+  background-image: url(../img/leaves_bg-large.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+@media only screen and (max-width: 37.5em) {
+  .green-container::after {
+    background-image: url(../img/leaves_bg-small.jpg);
+  }
+}
+.green-container > * {
+  position: relative;
+  z-index: 2;
+}
+
 .link {
   padding: 0 0.3rem;
 }
@@ -609,6 +638,7 @@ p:not(:last-child) {
   display: block;
   align-self: flex-end;
   position: relative;
+  z-index: 2;
   bottom: 8rem;
   margin-bottom: -20rem;
 }
@@ -955,7 +985,7 @@ footer {
 
 @media only screen and (max-width: 37.5em) {
   .site-nav, .nav-main__header {
-    z-index: 2;
+    z-index: 4;
     width: 0;
     opacity: 0;
     transition: 0.8s cubic-bezier(0.83, 0, 0.17, 1) 0.2s;
@@ -1056,11 +1086,11 @@ footer {
     height: 4rem;
     width: 12.5rem;
     position: fixed;
+    z-index: 4;
     top: 0;
     left: 0;
     margin-left: 1rem;
     margin-top: 2rem;
-    z-index: 2;
     fill: #fff;
     filter: drop-shadow(0 1rem 1rem rgba(0, 0, 0, 0.7));
     -webkit-filter: drop-shadow(0 1rem 1rem rgba(0, 0, 0, 0.7));
@@ -1072,7 +1102,7 @@ footer {
     position: fixed;
     right: -10rem;
     top: -100vh;
-    z-index: 2;
+    z-index: 3;
     background-image: linear-gradient(60deg, transparent 0%, transparent 50%, #2b4220 50%, #2b4220 100%);
     background-repeat: no-repeat;
     background-size: 270%;
@@ -1882,34 +1912,12 @@ footer {
 }
 
 .innovating {
-  position: relative;
   background-color: #2b4220;
   color: #efefef;
   display: flex;
   justify-content: center;
 }
-.innovating::after {
-  opacity: 0.2;
-  width: 100%;
-  height: 100%;
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  content: "";
-  background-image: url(../img/leaves_bg-large.jpg);
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-@media only screen and (max-width: 37.5em) {
-  .innovating::after {
-    background-image: url(../img/leaves_bg-small.jpg);
-  }
-}
 .innovating__container {
-  position: relative;
-  z-index: 1;
   width: 100%;
   justify-self: center;
   max-width: 100rem;

@@ -178,7 +178,7 @@ function createEventListeners () {
         popupGrowTimeSpan.classList.add("genetics__key-icon-name");
 
         //add the grow time to the span
-        popupGrowTimeSpan.innerHTML = `${growTimeString} weeks`;
+        popupGrowTimeSpan.innerHTML = `${growTimeString} Weeks`;
 
         //create the svg for grow time
         popupGrowTimeSvg.classList.add("genetics__key--icon", "genetics-card__type--icon--5");
@@ -207,7 +207,7 @@ function createEventListeners () {
         strainYieldString = strainYieldString.charAt(0).toUpperCase() + strainYieldString.substr(1);
 
         //add the yield to the span
-        popupYieldSpan.innerHTML = `${strainYieldString} yield`;
+        popupYieldSpan.innerHTML = `${strainYieldString} Yield`;
 
         //create the svg for yield
         popupYieldSvg.classList.add("genetics__key--icon", "genetics-card__type--icon--6");

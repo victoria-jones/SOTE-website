@@ -21,6 +21,8 @@
         display: block;
         align-self: flex-end;
         position: relative;
+        //fix for the background images on the green sections
+        z-index: 2;
         bottom: 8rem;
         margin-bottom: -20rem;
     }
