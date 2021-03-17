@@ -985,7 +985,7 @@ footer {
 
 @media only screen and (max-width: 37.5em) {
   .site-nav, .nav-main__header {
-    z-index: 4;
+    z-index: 5;
     width: 0;
     opacity: 0;
     transition: 0.8s cubic-bezier(0.83, 0, 0.17, 1) 0.2s;
@@ -1102,7 +1102,7 @@ footer {
     position: fixed;
     right: -10rem;
     top: -100vh;
-    z-index: 3;
+    z-index: 4;
     background-image: linear-gradient(60deg, transparent 0%, transparent 50%, #2b4220 50%, #2b4220 100%);
     background-repeat: no-repeat;
     background-size: 270%;
@@ -1177,7 +1177,7 @@ footer {
 }
 .contact__header--wrapper {
   position: relative;
-  z-index: 1;
+  z-index: 3;
   padding: 4rem 7rem;
 }
 @media only screen and (max-width: 37.5em) {
