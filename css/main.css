@@ -451,21 +451,6 @@ p:not(:last-child) {
   opacity: 0;
   z-index: -1000;
   transition: opacity 0.5s;
-  /*&__button {
-      height: 6rem;
-      width: 6rem;
-      position: relative;
-      top: 0;
-      right: 0;
-      margin-top: 1rem;
-      margin-right: 1rem;
-      //z-index: 9999;
-      border-radius: 50%;
-      background-color: $color-white;
-      @include box-shadow-light;
-      text-align: center;
-      cursor: pointer;
-  }*/
 }
 .popup--wrapper {
   position: relative;
@@ -500,16 +485,6 @@ p:not(:last-child) {
   top: 1.5rem;
   right: 1.5rem;
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.5);
-  /*@include respond(tab-port) {
-      top: 1.5rem;
-      right: 1.5rem;
-      @include box-shadow-light;
-
-      &:active {
-          @include box-shadow-pushed;
-          transform: translateY(1px);
-      }
-  }*/
 }
 .popup__close-btn:active {
   box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.8);
@@ -1209,7 +1184,7 @@ footer {
 }
 @media only screen and (max-width: 30em) {
   .contact__social-nav .social-nav__list {
-    justify-content: space-between;
+    justify-content: space-around;
   }
   .contact__social-nav .social-nav__item:not(:last-child) {
     margin-right: 0;
@@ -1328,7 +1303,8 @@ footer {
   list-style-type: none;
   display: flex;
   margin-top: 1rem;
-  justify-content: space-between;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 @media only screen and (max-width: 37.5em) {
   .genetics__key--list {
@@ -1347,9 +1323,15 @@ footer {
   display: flex;
   align-items: center;
 }
+.genetics__key--item:not(:first-child) {
+  margin-left: 1rem;
+}
 @media only screen and (max-width: 37.5em) {
   .genetics__key--item {
     flex: 0 50%;
+  }
+  .genetics__key--item:not(:first-child) {
+    margin-left: 0;
   }
 }
 @media only screen and (max-width: 30em) {
@@ -1372,6 +1354,14 @@ footer {
 .genetics__key--item--4 {
   color: #e0c15a;
   fill: #e0c15a;
+}
+.genetics__key--item--5 {
+  color: #96813c;
+  fill: #96813c;
+}
+.genetics__key--item--6 {
+  color: #546b34;
+  fill: #546b34;
 }
 .genetics__key--icon {
   width: 2rem;
@@ -1466,6 +1456,12 @@ footer {
 .genetics-card__type--icon--4 {
   fill: #e0c15a;
 }
+.genetics-card__type--icon--5 {
+  fill: #96813c;
+}
+.genetics-card__type--icon--6 {
+  fill: #546b34;
+}
 .genetics-card__btns {
   display: flex;
   align-items: center;
@@ -1502,7 +1498,7 @@ footer {
   max-height: 30rem;
   overflow-y: scroll;
 }
-.genetics-popup__type, .genetics-popup__care {
+.genetics-popup__type, .genetics-popup__care, .genetics-popup__growtime, .genetics-popup__yield {
   display: flex;
   align-items: center;
 }
@@ -1547,7 +1543,7 @@ footer {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
   }
-  .genetics-popup__header, .genetics-popup__type, .genetics-popup__care {
+  .genetics-popup__header, .genetics-popup__type, .genetics-popup__care, .genetics-popup__growtime, .genetics-popup__yield {
     padding-left: 2rem;
     padding-right: 2rem;
   }

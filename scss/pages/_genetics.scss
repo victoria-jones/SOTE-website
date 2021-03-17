@@ -130,7 +130,8 @@
             list-style-type: none;
             display: flex;
             margin-top: 1rem;
-            justify-content: space-between;
+            justify-content: center;
+            flex-wrap: wrap;
 
             @include respond(phone) {
                 flex-wrap: wrap;
@@ -146,9 +147,15 @@
         &--item {
             display: flex;
             align-items: center;
+            &:not(:first-child) {
+                margin-left: 1rem;
+            }
 
             @include respond(phone) {
-                flex: 0 50%;   
+                flex: 0 50%;
+                &:not(:first-child) {
+                    margin-left: 0;
+                } 
             }
             @include respond(phone-med) {
                 flex: 0 100%;
@@ -172,6 +179,16 @@
             &--4 {
                 color: $color-primary-yellow;
                 fill: $color-primary-yellow;
+            }
+            
+            &--5 {
+                color: $color-primary-yellow-dark;
+                fill: $color-primary-yellow-dark;
+            }
+
+            &--6 {
+                color: $color-primary-green;
+                fill: $color-primary-green;
             }
         }
         &--icon {
@@ -283,6 +300,12 @@
            &--4 {
                fill: $color-primary-yellow;
            }
+           &--5 {
+                fill: $color-primary-yellow-dark;
+           }
+           &--6 {
+                fill: $color-primary-green;
+           }
         }
     }
 
@@ -318,7 +341,6 @@
         flex-direction: column;
         justify-content: center;
         align-items: flex-start;
-        //width: 65%;
     }
     &__header {
         color: $color-primary-green-med;
@@ -331,7 +353,9 @@
     }
 
     &__type, 
-    &__care {
+    &__care,
+    &__growtime,
+    &__yield {
         display: flex;
         align-items: center;
     }
@@ -385,7 +409,9 @@
 
         &__header,
         &__type,
-        &__care {
+        &__care,
+        &__growtime,
+        &__yield {
             padding-left: 2rem;
             padding-right: 2rem;
         }
