@@ -715,10 +715,12 @@ footer {
   grid-auto-flow: dense;
 }
 
-.thefamily__p {
-  grid-column: 4/6;
-}
-
+/*
+.thefamily {
+    &__p {
+        grid-column: 4 / 6;
+    }
+}*/
 .family-group__about--1 {
   grid-column: 1/4;
 }
@@ -1698,6 +1700,8 @@ footer {
 }
 
 .merch {
+  position: relative;
+  z-index: 1;
   background-color: #2b4220;
   color: #efefef;
   height: 50vh;
@@ -1705,18 +1709,38 @@ footer {
   justify-content: center;
   align-items: center;
 }
-
-.white-space {
-  background-color: #fff;
-  height: 30rem;
+.merch::after {
+  opacity: 0.2;
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  content: "";
+  background-image: url(../img/merch-preview_large.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+@media only screen and (max-width: 37.5em) {
+  .merch::after {
+    background-image: url(../img/merch-preview_small.jpg);
+  }
 }
 
+/*
+.white-space {
+    background-color: $color-white;
+    height: 30rem;
+}*/
 .meetthefamily {
-  background-image: url(../img/farm4_bg-large.jpg);
+  background-image: url(../img/family_bg_02-large.jpg);
 }
 @media only screen and (max-width: 37.5em) {
   .meetthefamily {
-    background-image: url(../img/farm4_bg-small.jpg);
+    background-image: url(../img/family_bg_02-small.jpg);
   }
 }
 
@@ -1762,6 +1786,34 @@ footer {
     margin-bottom: 3rem;
   }
 }
+.family-group__img {
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.family-group__img--1 {
+  background-image: url(../img/family_01.png);
+}
+.family-group__img--2 {
+  background-image: url(../img/family_02.png);
+}
+.family-group__img--3 {
+  background-image: url(../img/family_03.png);
+}
+.family-group__img--4 {
+  background-image: url(../img/family_04.png);
+}
+.family-group__img--5 {
+  background-image: url(../img/family_05.png);
+}
+.family-group__img--6 {
+  background-image: url(../img/family_06.png);
+}
+.family-group__img--7 {
+  background-image: url(../img/family_07.png);
+}
+.family-group__img--8 {
+  background-image: url(../img/family_08.png);
+}
 
 .whoweare {
   background-image: url(../img/babies_bg-large.jpg);
@@ -1777,7 +1829,7 @@ footer {
 }
 .seedtomed__bg-img {
   position: relative;
-  z-index: 1;
+  z-index: 3;
   width: 100%;
   background-image: url(../img/overhead-plant.jpg), url(../img/overhead-plant-med.jpg);
   background-repeat: no-repeat, no-repeat;
@@ -1997,6 +2049,10 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: center;
+  /*
+  &__grid {
+      padding: 2rem 0;
+  }*/
   /* this chunk moved to soilbox component */
   /******/
 }
@@ -2007,14 +2063,12 @@ footer {
   width: 90%;
   max-width: 100rem;
 }
-.thefamily__grid {
-  padding: 2rem 0;
-}
 .thefamily__header {
   align-self: center;
 }
 .thefamily__btn {
   align-self: center;
+  margin-bottom: 7rem;
 }
 .thefamily__p {
   padding-left: 2rem;
@@ -2057,7 +2111,6 @@ footer {
     }*/
   }
   .thefamily__p {
-    order: -1;
     padding-bottom: 2rem;
   }
 }
