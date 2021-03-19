@@ -141,6 +141,21 @@ p:not(:last-child) {
   padding-top: 8rem;
 }
 
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0.3;
+  overflow: hidden;
+}
+.bg-video__content {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
 .btn {
   /*&::after {
       content: "";
@@ -715,10 +730,12 @@ footer {
   grid-auto-flow: dense;
 }
 
-.thefamily__p {
-  grid-column: 4/6;
-}
-
+/*
+.thefamily {
+    &__p {
+        grid-column: 4 / 6;
+    }
+}*/
 .family-group__about--1 {
   grid-column: 1/4;
 }
@@ -847,6 +864,7 @@ footer {
   width: 100%;
   height: 10rem;
   position: relative;
+  z-index: 4;
 }
 .nav-main__header {
   color: #efefef;
@@ -985,7 +1003,7 @@ footer {
 
 @media only screen and (max-width: 37.5em) {
   .site-nav, .nav-main__header {
-    z-index: 4;
+    z-index: 5;
     width: 0;
     opacity: 0;
     transition: 0.8s cubic-bezier(0.83, 0, 0.17, 1) 0.2s;
@@ -1102,7 +1120,7 @@ footer {
     position: fixed;
     right: -10rem;
     top: -100vh;
-    z-index: 3;
+    z-index: 4;
     background-image: linear-gradient(60deg, transparent 0%, transparent 50%, #2b4220 50%, #2b4220 100%);
     background-repeat: no-repeat;
     background-size: 270%;
@@ -1177,7 +1195,7 @@ footer {
 }
 .contact__header--wrapper {
   position: relative;
-  z-index: 1;
+  z-index: 3;
   padding: 4rem 7rem;
 }
 @media only screen and (max-width: 37.5em) {
@@ -1613,13 +1631,13 @@ footer {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: #2b4220;
+  position: relative;
 }
-@media only screen and (max-width: 37.5em) {
-  .home__header {
-    background-image: url(../img/leaves_bg-small.jpg);
-  }
+.home__header__img, .home__header__btn {
+  position: relative;
+  z-index: 1;
 }
-
 .clones {
   background-color: #fff;
   min-height: 80vh;
@@ -1698,6 +1716,8 @@ footer {
 }
 
 .merch {
+  position: relative;
+  z-index: 1;
   background-color: #2b4220;
   color: #efefef;
   height: 50vh;
@@ -1705,18 +1725,38 @@ footer {
   justify-content: center;
   align-items: center;
 }
-
-.white-space {
-  background-color: #fff;
-  height: 30rem;
+.merch::after {
+  opacity: 0.2;
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  content: "";
+  background-image: url(../img/merch-preview_large.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+@media only screen and (max-width: 37.5em) {
+  .merch::after {
+    background-image: url(../img/merch-preview_small.jpg);
+  }
 }
 
+/*
+.white-space {
+    background-color: $color-white;
+    height: 30rem;
+}*/
 .meetthefamily {
-  background-image: url(../img/farm4_bg-large.jpg);
+  background-image: url(../img/family_bg_02-large.jpg);
 }
 @media only screen and (max-width: 37.5em) {
   .meetthefamily {
-    background-image: url(../img/farm4_bg-small.jpg);
+    background-image: url(../img/family_bg_02-small.jpg);
   }
 }
 
@@ -1762,6 +1802,112 @@ footer {
     margin-bottom: 3rem;
   }
 }
+.family-group__img {
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.family-group__img--1 {
+  background-image: url(../img/family_01.png);
+}
+.family-group__img--2 {
+  background-image: url(../img/family_02.png);
+}
+.family-group__img--3 {
+  background-image: url(../img/family_03.png);
+}
+.family-group__img--4 {
+  background-image: url(../img/family_04.png);
+}
+.family-group__img--5 {
+  background-image: url(../img/family_05.png);
+}
+.family-group__img--6 {
+  background-image: url(../img/family_06.png);
+}
+.family-group__img--7 {
+  background-image: url(../img/family_07.png);
+}
+.family-group__img--8 {
+  background-image: url(../img/family_08.png);
+}
+
+.merch-page {
+  background-image: url(../img/merch-preview_bg-large.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 5rem;
+}
+@media only screen and (max-width: 37.5em) {
+  .merch-page {
+    background-image: url(../img/merch-preview_bg-small.jpg);
+  }
+  .merch-page__img {
+    width: 95%;
+  }
+}
+.merch-page__header, .merch-page__form-wrapper {
+  max-width: 80rem;
+  width: 100%;
+}
+.merch-page__header {
+  background-color: #fff;
+}
+.merch-page__header--wrapper {
+  background-color: #fff;
+  position: relative;
+  z-index: 3;
+  padding: 4rem 7rem;
+}
+@media only screen and (max-width: 37.5em) {
+  .merch-page__header--wrapper {
+    padding: 1.5rem 3rem 0 3rem;
+  }
+}
+.merch-page__img {
+  margin: 5rem 0;
+}
+@media only screen and (max-width: 56.25em) {
+  .merch-page__form-wrapper {
+    max-width: 95%;
+  }
+}
+
+.merch-page__social-nav .social-nav__list {
+  display: flex;
+  justify-content: center;
+}
+.merch-page__social-nav .social-nav__icon {
+  fill: #000;
+  width: 2.8rem;
+  height: 2.8rem;
+}
+.merch-page__social-nav .social-nav__item:not(:last-child) {
+  margin-right: 5rem;
+}
+@media only screen and (max-width: 37.5em) {
+  .merch-page__social-nav .social-nav__icon {
+    width: 3.5rem;
+    height: 3.5rem;
+  }
+  .merch-page__social-nav .social-nav__item:not(:last-child) {
+    margin-right: 8rem;
+  }
+}
+@media only screen and (max-width: 30em) {
+  .merch-page__social-nav .social-nav__list {
+    justify-content: space-around;
+  }
+  .merch-page__social-nav .social-nav__item:not(:last-child) {
+    margin-right: 0;
+  }
+}
 
 .whoweare {
   background-image: url(../img/babies_bg-large.jpg);
@@ -1777,7 +1923,7 @@ footer {
 }
 .seedtomed__bg-img {
   position: relative;
-  z-index: 1;
+  z-index: 3;
   width: 100%;
   background-image: url(../img/overhead-plant.jpg), url(../img/overhead-plant-med.jpg);
   background-repeat: no-repeat, no-repeat;
@@ -1997,6 +2143,10 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: center;
+  /*
+  &__grid {
+      padding: 2rem 0;
+  }*/
   /* this chunk moved to soilbox component */
   /******/
 }
@@ -2007,14 +2157,12 @@ footer {
   width: 90%;
   max-width: 100rem;
 }
-.thefamily__grid {
-  padding: 2rem 0;
-}
 .thefamily__header {
   align-self: center;
 }
 .thefamily__btn {
   align-self: center;
+  margin-bottom: 7rem;
 }
 .thefamily__p {
   padding-left: 2rem;
@@ -2057,7 +2205,6 @@ footer {
     }*/
   }
   .thefamily__p {
-    order: -1;
     padding-bottom: 2rem;
   }
 }

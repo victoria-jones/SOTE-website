@@ -25,6 +25,14 @@
     -webkit-filter: drop-shadow(0 1rem 1rem rgba($color-black, .7));
 }
 
+//box-shadow edge fade
+@mixin edge-fade {
+    -moz-box-shadow: 1px 2px 3px rgba(0,0,0,.5);
+    -webkit-box-shadow: 1px 2px 3px rgba(0,0,0,.5);
+    box-shadow: 1px 2px 3px rgba(0,0,0,.5);
+}
+
+
 /*border radius*/
 
 @mixin border-radius {

@@ -6,9 +6,17 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: $color-primary-green-med;
+    position: relative;
+
+    &__img,
+    &__btn {
+        position: relative;
+        z-index: 1;
+    }
 
     @include respond(phone) {
-        background-image: url(../img/leaves_bg-small.jpg);
+        //background-image: url(../img/leaves_bg-small.jpg);
     }
 }
 
@@ -101,6 +109,8 @@
 }
 
 .merch {
+    position: relative;
+    z-index: 1;
     background-color: $color-primary-green-med;
     color: $color-grey-light;
     //padding-top: 8rem;  //to recenter flex items after torn edge added to section above this
@@ -108,9 +118,33 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    &::after {
+        opacity: .2;
+        width: 100%;
+        height: 100%;
+        display: block;
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        left: 0;
+        content: "";
+        background-image: url(../img/merch-preview_large.jpg);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+
+        @include respond(phone) {
+            background-image: url(../img/merch-preview_small.jpg);
+        }
+    }
+    //background-position: center;
+    //background-repeat: no-repeat;
+    //background-image: url(../img/merch-preview_large.jpg);
+
 }
 
+/*
 .white-space {
     background-color: $color-white;
     height: 30rem;
-}
+}*/

@@ -10,7 +10,7 @@
 
     &__bg-img {
         position: relative;
-        z-index: 1;
+        z-index: 3;
         width: 100%;
         //overflow: hidden;
         background-image: url(../img/overhead-plant.jpg),
@@ -273,9 +273,10 @@
         @include default-container-max-width-large;
     }
 
+    /*
     &__grid {
         padding: 2rem 0;
-    }
+    }*/
 
     &__header {
         align-self: center;
@@ -283,6 +284,7 @@
 
     &__btn {
         align-self: center;
+        margin-bottom: 7rem;
     }
 
     &__p {
@@ -332,7 +334,7 @@
         }*/
 
         &__p {
-            order: -1;
+            //order: -1;
             padding-bottom: 2rem;
         }
 

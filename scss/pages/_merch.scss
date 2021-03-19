@@ -1,0 +1,101 @@
+.merch-page {
+    background-image: url(../img/merch-preview_bg-large.jpg);
+    background-repeat: no-repeat;
+    background-size: cover; 
+    background-attachment: fixed;
+    background-position: center;
+    min-height: 100vh;
+ 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding-bottom: 5rem;
+ 
+    @include respond(phone) {
+        background-image: url(../img/merch-preview_bg-small.jpg);
+
+     &__img {
+         width: 95%;
+     }
+    }
+ 
+    &__header,
+    &__form-wrapper {
+        max-width: 80rem;
+        width: 100%;
+    }
+ 
+    &__header {
+        background-color: $color-white;
+        &--wrapper {
+            background-color: $color-white;
+            position: relative;
+            z-index: 3;
+            @include default-container-padding;
+ 
+            @include respond(phone) {
+                 //padding-top: 1.5rem;
+                 //padding-bottom: 0;
+                 padding: 1.5rem 3rem 0 3rem;
+             }
+ 
+        }
+    }
+    
+    &__img {
+        margin: 5rem 0;
+    }
+ 
+    @include respond(tab-port) {
+        &__form-wrapper {
+            max-width: 95%;
+        }
+    }
+ 
+    
+ }
+ 
+ .merch-page__social-nav {
+     .social-nav {
+         &__list {
+             display: flex;
+             justify-content: center;
+         }
+         &__icon {
+             fill: $color-black;
+             width: 2.8rem;
+             height: 2.8rem;
+         }
+         &__item {
+             &:not(:last-child) {
+                 margin-right: 5rem;
+             }
+         }
+ 
+         @include respond(phone) {
+             
+             &__icon {
+                 width: 3.5rem;
+                 height: 3.5rem;
+             }
+             &__item {
+                 &:not(:last-child) {
+                     margin-right: 8rem;
+                 }
+             }
+         }
+ 
+         @include respond(phone-med) {
+             &__list {
+                 justify-content: space-around;
+             }
+             &__item {
+                 &:not(:last-child) {
+                     margin-right: 0;
+                 }
+             }
+         }
+     }
+ }
