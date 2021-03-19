@@ -141,6 +141,21 @@ p:not(:last-child) {
   padding-top: 8rem;
 }
 
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0.3;
+  overflow: hidden;
+}
+.bg-video__content {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
 .btn {
   /*&::after {
       content: "";
@@ -849,6 +864,7 @@ footer {
   width: 100%;
   height: 10rem;
   position: relative;
+  z-index: 4;
 }
 .nav-main__header {
   color: #efefef;
@@ -1615,13 +1631,13 @@ footer {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: #2b4220;
+  position: relative;
 }
-@media only screen and (max-width: 37.5em) {
-  .home__header {
-    background-image: url(../img/leaves_bg-small.jpg);
-  }
+.home__header__img, .home__header__btn {
+  position: relative;
+  z-index: 1;
 }
-
 .clones {
   background-color: #fff;
   min-height: 80vh;
@@ -1813,6 +1829,84 @@ footer {
 }
 .family-group__img--8 {
   background-image: url(../img/family_08.png);
+}
+
+.merch-page {
+  background-image: url(../img/merch-preview_bg-large.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 5rem;
+}
+@media only screen and (max-width: 37.5em) {
+  .merch-page {
+    background-image: url(../img/merch-preview_bg-small.jpg);
+  }
+  .merch-page__img {
+    width: 95%;
+  }
+}
+.merch-page__header, .merch-page__form-wrapper {
+  max-width: 80rem;
+  width: 100%;
+}
+.merch-page__header {
+  background-color: #fff;
+}
+.merch-page__header--wrapper {
+  background-color: #fff;
+  position: relative;
+  z-index: 3;
+  padding: 4rem 7rem;
+}
+@media only screen and (max-width: 37.5em) {
+  .merch-page__header--wrapper {
+    padding: 1.5rem 3rem 0 3rem;
+  }
+}
+.merch-page__img {
+  margin: 5rem 0;
+}
+@media only screen and (max-width: 56.25em) {
+  .merch-page__form-wrapper {
+    max-width: 95%;
+  }
+}
+
+.merch-page__social-nav .social-nav__list {
+  display: flex;
+  justify-content: center;
+}
+.merch-page__social-nav .social-nav__icon {
+  fill: #000;
+  width: 2.8rem;
+  height: 2.8rem;
+}
+.merch-page__social-nav .social-nav__item:not(:last-child) {
+  margin-right: 5rem;
+}
+@media only screen and (max-width: 37.5em) {
+  .merch-page__social-nav .social-nav__icon {
+    width: 3.5rem;
+    height: 3.5rem;
+  }
+  .merch-page__social-nav .social-nav__item:not(:last-child) {
+    margin-right: 8rem;
+  }
+}
+@media only screen and (max-width: 30em) {
+  .merch-page__social-nav .social-nav__list {
+    justify-content: space-around;
+  }
+  .merch-page__social-nav .social-nav__item:not(:last-child) {
+    margin-right: 0;
+  }
 }
 
 .whoweare {

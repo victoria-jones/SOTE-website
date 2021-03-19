@@ -6,9 +6,17 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: $color-primary-green-med;
+    position: relative;
+
+    &__img,
+    &__btn {
+        position: relative;
+        z-index: 1;
+    }
 
     @include respond(phone) {
-        background-image: url(../img/leaves_bg-small.jpg);
+        //background-image: url(../img/leaves_bg-small.jpg);
     }
 }
 
