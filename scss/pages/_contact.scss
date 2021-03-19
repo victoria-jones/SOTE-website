@@ -1,5 +1,5 @@
 .contact {
-   background-image: url(../img/farm2_bg-large.jpg);
+   background-image: url(../img/bud03_bg-large.jpg);
    background-repeat: no-repeat;
    background-size: cover; 
    background-attachment: fixed;
@@ -11,7 +11,7 @@
    align-items: center;
 
    @include respond(phone) {
-    background-image: url(../img/farm2_bg-small.jpg);
+    background-image: url(../img/bud03_bg-small.jpg);
    }
 
    &__header,

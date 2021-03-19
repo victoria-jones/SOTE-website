@@ -147,7 +147,7 @@ p:not(:last-child) {
   left: 0;
   height: 100%;
   width: 100%;
-  opacity: 0.3;
+  opacity: 0.4;
   overflow: hidden;
 }
 .bg-video__content {
@@ -1171,7 +1171,7 @@ footer {
   }
 }
 .contact {
-  background-image: url(../img/farm2_bg-large.jpg);
+  background-image: url(../img/bud03_bg-large.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -1183,7 +1183,7 @@ footer {
 }
 @media only screen and (max-width: 37.5em) {
   .contact {
-    background-image: url(../img/farm2_bg-small.jpg);
+    background-image: url(../img/bud03_bg-small.jpg);
   }
 }
 .contact__header, .contact__form-wrapper {
