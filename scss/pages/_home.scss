@@ -39,6 +39,8 @@
         overflow-x: hidden; 
         overflow-y: hidden;
         @include torn-edge-fix;
+        position: relative;
+        z-index: 3;
     }
     
     &__info {

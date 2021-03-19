@@ -1655,6 +1655,8 @@ footer {
   overflow-y: hidden;
   position: relative;
   z-index: 1;
+  position: relative;
+  z-index: 3;
 }
 .clones__info {
   max-width: 50rem;
