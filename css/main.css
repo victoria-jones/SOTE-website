@@ -147,7 +147,6 @@ p:not(:last-child) {
   left: 0;
   height: 100%;
   width: 100%;
-  opacity: 0.4;
   overflow: hidden;
 }
 .bg-video__content {
