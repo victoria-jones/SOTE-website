@@ -2200,6 +2200,12 @@ footer {
     padding-left: 0;
     padding-right: 0;
   }
+  .thefamily__img {
+    width: 100%;
+  }
+  .thefamily__img::after {
+    padding-top: 65.9137577002%;
+  }
 }
 @media only screen and (max-width: 56.25em) {
   .thefamily {

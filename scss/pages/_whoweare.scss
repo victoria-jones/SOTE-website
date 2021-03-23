@@ -273,6 +273,8 @@
         @include default-container-max-width-large;
     }
 
+    
+
     /*
     &__grid {
         padding: 2rem 0;
@@ -321,6 +323,17 @@
             padding-right: 0;
         }
 
+        //quick and dirty fix for mobile views of the image for now
+        //it will be fixed the *right way* later
+            //this is just to maintain aspec ratio and resizes the image to fit the available space
+        &__img {
+            width: 100%;
+            &::after {
+                padding-top: 65.91375770020534%;
+            }
+            
+        }
+
        /*&__grid {
             align-self: center;
         }*/
@@ -355,4 +368,5 @@
             width: 50%;
         }*/
     }
+
 }
