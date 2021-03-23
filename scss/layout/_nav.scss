@@ -226,6 +226,7 @@
     }
 
     .nav-main {
+        //transition: all .8s cubic-bezier(0.83, 0, 0.17, 1) .2s;
         &__header {
             position: absolute;
             bottom: -70vh;
@@ -233,7 +234,9 @@
         
         &__social-nav {
             position: fixed;
-            width: 100%;
+            //width: 100%;
+            width: 0;
+            left: -100%;
         }
 
         .social-nav__list {
@@ -349,6 +352,11 @@
         //right: 0;
         width: 100%;
         opacity: 1;
+    }
+    //scroll out social navigation
+    .nav-mobile__checkbox:checked ~ .nav-main__header .social-nav {
+        width: 100%;
+        left: initial;
     }
 
     //icon change to close 
