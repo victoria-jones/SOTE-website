@@ -81,7 +81,7 @@
                     <a href="genetics.html" class="btn header__btn home__header__btn margin-top-med">View Genetics</a>
 
                     <div class="bg-video">
-                        <video class="bg-video__content" autoplay muted loop>
+                        <video class="bg-video__content" playsinline autoplay muted loop>
                             <source src="img/bg_video_01.mp4" type="video/mp4">
                             Your browser does not support this video :(
                         </video>
@@ -118,6 +118,11 @@
                 <section class="home__contact component__contact">
                     <div class="contact__form-wrapper form-wrapper margin-bottom-sml margin-top-sml">
                         <h2 class="margin-bottom-sml">Contact Us</h2>
+                        <p class="contact__p">
+                            The contact form is temorary down if you have any inquiries please contact us through social media or at:
+                            <span class="contact__email-span">brent@sotenursery.com</span>
+                        </p>
+                        <!--
                         <form action="#" class="contact__form form">
                             <div class="form__group">
                                 <input type="text" class="form__input" placeholder="Name" id="name"  name="user_name" maxlength="30" required />
@@ -138,6 +143,7 @@
                                 <button class="btn contact_btn">Send</button>
                             </div>
                         </form>
+                        -->
                     </div>
                 </section>
             
@@ -178,7 +184,9 @@
             <!--which apparent only works when it feels like it...-->
             <script> </script>
             <script src="js/utilities/close-menus.js"></script>
-            <script src="js/email/sendemail.js"></script>
+            <!--<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+            <script type="text/javascript">emailjs.init('user_M6X9wAuGQeT3M2XpZlbmN')</script>
+            <script src="js/email/sendemail.js"></script>-->
         </footer>
     </body>
 </html>

@@ -363,6 +363,12 @@ p:not(:last-child) {
   align-items: center;
 }
 
+.contact__email-span {
+  display: block;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
 .green-container {
   position: relative;
   z-index: 1;
@@ -2193,6 +2199,12 @@ footer {
   .thefamily__container {
     padding-left: 0;
     padding-right: 0;
+  }
+  .thefamily__img {
+    width: 100%;
+  }
+  .thefamily__img::after {
+    padding-top: 65.9137577002%;
   }
 }
 @media only screen and (max-width: 56.25em) {
