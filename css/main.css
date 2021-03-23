@@ -363,6 +363,12 @@ p:not(:last-child) {
   align-items: center;
 }
 
+.contact__email-span {
+  display: block;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
 .green-container {
   position: relative;
   z-index: 1;
