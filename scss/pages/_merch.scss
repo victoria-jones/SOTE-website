@@ -14,7 +14,23 @@
     padding-bottom: 5rem;
  
     @include respond(phone) {
-        background-image: url(../img/merch-preview_bg-small.jpg);
+        //background-attament: fixed mobile browser fix
+
+        //background-image: url(../img/merch-preview_bg-small.jpg);
+        background-image: none;
+        &::after {
+            content: "";
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url(../img/merch-preview_bg-small.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            z-index: -1;
+        }
+        
 
      &__img {
          width: 95%;

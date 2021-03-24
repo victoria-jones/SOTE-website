@@ -11,7 +11,21 @@
    align-items: center;
 
    @include respond(phone) {
-    background-image: url(../img/bud03_bg-small.jpg);
+        //background-image: url(../img/bud03_bg-small.jpg);
+        //background-attatchment:fixed mobile browser fix 
+        background-image: none;
+        &::after {
+            content: "";
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url(../img/bud03_bg-small.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            z-index: -1;
+        }
    }
 
    &__header,

@@ -70,6 +70,7 @@
     }
 
     @include respond(phone) {
+        background-attachment: initial;
         &__p-container {
             padding: 6rem 4rem;  
             margin-bottom: 10rem; 
