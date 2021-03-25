@@ -371,7 +371,6 @@
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
-        background-attachment: fixed;
 
         @include respond(phone) {
             background-image: url(../img/buds2_bg-small.jpg);
