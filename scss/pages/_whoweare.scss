@@ -1,7 +1,7 @@
 .whoweare {
-    background-image: url(../img/babies_bg-large.jpg);
+    background-image: url(../img/babies02_bg-large.jpg);
     @include respond(phone) {
-        background-image: url(../img/babies_bg-small.jpg);
+        background-image: url(../img/babies02_bg-small.jpg);
     }
 }
 

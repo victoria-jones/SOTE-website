@@ -1984,11 +1984,11 @@ footer {
 }
 
 .whoweare {
-  background-image: url(../img/babies_bg-large.jpg);
+  background-image: url(../img/babies02_bg-large.jpg);
 }
 @media only screen and (max-width: 37.5em) {
   .whoweare {
-    background-image: url(../img/babies_bg-small.jpg);
+    background-image: url(../img/babies02_bg-small.jpg);
   }
 }
 
