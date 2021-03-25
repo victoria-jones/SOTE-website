@@ -1,7 +1,29 @@
 .whoweare {
     background-image: url(../img/babies02_bg-large.jpg);
+    position: relative;
+
     @include respond(phone) {
-        background-image: url(../img/babies02_bg-small.jpg);
+        background-image: none;
+
+        &::after {
+            content: "";
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            top: 0;
+            right: 0;
+            background-image: url(../img/babies02_bg-small.jpg);
+            z-index: -1;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        //background-image: url(../img/babies02_bg-small.jpg);
+    }
+
+    &__header,
+    &__p-container {
+        
     }
 }
 
