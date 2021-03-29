@@ -6,7 +6,11 @@
         padding-bottom: 5rem;
 
         @include respond(phone) {
+            //background-image: url(../img/buds01_bg-small.jpg);
+            background-image: none;
+        &::after {
             background-image: url(../img/buds01_bg-small.jpg);
+        }
         }
 
         &--wrapper {
