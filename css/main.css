@@ -1633,7 +1633,7 @@ footer {
   max-height: 30rem;
   overflow-y: scroll;
 }
-.genetics-popup__type, .genetics-popup__care, .genetics-popup__growtime, .genetics-popup__yield, .genetics-popup__THC {
+.genetics-popup__key-info {
   display: flex;
   align-items: center;
 }
@@ -1677,7 +1677,7 @@ footer {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
   }
-  .genetics-popup__header, .genetics-popup__type, .genetics-popup__care, .genetics-popup__growtime, .genetics-popup__yield {
+  .genetics-popup__header, .genetics-popup__key-info {
     padding-left: 2rem;
     padding-right: 2rem;
   }

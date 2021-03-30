@@ -364,11 +364,7 @@
         overflow-y: scroll;
     }
 
-    &__type, 
-    &__care,
-    &__growtime,
-    &__yield,
-    &__THC {
+    &__key-info {
         display: flex;
         align-items: center;
     }
@@ -420,10 +416,7 @@
         }
 
         &__header,
-        &__type,
-        &__care,
-        &__growtime,
-        &__yield {
+        &__key-info {
             padding-left: 2rem;
             padding-right: 2rem;
         }
