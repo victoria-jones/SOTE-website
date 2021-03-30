@@ -49,6 +49,7 @@ function createEventListeners () {
         populateStrainGrow(selectedStrain);
         populateStrainGrowTime(selectedStrain);
         populateStrainYield(selectedStrain);
+        populateStrainTHC(selectedStrain);
         populateStrainDescription(selectedStrain);
         createTags(selectedStrain);
         showPopup();
@@ -220,6 +221,35 @@ function createEventListeners () {
         popupYieldDiv.appendChild(popupYieldSpan);
     }
 
+    function populateStrainTHC(x) {
+        let popupTHCDiv = document.getElementsByClassName("genetics-popup__THC")[0];
+        let popupTHCSvg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+        let popupTHCSvgUse = document.createElementNS('http://www.w3.org/2000/svg', 'use');
+        let popupTHCSpan = document.createElement("span");
+        let strainTHC = x.thc;
+        let strainTHCString;
+
+        //set span class and add name
+        popupTHCSpan.classList.add("genetics__key-icon-name");
+
+        //set first letter of yield to uppercase 
+        strainTHCString = strainTHC;
+        strainTHCString = strainTHCString.charAt(0).toUpperCase() + strainTHCString.substr(1);
+
+        //add the yield to the span
+        popupTHCSpan.innerHTML = `${strainTHCString} THC`;
+
+        //create the svg for yield
+        popupTHCSvg.classList.add("genetics__key--icon", "genetics-card__type--icon--7");
+        popupTHCSvgUse.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href', 'img/sprite.svg#icon-droplet');
+
+        popupTHCSvg.appendChild(popupTHCSvgUse);
+
+        //append svgs then append text
+        popupTHCDiv.appendChild(popupTHCSvg);
+        popupTHCDiv.appendChild(popupTHCSpan);
+    }
+
     function populateStrainDescription(x) {
         let strainDescription = x.description;
         let popupDescriptionDiv = document.getElementsByClassName("genetics-popup__details")[0];
@@ -294,12 +324,14 @@ function createEventListeners () {
         let popupDescription = document.getElementsByClassName("genetics-popup__details")[0];
         let popupGrowTime = document.getElementsByClassName("genetics-popup__growtime")[0];
         let popupYield = document.getElementsByClassName("genetics-popup__yield")[0];
+        let popupTHC = document.getElementsByClassName("genetics-popup__THC")[0];
         let popupDivFields = [
             popupType,
             popupGrow,
             popupDescription,
             popupGrowTime,
-            popupYield
+            popupYield,
+            popupTHC
         ];
 
         for(i in popupDivFields) {
