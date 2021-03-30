@@ -69,7 +69,7 @@ var strainList = [
         "type": ["indica"],
         "grow": ["indoors", "outdoors"],
         "description": "Dense Buds. Genetics hold relief for chronic pain, stress and anxiety.",
-        "photo": ["lavacake-tb.jpg", "lavacake3.jpg"],
+        "photo": ["lavacake01-tb.jpg", "lavacake3.jpg"],
         "growtime": "8",
         "yield": "medium",
         "thc": "25-31%",
