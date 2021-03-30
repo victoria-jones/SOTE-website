@@ -7,6 +7,8 @@ var strainList = [
         "photo": ["cherrypunch-tb.jpg", "cherry.jpg"],
         "growtime": "8-9",
         "yield": "high",
+        "thc": "22-27%",
+        "cbd": "<2%",
         "available": false,
         "section": "featured"
     },
@@ -18,6 +20,8 @@ var strainList = [
         "photo": ["cerealmilk-tb.jpg", "cerealmilk.jpg"],
         "growtime": "9",
         "yield": "medium",
+        "thc": "24-31%",
+        "cbd": "<2%",
         "available": true,
         "section": "featured"
     },
@@ -25,10 +29,12 @@ var strainList = [
         "name": "Purple Punch",
         "type": ["indica"],
         "grow": ["indoors"],
-        "description": "Extreme Trichome Production - Helps patients with managing nausea, stress, minor body aches, and sleeplessness.",
+        "description": "Extreme Purple and Trichome Production - Helps patients with managing nausea, stress, minor body aches, and sleeplessness.",
         "photo": ["purplepunch-tb.jpg", "purplepunch4.jpg"],
         "growtime": "7",
         "yield": "high",
+        "thc": "19-24%",
+        "cbd": "<2%",
         "available": true,
         "section": "featured"
     },
@@ -40,6 +46,8 @@ var strainList = [
         "photo": ["projectx-tb.jpg", "projectX52.jpg"],
         "growtime": "9",
         "yield": "high",
+        "thc": "26-31%",
+        "cbd": "<2%",
         "available": false,
         "section": "featured"
     },
@@ -51,6 +59,8 @@ var strainList = [
         "photo": ["sundaydriver-tb.jpg", "sundaydriver2.jpg"],
         "growtime": "8-9",
         "yield": "high",
+        "thc": "23-27%",
+        "cbd": "<2%",
         "available": true,
         "section": "featured"
     },
@@ -62,6 +72,34 @@ var strainList = [
         "photo": ["lavacake-tb.jpg", "lavacake3.jpg"],
         "growtime": "8",
         "yield": "medium",
+        "thc": "25-31%",
+        "cbd": "<2%",
+        "available": true,
+        "section": "featured"
+    },
+    {
+        "name": "White Tahoe Cookies",
+        "type": ["sativa"],
+        "grow": ["indoors", "outdoors"],
+        "description": "Larger nugs than traditional cookies with less color.",
+        "photo": ["lavacake-tb.jpg", "lavacake3.jpg"],
+        "growtime": "8-9",
+        "yield": "high",
+        "thc": "26-32%",
+        "cbd": "<2%",
+        "available": true,
+        "section": "featured"
+    },
+    {
+        "name": "Girl Scout Cookies",
+        "type": ["sativa"],
+        "grow": ["indoors", "outdoors"],
+        "description": "Smaller nug size yet very dense buds.",
+        "photo": ["lavacake-tb.jpg", "lavacake3.jpg"],
+        "growtime": "8-9",
+        "yield": "high",
+        "thc": "26-29%",
+        "cbd": "<2%",
         "available": true,
         "section": "featured"
     }

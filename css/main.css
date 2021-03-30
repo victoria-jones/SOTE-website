@@ -1491,6 +1491,10 @@ footer {
   color: #546b34;
   fill: #546b34;
 }
+.genetics__key--item--7 {
+  color: #FF832A;
+  fill: #FF832A;
+}
 .genetics__key--icon {
   width: 2rem;
   height: 2rem;
@@ -1590,6 +1594,9 @@ footer {
 .genetics-card__type--icon--6 {
   fill: #546b34;
 }
+.genetics-card__type--icon--7 {
+  fill: #FF832A;
+}
 .genetics-card__btns {
   display: flex;
   align-items: center;
@@ -1626,7 +1633,7 @@ footer {
   max-height: 30rem;
   overflow-y: scroll;
 }
-.genetics-popup__type, .genetics-popup__care, .genetics-popup__growtime, .genetics-popup__yield {
+.genetics-popup__type, .genetics-popup__care, .genetics-popup__growtime, .genetics-popup__yield, .genetics-popup__THC {
   display: flex;
   align-items: center;
 }

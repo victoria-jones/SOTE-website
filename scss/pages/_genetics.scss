@@ -194,6 +194,11 @@
                 color: $color-primary-green;
                 fill: $color-primary-green;
             }
+
+            &--7 {
+                color: $color-secondary-orange;
+                fill: $color-secondary-orange;
+            }
         }
         &--icon {
             width: 2rem;
@@ -310,6 +315,9 @@
            &--6 {
                 fill: $color-primary-green;
            }
+           &--7 {
+               fill: $color-secondary-orange;
+           }
         }
     }
 
@@ -359,7 +367,8 @@
     &__type, 
     &__care,
     &__growtime,
-    &__yield {
+    &__yield,
+    &__THC {
         display: flex;
         align-items: center;
     }
