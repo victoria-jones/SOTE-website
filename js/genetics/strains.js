@@ -9,7 +9,7 @@ var strainList = [
         "yield": "high",
         "thc": "22-27%",
         "cbd": "<2%",
-        "available": false,
+        "available": true,
         "section": "featured"
     },
     {
@@ -48,7 +48,7 @@ var strainList = [
         "yield": "high",
         "thc": "26-31%",
         "cbd": "<2%",
-        "available": false,
+        "available": true,
         "section": "featured"
     },
     {
@@ -87,7 +87,7 @@ var strainList = [
         "yield": "high",
         "thc": "26-32%",
         "cbd": "<2%",
-        "available": true,
+        "available": false,
         "section": "featured"
     },
     {
@@ -100,7 +100,7 @@ var strainList = [
         "yield": "high",
         "thc": "26-29%",
         "cbd": "<2%",
-        "available": true,
+        "available": false,
         "section": "featured"
     }
 ]
