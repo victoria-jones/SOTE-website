@@ -19,8 +19,8 @@ function createEventListeners() {
 
 
     function showPopupContact(x) {
-        const selectedStrain = getStrainName(x);
-        populateMessage(selectedStrain);
+        //const selectedStrain = getStrainName(x);
+        //populateMessage(selectedStrain);
         showPopup();
     }
 
