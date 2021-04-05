@@ -24,7 +24,7 @@ function populateGeneticsCard(x) {
 //Create the strain cards 
 function createCards () {
     
-    let strains = strainList;
+    let strains = getStrainList();
 
     //make a card for each strain from the strain List:(strains-test.json)
     let geneticsCardList = [];
@@ -34,6 +34,19 @@ function createCards () {
     for(i in strains) {
         let newCard = makeCards(strains[i]);
         geneticsCardList.push(newCard);
+    }
+
+    function getStrainList() {
+        let allStrains = strainList;
+        let currentStrains = [];
+
+        for(i in allStrains) {
+            if(allStrains[i].available) {
+                currentStrains.push(allStrains[i]);
+            }
+        }
+
+        return currentStrains;
     }
     
     //populate the genetics cards

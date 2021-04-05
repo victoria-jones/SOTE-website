@@ -5,7 +5,7 @@
 
 //parse the json data
 function getStrains () {
-    let strains = strainList;
+    let strains = createStrainList();
     strains.forEach(createLinks);
 
     function createLinks (x) {
@@ -28,6 +28,19 @@ function getStrains () {
         strainListItem.appendChild(strainHiddenInput);
         linkList.appendChild(strainListItem);
     }
+}
+
+function createStrainList() {
+    let allStrains = strainList;
+    let currentStrains = [];
+
+    for(i in allStrains) {
+        if(allStrains[i].available) {
+            currentStrains.push(allStrains[i]);
+        }
+    }
+
+    return currentStrains;
 }
 
 //on pageload create eventlisteners 
