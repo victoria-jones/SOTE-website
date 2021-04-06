@@ -1,0 +1,36 @@
+/**
+ * @license
+ * MyFonts Webfont Build ID 4035747, 2021-04-06T15:38:57-0400
+ * 
+ * The fonts listed in this notice are subject to the End User License
+ * Agreement(s) entered into by the website owner. All other parties are 
+ * explicitly restricted from using the Licensed Webfonts(s).
+ * 
+ * You may obtain a valid license at the URLs below.
+ * 
+ * Webfont: LEMONMILKPro-Regular by Marsnev
+ * URL: https://www.myfonts.com/fonts/marsnev/lemon-milk-pro/regular/
+ * 
+ * Webfont: LEMONMILKPro-Bold by Marsnev
+ * URL: https://www.myfonts.com/fonts/marsnev/lemon-milk-pro/bold/
+ * 
+ * 
+ * Webfonts copyright: Copyright © 2020 by MARSNEV. All rights reserved.
+ * 
+ * © 2021 MyFonts Inc
+*/
+
+
+/* @import must be at top of file, otherwise CSS will not work */
+@import url("//hello.myfonts.net/count/3d94a3");
+ 
+/* font url as is will not work locally, remove one file level */
+@font-face {
+  font-family: "LEMONMILKPro-Bold";
+  src: url('../../webFonts/LEMONMILKProBold/font.woff2') format('woff2'), url('../../webFonts/LEMONMILKProBold/font.woff') format('woff');
+}
+@font-face {
+  font-family: "LEMONMILKPro-Regular";
+  src: url('../../webFonts/LEMONMILKProRegular/font.woff2') format('woff2'), url('../../webFonts/LEMONMILKProRegular/font.woff') format('woff');
+}
+
