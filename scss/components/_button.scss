@@ -2,7 +2,7 @@
     &,
     &:link,
     &:visited {
-        font-family: $font-display;
+        font-family: $font-display-light;
         color: $color-white;
         font-size: $default-font-size;
         text-decoration: none;
@@ -66,7 +66,7 @@
     &,
     &:link,
     &:visited {
-        font-family: $font-display;
+        font-family: $font-display-light;
         color: $color-white;
         font-size: $font-size-small;
         text-decoration: none;

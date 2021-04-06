@@ -75,6 +75,12 @@ body {
   font-size: 1.6rem;
 }
 
+.header-1,
+.header-2,
+.header-3 {
+  font-family: "LEMONMILKPro-Regular", sans-serif;
+}
+
 .header-1 {
   font-size: 4.5rem;
   color: #fff;
@@ -175,7 +181,7 @@ p:not(:last-child) {
   }*/
 }
 .btn, .btn:link, .btn:visited {
-  font-family: "LEMONMILKPro-Bold", sans-serif;
+  font-family: "LEMONMILKPro-Regular", sans-serif;
   color: #fff;
   font-size: 1.6rem;
   text-decoration: none;
@@ -211,7 +217,7 @@ p:not(:last-child) {
   box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.8);
 }
 .card-btn, .card-btn:link, .card-btn:visited {
-  font-family: "LEMONMILKPro-Bold", sans-serif;
+  font-family: "LEMONMILKPro-Regular", sans-serif;
   color: #fff;
   font-size: 1.2rem;
   text-decoration: none;
@@ -1563,7 +1569,7 @@ footer {
 .genetics-card__header {
   margin-bottom: 0;
   color: #2b4220;
-  font-size: 2.4rem;
+  font-size: 2rem;
 }
 .genetics-card__info {
   padding: 0 2rem 2rem 2rem;
