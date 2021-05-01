@@ -18,13 +18,13 @@
             background-position: center;
             background-repeat: no-repeat;
         }
-        //background-image: url(../img/babies02_bg-small.jpg);
-    }
-
-    &__header,
-    &__p-container {
         
     }
+
+    @include respond(big-desktop) {
+        background-image: url(../img/babies02_bg-xl.jpg);
+    }
+
 }
 
 .seedtomed {
@@ -34,7 +34,6 @@
         position: relative;
         z-index: 3;
         width: 100%;
-        //overflow: hidden;
         background-image: url(../img/overhead-plant.jpg),
                         url(../img/overhead-plant-med.jpg);
         background-repeat: no-repeat, no-repeat;
@@ -90,8 +89,14 @@
 
     @include respond(phone-med) {
         &__bg-img {
-            background-position: (calc(100% + 10rem) 12rem), (-15rem 95%)
+            background-position: (calc(100% + 10rem) 12rem), (-15rem 95%);
         }
+    }
+
+    @include respond(xl-desktop) {
+        &__bg-img {
+            background-position: (calc(50% + 50rem) 0), (calc(50% - 50rem) 100%);  
+        }     
     }
 }
 

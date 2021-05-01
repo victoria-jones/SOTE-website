@@ -51,6 +51,12 @@ function filterCards(x) {
             } else {
                 hideCard = true;
             }
+            
+            /*if(cardValue.type[0].includes("hybrid")) {
+                hideCard = false;
+            } else {
+                hideCard = true;
+            }*/
         } else if (selectedFilterOption === "available") {
             if(cardValue.available) {
                 hideCard = false;

@@ -17,6 +17,68 @@
     </head>
 
     <body class="container">
+        <!-- popup for email alert -->
+        <div class="genetics-popup popup">
+            <div class="genetics-popup--wrapper popup--wrapper"> 
+
+                <div class="genetics-popup__close-btn popup__close-btn">
+                    <span class="genetics-popup__icon popup__icon">&nbsp;</span>
+                </div>
+
+                <div class="popup__message-sent">
+                    <div class="message-sent--successful">
+                        <h2 class="header-2">Your message has sent.</h2>
+                        <p class="p">We will get in touch soon.</p>
+
+                        <nav class="social-nav contact__social-nav">
+                            <ul class="social-nav__list margin-top-sml">
+                                <li class="social-nav__item">
+                                    <a href="https://www.facebook.com/SOTEnursery/" class="social-nav__link">
+                                        <svg class="social-nav__icon">
+                                            <use xlink:href="img/sprite.svg#icon-facebook"></use>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li class="social-nav__item">
+                                    <a href="https://www.instagram.com/sotenursery/" class="social-nav__link">
+                                        <svg class="social-nav__icon">
+                                            <use xlink:href="img/sprite.svg#icon-instagram"></use>
+                                        </svg>
+                                    </a> 
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+
+                    <div class="message-sent--error">
+                        <h2 class="header-2">Whoops, there was an error sending your messsage.</h2>
+                        <p class="p">Please try again later, or check out other ways to reach us below.</p>
+
+                        <p class="p email">brent@sotenursey.com</p>
+                        <nav class="social-nav contact__social-nav">
+                            <ul class="social-nav__list margin-top-sml">
+                                <li class="social-nav__item">
+                                    <a href="https://www.facebook.com/SOTEnursery/" class="social-nav__link">
+                                        <svg class="social-nav__icon">
+                                            <use xlink:href="img/sprite.svg#icon-facebook"></use>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li class="social-nav__item">
+                                    <a href="https://www.instagram.com/sotenursery/" class="social-nav__link">
+                                        <svg class="social-nav__icon">
+                                            <use xlink:href="img/sprite.svg#icon-instagram"></use>
+                                        </svg>
+                                    </a> 
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                    
+                </div>
+                
+            </div>
+        </div>
 
         <div class="nav-main">
             <!-- mobile nav parts -->
@@ -111,11 +173,7 @@
     
                 <div class="contact__form-wrapper form-wrapper margin-bottom-sml margin-top-sml">
                     <h2 class="margin-bottom-sml">Contact Us</h2>
-                    <p class="contact__p">
-                        The contact form is temorary down if you have any inquiries please contact us through social media or at:
-                        <span class="contact__email-span">brent@sotenursery.com</span>
-                    </p>
-                    <!--
+                    
                     <form class="contact__form form">
                         <div class="form__group">
                             <input type="text" class="form__input" placeholder="Name" id="name" name="user_name" maxlength="30" required />
@@ -136,7 +194,7 @@
                             <button class="btn contact_btn">Send</button>
                         </div>
                     </form>
-                    -->
+                    
                 </div>
             </section>
 
@@ -176,9 +234,10 @@
             <!--chrome animation on load glitch fix-->
             <script> </script>
             <script src="js/utilities/close-menus.js"></script>
-            <!--<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
-            <script type="text/javascript">emailjs.init('user_M6X9wAuGQeT3M2XpZlbmN')</script>
-            <script src="js/email/sendemail.js"></script>-->
+            <!-- EmailJS scripts -->
+            <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+            <script type="text/javascript">emailjs.init('user_0HK1SYsYalc4bA0EvdPUM')</script>
+            <script src="js/email/sendemail.js"></script>
         </footer>
     </body>
 </html>

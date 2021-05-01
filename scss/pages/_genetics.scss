@@ -6,17 +6,20 @@
         padding-bottom: 5rem;
 
         @include respond(phone) {
-            //background-image: url(../img/buds01_bg-small.jpg);
             background-image: none;
-        &::after {
-            background-image: url(../img/buds01_bg-small.jpg);
-        }
+            &::after {
+                background-image: url(../img/buds01_bg-small.jpg);
+            }
         }
 
         &--wrapper {
-            @include respond(phone) {
+            @include respond(phone) { 
                 padding: 1.5rem;
             }
+        }
+
+        @include respond(big-desktop) {
+            background-image: url(../img/buds01_bg-xl-test.jpg);
         }
     }
 
@@ -215,11 +218,22 @@
     color: $color-grey-light;
     padding: 1.5rem;
     display: flex;
-    justify-content: flex-end;
-    align-items: center;
+    justify-content: center;
+    
 
     @include respond(phone) {
-        justify-content: center;
+        &--wrapper {
+            justify-content: center;
+        }    
+    }
+
+    &--wrapper {
+        width: 100%;
+        max-width: 115rem;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+
     }
 }
 
@@ -272,6 +286,9 @@
         @include default-skew-horizontal;
         background-size: cover;
         background-position: center;
+        &:hover {
+            cursor: pointer;
+        }
     }
 
     &__header {
@@ -367,6 +384,15 @@
     &__key-info {
         display: flex;
         align-items: center;
+    }
+
+    //card image enlarge popup 
+    &__card-image {
+        display: none;
+        width: 100%;
+        height: 100%;
+        background-position: center;
+        background-size: cover;
     }
 
     //contact popup

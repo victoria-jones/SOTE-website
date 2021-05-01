@@ -19,8 +19,8 @@ function createEventListeners() {
 
 
     function showPopupContact(x) {
-        //const selectedStrain = getStrainName(x);
-        //populateMessage(selectedStrain);
+        const selectedStrain = getStrainName(x);
+        populateMessage(selectedStrain);
         showPopup();
     }
 
@@ -47,7 +47,8 @@ function createEventListeners() {
     function populateMessage(x) {
         let strainName = x;
         let messageArea = document.getElementById("message-quickview");
-        messageArea.innerHTML = `I'm interested in ${strainName}`;
+        //messageArea.innerHTML = `I'm interested in ${strainName}`;
+        messageArea.value = `I'm interested in ${strainName}`;
     }
 
     function showPopup() {
@@ -73,8 +74,23 @@ function createEventListeners() {
         //hide the popup and clear the message
             //the rest of the hide pop-up functionality works with populate-strain-quickview.js
         let contactView = document.getElementsByClassName("genetics-popup__contact")[0];
+        let messageSentView = document.getElementsByClassName("popup__message-sent")[0];
+        let formFields = document.getElementsByClassName("form__group");
+        let errorFields = document.getElementsByClassName("form__error");
+        let messageSuccessView = document.getElementsByClassName("message-sent--successful")[0];
+        let messageFailView = document.getElementsByClassName("message-sent--error")[0];
 
-        contactView.style.display = "none";      
+        contactView.style.display = "none";
+        messageSentView.style.display = "none"; 
+        messageSuccessView.style.display = "none";
+        messageFailView.style.display = "none";
+        
+        //clear the form fields and error messages when the popup closes
+            //do not clear the index 3 group (that is the submit button)
+        for(i=0; i<3; i++) {
+            formFields[i].childNodes[1].value = "";
+            errorFields[i].innerHTML = "";
+        }
     }
 
 }

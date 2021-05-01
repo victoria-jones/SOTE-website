@@ -16,9 +16,9 @@
     </head>
 
     <body class="container">
-            <!--<input type="checkbox" class="genetics-popup__checkbox popup__checkbox" id="popup-toggle" /> -->   
+            
             <div class="genetics-popup popup">
-                <div class="genetics-popup--wrapper popup--wrapper">
+                <div class="genetics-popup--wrapper popup--wrapper"> 
 
                     <div class="genetics-popup__close-btn popup__close-btn">
                         <span class="genetics-popup__icon popup__icon">&nbsp;</span>
@@ -96,11 +96,7 @@
                     <div class="genetics-popup__contact">
                         <div class="contact__form-wrapper form-wrapper margin-bottom-sml margin-top-sml">
                             <h2 class="margin-bottom-sml">Contact Us</h2>
-                            <p class="contact__p">
-                                The contact form is temorary down if you have any inquiries please contact us through social media or at:
-                                <span class="contact__email-span">brent@sotenursery.com</span>
-                            </p>
-                            <!--
+                        
                             <form action="#" class="contact__form form">
                                 <div class="form__group">
                                     <input type="text" class="form__input" placeholder="Name" id="name-quickview"  name="user_name" maxlength="30" required />
@@ -121,12 +117,67 @@
                                     <button class="btn contact_btn">Send</button>
                                 </div>
                             </form>
-                            -->
+
                         </div>
 
 
                     </div>
 
+                    <div class="popup__message-sent">
+                        <div class="message-sent--successful">
+                            <h2 class="header-2">Your message has sent.</h2>
+                            <p class="p">We will get in touch soon.</p>
+
+                            <nav class="social-nav contact__social-nav">
+                                <ul class="social-nav__list margin-top-sml">
+                                    <li class="social-nav__item">
+                                        <a href="https://www.facebook.com/SOTEnursery/" class="social-nav__link">
+                                            <svg class="social-nav__icon">
+                                                <use xlink:href="img/sprite.svg#icon-facebook"></use>
+                                            </svg>
+                                        </a>
+                                    </li>
+                                    <li class="social-nav__item">
+                                        <a href="https://www.instagram.com/sotenursery/" class="social-nav__link">
+                                            <svg class="social-nav__icon">
+                                                <use xlink:href="img/sprite.svg#icon-instagram"></use>
+                                            </svg>
+                                        </a> 
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+
+                        <div class="message-sent--error">
+                            <h2 class="header-2">Whoops, there was an error sending your messsage.</h2>
+                            <p class="p">Please try again later, or check out other ways to reach us below.</p>
+
+                            <p class="p email">brent@sotenursey.com</p>
+                            <nav class="social-nav contact__social-nav">
+                                <ul class="social-nav__list margin-top-sml">
+                                    <li class="social-nav__item">
+                                        <a href="https://www.facebook.com/SOTEnursery/" class="social-nav__link">
+                                            <svg class="social-nav__icon">
+                                                <use xlink:href="img/sprite.svg#icon-facebook"></use>
+                                            </svg>
+                                        </a>
+                                    </li>
+                                    <li class="social-nav__item">
+                                        <a href="https://www.instagram.com/sotenursery/" class="social-nav__link">
+                                            <svg class="social-nav__icon">
+                                                <use xlink:href="img/sprite.svg#icon-instagram"></use>
+                                            </svg>
+                                        </a> 
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                        
+                    </div>
+
+                    <div class="genetics-popup__card-image">
+
+                    </div>
                     
                 </div>
             </div>
@@ -254,17 +305,22 @@
             <main>
 
                 <section class="genetics">
+
                         <div class="genetics-filter">
-                            <label for="genetics-filter-select" class="genetics-filter__label">Filter View:</label>
-                            <select name="genetics-filter-select" id="genetics-filter-select" class="genetics-filter__menu">
-                                <option class="genetics-filter__option" value="none">Show all</option>
-                                <option class="genetics-filter__option" value="indica">Indica</option>
-                                <option class="genetics-filter__option" value="sativa">Sativa</option>
-                                <option class="genetics-filter__option" value="hybrid">Hybrid</option>
-                                <option class="genetics-filter__option" value="indoors">Grows Indoors</option>
-                                <option class="genetics-filter__option" value="outdoors">Grows Outdoors</option>
-                                <!--<option class="genetics-filter__option" value="available">Available</option>-->
-                            </select>
+                            <div class="genetics-filter--wrapper">
+
+                                <label for="genetics-filter-select" class="genetics-filter__label">Filter View:</label>
+                                <select name="genetics-filter-select" id="genetics-filter-select" class="genetics-filter__menu">
+                                    <option class="genetics-filter__option" value="none">Show all</option>
+                                    <option class="genetics-filter__option" value="indica">Indica</option>
+                                    <option class="genetics-filter__option" value="sativa">Sativa</option>
+                                    <option class="genetics-filter__option" value="hybrid">Hybrid</option>
+                                    <option class="genetics-filter__option" value="indoors">Grows Indoors</option>
+                                    <option class="genetics-filter__option" value="outdoors">Grows Outdoors</option>
+                                    <!--<option class="genetics-filter__option" value="available">Available</option>-->
+                                </select>
+
+                            </div>  
                         </div>
 
                         <nav class="genetics__side-menu">
@@ -327,7 +383,7 @@
 
                             <div class="genetics-section"></div>
                             <div class="genetics-section"></div>
-                        </div>     
+                        </div> 
                 </section>
 
                 <section class="genetics__contact component__contact">
@@ -361,11 +417,7 @@
 
                     <div class="contact__form-wrapper form-wrapper component__contact__form-wrapper margin-bottom-sml margin-top-sml">
                         <h2 class="margin-bottom-sml">Contact Us</h2>
-                        <p class="contact__p">
-                            The contact form is temorary down if you have any inquiries please contact us through social media or at:
-                            <span class="contact__email-span">brent@sotenursery.com</span>
-                        </p>
-                        <!--
+                        
                         <form action="#" class="contact__form form">
                             <div class="form__group">
                                 <input type="text" class="form__input" placeholder="Name" id="name"  name="user_name" maxlength="30" required />
@@ -386,7 +438,7 @@
                                 <button class="btn contact_btn">Send</button>
                             </div>
                         </form>
-                        -->
+
                     </div>
                 </section>
 
@@ -435,8 +487,10 @@
         <script src="js/genetics/filter-strains.js"></script>
         <script src="js/genetics/populate-strain-quickview.js"></script>
         <script src="js/genetics/popup-strain-contact.js"></script>
-        <!--<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
-        <script type="text/javascript">emailjs.init('user_M6X9wAuGQeT3M2XpZlbmN')</script>
-        <script src="js/email/sendemail.js"></script>-->
+        <script src="js/genetics/enlarge-card-image.js"></script>
+        <!-- EmailJS scripts -->
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+        <script type="text/javascript">emailjs.init('user_0HK1SYsYalc4bA0EvdPUM')</script>
+        <script src="js/email/sendemail.js"></script>
     </body>
 </html>

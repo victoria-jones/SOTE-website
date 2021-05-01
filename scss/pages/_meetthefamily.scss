@@ -7,6 +7,10 @@
             background-image: url(../img/family_bg_02-small.jpg);
         }
     }
+
+    @include respond(big-desktop) {
+        background-image: url(../img/family_bg_02-xl.jpg);
+    }
 }
 
 .family-group {

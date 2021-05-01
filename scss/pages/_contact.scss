@@ -28,6 +28,10 @@
         }
    }
 
+   @include respond(big-desktop) {
+    background-image: url(../img/bud03_bg-xl.jpg);
+   }
+
    &__header,
    &__form-wrapper {
        max-width: 80rem;

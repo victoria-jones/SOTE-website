@@ -19,6 +19,15 @@
             submitButton[i].attachEvent("onclick", sendEmail, false);
         }
     }
+
+    //close button listener
+    let popupClose = document.getElementsByClassName("popup__close-btn")[0];
+    if(popupClose.addEventListener) {
+        popupClose.addEventListener("click", hidePopup, false);
+    } else if (popupClose.attachEvent) {
+        popupClose.attachEvent("onclick", hidePopup);
+    }
+ 
  }
 
  function sendEmail(x) {
@@ -40,27 +49,40 @@
 
     //check if email can send by making sure there are no false values present
     if(sendCheck(formFields)) {
-        console.log("the email can send!");
+        //console.log("the email can send!");
   
         //send the emeail 
-        const serviceID = 'default_service';
-        const templateID = 'contact_form';
+        /*const serviceID = 'service_s5ewxza';
+        const templateID = 'template_sq5m80v';
         const formID = this.parentNode.parentNode;
 
-        /*emailjs.sendForm(serviceID, templateID, formID)
+        emailjs.sendForm(serviceID, templateID, formID)
             .then(() => {
-                alert('sent!');
+                messageSentPopup(true);
             }, (err) => {
-                alert(JSON.stringify(err));
+                messageSentPopup(false);
             });*/
         
         // empty the contact form and show a sent pop-up
+        messageSentPopup(true);
+        emptyFormFields(target);
 
     } else {
-        console.log("DO NOT SEND THE EMAIL");
+        //console.log("DO NOT SEND THE EMAIL");
         return;
     }
 
+ }
+
+ function emptyFormFields(target) {
+    const formFields = target.parentNode.parentNode.getElementsByClassName("form__group");
+
+    //do not pull the last form group (its the submit button)
+        //set to 3 to prevent pulling button into array
+    //empty the form fields 
+    for(i=0; i<3; i++) {
+        formFields[i].childNodes[1].value = "";
+    }
  }
 
  function checkFormFields(target) {
@@ -149,6 +171,79 @@
     if(allFields[i].childNodes[errorSpanChild].classList.item(1)) {
         allFields[i].childNodes[errorSpanChild].classList.remove("form__error--visible");
     }
+ }
+
+ function messageSentPopup(x) {
+    let contactView = document.getElementsByClassName("genetics-popup__contact")[0];
+    let popupBackground = document.getElementsByClassName("popup")[0];
+    let popup = document.getElementsByClassName("popup--wrapper")[0];
+    let messageSentView = document.getElementsByClassName("popup__message-sent")[0];
+    let messageSuccessView = document.getElementsByClassName("message-sent--successful")[0];
+    let messageFailView = document.getElementsByClassName("message-sent--error")[0];
+
+     //if contact popup is present or exists on this page hide it first
+    if(contactView === undefined) {
+        popupBackground.style.zIndex = "10000";
+        popupBackground.style.opacity = "1";
+
+        popup.style.height = "95vh";
+        popup.style.bottom = "0";
+
+        messageSentView.style.display = "flex"; 
+
+        //check if send was successuful and display either message sent view or an error view
+        if(x) {
+            messageSuccessView.style.display = "flex";
+        } else {
+            messageFailView.style.display = "flex";
+        }
+    } else if (contactView.style.getPropertyValue('display') === 'flex') {
+        contactView.style.display = "none";
+        messageSentView.style.display = "flex";
+
+        //check if send was successuful and display either message sent view or an error view
+        if(x) { 
+            messageSuccessView.style.display = "flex";
+        } else {
+            messageFailView.style.display = "flex";
+        }
+        
+    } else {
+        //if the contact popup is not present then display the popup and message sent
+        popupBackground.style.zIndex = "10000";
+        popupBackground.style.opacity = "1";
+
+        popup.style.height = "95vh";
+        popup.style.bottom = "0";
+
+        messageSentView.style.display = "flex"; 
+
+        //check if send was successuful and display either message sent view or an error view
+        if(x) {
+            messageSuccessView.style.display = "flex";
+        } else {
+            messageFailView.style.display = "flex";
+        }
+
+    }
+ }
+
+ function hidePopup () {
+    let popupBackground = document.getElementsByClassName("popup")[0];
+    let popup = document.getElementsByClassName("popup--wrapper")[0];
+    let messageSentView = document.getElementsByClassName("popup__message-sent")[0];
+    let messageSuccessView = document.getElementsByClassName("message-sent--successful")[0];
+    let messageFailView = document.getElementsByClassName("message-sent--error")[0];
+    
+    messageSentView.style.display = "none"; 
+    messageSuccessView.style.display = "none";
+    messageFailView.style.display = "none";
+
+    popupBackground.style.zIndex = "-1000";
+    popupBackground.style.opacity = "0";
+
+    popup.style.height = "0";
+    popup.style.bottom = "110%";
  }
 
 
