@@ -336,7 +336,6 @@ p:not(:last-child) {
 }
 @media only screen and (max-width: 37.5em) {
   .component__contact {
-    z-index: -2;
     overflow: hidden;
   }
   .component__contact__form-wrapper {
@@ -353,6 +352,7 @@ p:not(:last-child) {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    z-index: -2;
   }
 }
 
@@ -1104,6 +1104,11 @@ footer {
 .social-nav__link:active .social-nav__icon {
   transform: translateY(0);
   fill: #96813c;
+}
+@media only screen and (max-width: 37.5em) {
+  .social-nav__popup .social-nav__item:not(:last-child) {
+    margin-right: 7rem !important;
+  }
 }
 
 .nav-mobile__,

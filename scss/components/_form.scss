@@ -103,7 +103,7 @@
     //background-attachment: fixed does not work on some mobile browsers and safari ios
         //this is a workaround
     @include respond(phone) {
-        z-index: -2;
+        //z-index: -2;
         overflow: hidden;
 
         &__form-wrapper {
@@ -120,6 +120,8 @@
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
+
+            z-index: -2;
         }
     }
     //@include default-section-container-padding;
