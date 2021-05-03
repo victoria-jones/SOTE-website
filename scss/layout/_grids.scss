@@ -74,12 +74,14 @@ footer {
     grid-gap: 2rem;
 
     &__side-menu,
-    &__genetics-container {
+    &__container {
         grid-row: 2;
     }
 
     @include respond(tab-land) {
         grid-template-columns: 23rem 3fr;
+
+
     }
 
     @include respond(tab-port) {
@@ -89,9 +91,20 @@ footer {
             grid-row: 2;
             grid-column: 1 / -1;
         }
-        &__genetics-container {
+        &__container {
             grid-row: 3;
             grid-column: 1 / -1;
+        }
+    }
+
+    @include respond(big-desktop) {
+        grid-template-columns: 1fr 30rem 100rem 1fr;
+
+        &__side-menu {
+            grid-column: 2;
+        }
+        &__container {
+            grid-column: 3;
         }
     }
 }

@@ -24,13 +24,13 @@
 /* @import must be at top of file, otherwise CSS will not work */
 @import url("//hello.myfonts.net/count/3d94a3");
  
-/* font url as is will not work locally, remove one file level */
+
 @font-face {
   font-family: "LEMONMILKPro-Bold";
-  src: url('../../webFonts/LEMONMILKProBold/font.woff2') format('woff2'), url('../../webFonts/LEMONMILKProBold/font.woff') format('woff');
+  src: url('../webFonts/LEMONMILKProBold/font.woff2') format('woff2'), url('../../webFonts/LEMONMILKProBold/font.woff') format('woff');
 }
 @font-face {
   font-family: "LEMONMILKPro-Regular";
-  src: url('../../webFonts/LEMONMILKProRegular/font.woff2') format('woff2'), url('../../webFonts/LEMONMILKProRegular/font.woff') format('woff');
+  src: url('../webFonts/LEMONMILKProRegular/font.woff2') format('woff2'), url('../../webFonts/LEMONMILKProRegular/font.woff') format('woff');
 }
 

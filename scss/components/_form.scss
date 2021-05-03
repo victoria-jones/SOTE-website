@@ -94,10 +94,16 @@
     justify-content: center;
     position: relative;
 
+    @include respond(big-desktop) {
+        //background-color: $color-primary-green-med;
+        //background-color: $color-white;
+        //background-size: contain;
+    }
+
     //background-attachment: fixed does not work on some mobile browsers and safari ios
         //this is a workaround
     @include respond(phone) {
-        z-index: -2;
+        //z-index: -2;
         overflow: hidden;
 
         &__form-wrapper {
@@ -114,6 +120,8 @@
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
+
+            z-index: -2;
         }
     }
     //@include default-section-container-padding;
@@ -122,7 +130,6 @@
 .home__contact { 
     background-image: url(../img/farm3_bg-large.jpg); 
     @include respond(phone) {
-        //background-image: url(../img/farm3_bg-small.jpg);
         //background-attachemnt: fixed does not work on some mobile browsers including safari ios
             //this is the workaround
         background-image: none;
@@ -130,9 +137,14 @@
             background-image: url(../img/farm3_bg-small.jpg);
         }
     }
+
+    @include respond(big-desktop) {
+        background-image: url(../img/farm3_bg-xl.jpg);
+    }
 }
 .whoweare__contact { 
-    background-image: url(../img/roots_bg-large.jpg); 
+    //this was removed from the contact page
+    /*background-image: url(../img/roots_bg-large.jpg); 
     @include respond(phone) {
         //background-image: url(../img/roots_bg-small.jpg);
         //background-attachemnt: fixed does not work on some mobile browsers including safari ios
@@ -141,7 +153,8 @@
         &::after {
             background-image: url(../img/roots_bg-small.jpg);
         }  
-    }
+    }*/
+    
 }
 .meetthefamily__contact { 
     background-image: url(../img/family_bg-large.jpg); 
@@ -153,6 +166,11 @@
         &::after {
             background-image: url(../img/family_bg-small.jpg);
         }
+    }
+
+    //this image is too small to edit will need to get a bigger one
+    @include respond(big-desktop) {
+        //background-image: url(../img/farm3_bg-xl.jpg);
     }
 }
 .genetics__contact { 
@@ -166,6 +184,10 @@
             background-image: url(../img/buds3_bg-small.jpg);
             z-index: -2;
         }
+    }
+
+    @include respond(big-desktop) {
+        background-image: url(../img/buds3_bg-xl.jpg);
     }
 }
 

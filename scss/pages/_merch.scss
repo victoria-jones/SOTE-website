@@ -36,6 +36,10 @@
          width: 95%;
      }
     }
+
+    @include respond(big-desktop) {
+        background-image: url(../img/merch-preview_bg-xl.jpg);
+    }
  
     &__header,
     &__form-wrapper {
