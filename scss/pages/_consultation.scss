@@ -153,7 +153,7 @@
 
     &__section {
         &:not(:last-child) {
-            margin-bottom: 2rem;
+            margin-bottom: 5rem;
         }
 
         &--side {
@@ -169,25 +169,11 @@
 
                 &--header{
                     align-self: start;
-                    order: -1;
                 }
 
                 &:not(:last-child) {
                     margin-right: 0;
                 }
-            }
-        }
-
-        &__image {
-            @include respond(tab-port) {
-                order: 1;
-            }
-        }
-
-        &__p {
-            @include respond(tab-port) {
-                order: 2;
-                margin-top: 2rem;
             }
         }
     }

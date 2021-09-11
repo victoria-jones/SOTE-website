@@ -1485,7 +1485,7 @@ footer {
   }
 }
 .before-after__section:not(:last-child) {
-  margin-bottom: 2rem;
+  margin-bottom: 5rem;
 }
 .before-after__section--side:not(:last-child) {
   margin-right: 2rem;
@@ -1499,21 +1499,9 @@ footer {
   }
   .before-after__section--side--header {
     align-self: start;
-    order: -1;
   }
   .before-after__section--side:not(:last-child) {
     margin-right: 0;
-  }
-}
-@media only screen and (max-width: 56.25em) {
-  .before-after__section__image {
-    order: 1;
-  }
-}
-@media only screen and (max-width: 56.25em) {
-  .before-after__section__p {
-    order: 2;
-    margin-top: 2rem;
   }
 }
 .before-after__section--1, .before-after__section--2 {
