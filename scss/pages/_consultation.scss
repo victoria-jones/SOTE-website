@@ -136,7 +136,6 @@
     color: $color-grey-light;
     display: flex;
     justify-content: center;
-    height: auto;
     
 
     &__container {
@@ -155,6 +154,41 @@
     &__section {
         &:not(:last-child) {
             margin-bottom: 2rem;
+        }
+
+        &--side {
+            &:not(:last-child) {
+                margin-right: 2rem;
+            }
+            @include respond(tab-port) {
+                margin-bottom: 4rem;
+
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                &--header{
+                    align-self: start;
+                    order: -1;
+                }
+
+                &:not(:last-child) {
+                    margin-right: 0;
+                }
+            }
+        }
+
+        &__image {
+            @include respond(tab-port) {
+                order: 1;
+            }
+        }
+
+        &__p {
+            @include respond(tab-port) {
+                order: 2;
+                margin-top: 2rem;
+            }
         }
     }
 
@@ -180,10 +214,11 @@
 
     &__img {
         width: 90%;
-        height: 90%;
+        height: 20rem;
         background-color: grey;
         @include respond(tab-port) {
-            width: 90%;
+            width: 80%;
+            height: 30rem;
         }
     }
 

@@ -290,6 +290,11 @@ p:not(:last-child) {
   transform: rotate(45deg);
   transition: all 0.2s;
 }
+@media only screen and (max-width: 56.25em) {
+  .drop-down-list {
+    width: 90%;
+  }
+}
 
 .form-wrapper {
   width: 100%;
@@ -1461,7 +1466,6 @@ footer {
   color: #efefef;
   display: flex;
   justify-content: center;
-  height: auto;
   /*&__video {
       @include respond(tab-port) {
           width: 100%;
@@ -1482,6 +1486,35 @@ footer {
 }
 .before-after__section:not(:last-child) {
   margin-bottom: 2rem;
+}
+.before-after__section--side:not(:last-child) {
+  margin-right: 2rem;
+}
+@media only screen and (max-width: 56.25em) {
+  .before-after__section--side {
+    margin-bottom: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .before-after__section--side--header {
+    align-self: start;
+    order: -1;
+  }
+  .before-after__section--side:not(:last-child) {
+    margin-right: 0;
+  }
+}
+@media only screen and (max-width: 56.25em) {
+  .before-after__section__image {
+    order: 1;
+  }
+}
+@media only screen and (max-width: 56.25em) {
+  .before-after__section__p {
+    order: 2;
+    margin-top: 2rem;
+  }
 }
 .before-after__section--1, .before-after__section--2 {
   display: flex;
@@ -1506,12 +1539,13 @@ footer {
 }
 .before-after__img {
   width: 90%;
-  height: 90%;
+  height: 20rem;
   background-color: grey;
 }
 @media only screen and (max-width: 56.25em) {
   .before-after__img {
-    width: 90%;
+    width: 80%;
+    height: 30rem;
   }
 }
 .before-after__section--3 {

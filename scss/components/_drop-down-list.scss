@@ -42,4 +42,8 @@
         transform: rotate(45deg);
         transition: all .2s;
     }
+
+    @include respond(tab-port) {
+        width: 90%;
+    }
 }
