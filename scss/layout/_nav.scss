@@ -88,6 +88,14 @@
             color: $color-primary-yellow-dark;
             transform: translateY(0);
         }
+
+        @include respond(tab-port) {
+            font-size: 1.4rem;
+        }
+
+        @include respond(phone) {
+            font-size: inherit;
+        }
     }
 
     &__checkbox {

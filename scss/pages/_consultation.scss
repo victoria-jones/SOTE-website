@@ -1,0 +1,274 @@
+.consultation {
+    background-image: url(../img/babies02_bg-large.jpg);
+    position: relative;
+
+    @include respond(phone) {
+        background-image: none;
+
+        &::after {
+            content: "";
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            top: 0;
+            right: 0;
+            background-image: url(../img/babies02_bg-small.jpg);
+            z-index: -1;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        
+    }
+
+    @include respond(big-desktop) {
+        background-image: url(../img/babies02_bg-xl.jpg);
+    }
+
+    &__p-container {
+        &--part-1 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            @include respond(tab-port) {
+                flex-direction: column;
+            }
+        }
+
+        &__image {
+            //replace with background image
+            background-color: orange;
+
+            clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+            -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+            width: 18rem;
+            height: 20rem;
+        }
+
+        &__image-caption {
+            width: 60%;
+            padding-left: 2rem;
+
+            @include respond(tab-port) {
+                width: 100%;
+                padding-left: 0;
+                order: -1;
+                margin-bottom: 2rem;
+
+                &--header,
+                &--about {
+                    text-align: center;
+                }
+            }
+
+            &--header {
+                display: block;
+                font-size: 2.4rem;
+                font-weight: bold;
+            }
+
+            &--about-part {
+                display: block;
+                &:not(:last-child) {
+                    padding-bottom: 1rem;
+                }
+            }
+        }
+
+        &--part-2 {
+            margin-top: 3rem;
+        }
+    }
+}
+
+.specialties {
+    background-color: $color-white;
+
+    &__bg-img {
+        position: relative;
+        z-index: 3;
+        width: 100%;
+        background-image: url(../img/overhead-plant.jpg);
+        background-repeat: no-repeat;
+        background-position: (140% 0);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+    }
+     
+    &__container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        @include torn-edge-fix;
+        @include default-container-max-width-large;
+        @include default-section-container-padding;
+    }
+
+    &__header {
+        align-self: flex-start;
+        margin-bottom: 8rem;
+    }
+
+    @include respond(tab-port) {
+
+        &__container {
+            padding: 5rem 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        &__bg-img {
+            background-image: url(../img/overhead-plant-med.jpg),
+                                url(../img/overhead-plant-small.jpg);
+            background-position: (calc(100% + 20rem) 0), (-15rem 100%);
+        }
+    }  
+    
+    @include respond(phone) {
+        &__bg-img {
+            background-position: (calc(100% + 10rem) 12rem), (-15rem 100%);
+        }
+
+        &__header {
+            align-self: center;
+            width: 90%;
+        }
+        
+    }
+}
+
+.before-after {
+    background-color: $color-primary-green-med;
+    color: $color-grey-light;
+    display: flex;
+    justify-content: center;
+    
+
+    &__container {
+        width: 100%;
+        
+        justify-self: center;
+        @include default-container-max-width-large;
+        @include default-section-container-padding;
+
+        @include respond(phone) {
+            padding-left: 2rem;
+            padding-right: 2rem;
+        }
+    }
+
+    &__section {
+        &:not(:last-child) {
+            margin-bottom: 5rem;
+        }
+
+        &--side {
+            &:not(:last-child) {
+                margin-right: 2rem;
+            }
+            @include respond(tab-port) {
+                margin-bottom: 4rem;
+
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                &--header{
+                    align-self: start;
+                }
+
+                &:not(:last-child) {
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+
+    &__section--1,
+    &__section--2 {
+        display: flex;
+        @include respond(tab-port) {
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+    &__p--1 {
+        width: 50%;
+        margin-right: 2rem;
+        align-self: center;
+
+        @include respond(tab-port) {
+            width: 100%;
+            margin-right: 0;
+        }
+    }
+
+    &__img {
+        width: 90%;
+        height: 20rem;
+        background-color: grey;
+        @include respond(tab-port) {
+            width: 80%;
+            height: 30rem;
+        }
+    }
+
+    /*&__video {
+        @include respond(tab-port) {
+            width: 100%;
+        }
+    }*/
+
+    &__section--3 {
+        text-align: center;
+    }
+
+    &__subheader {
+        margin-bottom: 1rem;
+    }
+    
+}
+
+.inquire {
+    background-color: $color-white;
+    //color: $color-grey-light;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        @include default-section-container-padding;
+        width: 90%;
+        @include default-container-max-width-large;
+    }
+
+    &__btn {
+        align-self: center;
+    }
+
+    &__social-nav {
+        margin-bottom: 7rem;
+
+        &__icon {
+            width: 3rem;
+            height: 3rem;
+            fill: $color-black;
+        }
+    }
+
+    @include respond(tab-land) {
+        &__container {
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+
+}

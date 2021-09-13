@@ -253,6 +253,76 @@ p:not(:last-child) {
   box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.8);
 }
 
+.drop-down-list {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90%;
+}
+@media only screen and (max-width: 30em) {
+  .drop-down-list {
+    width: 95%;
+  }
+}
+.drop-down-list__item {
+  background-color: white;
+  font-family: "LEMONMILKPro-Regular", sans-serif;
+  width: 100%;
+  padding: 4rem 7rem;
+  transform: skew(-15deg, 0);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.5);
+}
+@media only screen and (max-width: 37.5em) {
+  .drop-down-list__item {
+    max-width: 90%;
+  }
+}
+@media only screen and (max-width: 30em) {
+  .drop-down-list__item {
+    transform: skew(0);
+    padding: 4rem 5rem;
+    max-width: 100%;
+  }
+}
+.drop-down-list__item > * {
+  transform: skew(15deg, 0);
+}
+@media only screen and (max-width: 30em) {
+  .drop-down-list__item > * {
+    transform: skew(0);
+  }
+}
+.drop-down-list__item:not(:last-child) {
+  margin-bottom: 2rem;
+}
+.drop-down-list__drop {
+  /*&:hover {
+      cursor: pointer;
+  }*/
+}
+.drop-down-list__drop__list {
+  list-style-type: none;
+  font-size: 1.6rem;
+  font-family: "Roboto Condensed", sans-serif;
+}
+.drop-down-list__dropicon {
+  border: solid #e0c15a;
+  border-width: 0 3px 3px 0;
+  width: 1.3rem;
+  height: 1.3rem;
+  display: inline-block;
+  margin-bottom: 0.3rem;
+  margin-left: 1rem;
+  transform: rotate(45deg);
+  transition: all 0.2s;
+}
+@media only screen and (max-width: 56.25em) {
+  .drop-down-list {
+    width: 90%;
+  }
+}
+
 .form-wrapper {
   width: 100%;
   background-color: rgba(255, 255, 255, 0.8);
@@ -453,6 +523,12 @@ p:not(:last-child) {
 .green-container > * {
   position: relative;
   z-index: 2;
+}
+
+.hex-image {
+  overflow: hidden;
+  width: 20rem;
+  height: 20rem;
 }
 
 .link {
@@ -778,7 +854,6 @@ p:not(:last-child) {
 .container {
   display: grid;
   grid-template-rows: 10rem repeat(2, maxcontent) 20rem;
-  grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(-webkit-min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
   grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
 }
 
@@ -1040,6 +1115,16 @@ footer {
   color: #96813c;
   transform: translateY(0);
 }
+@media only screen and (max-width: 56.25em) {
+  .site-nav__link {
+    font-size: 1.4rem;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .site-nav__link {
+    font-size: inherit;
+  }
+}
 .site-nav__checkbox {
   display: none;
 }
@@ -1296,6 +1381,244 @@ footer {
     margin-left: 0;
   }
 }
+.consultation {
+  background-image: url(../img/babies02_bg-large.jpg);
+  position: relative;
+}
+@media only screen and (max-width: 37.5em) {
+  .consultation {
+    background-image: none;
+  }
+  .consultation::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-image: url(../img/babies02_bg-small.jpg);
+    z-index: -1;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}
+@media only screen and (min-width: 112.5em) {
+  .consultation {
+    background-image: url(../img/babies02_bg-xl.jpg);
+  }
+}
+.consultation__p-container--part-1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media only screen and (max-width: 56.25em) {
+  .consultation__p-container--part-1 {
+    flex-direction: column;
+  }
+}
+.consultation__p-container__image {
+  background-color: orange;
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  width: 18rem;
+  height: 20rem;
+}
+.consultation__p-container__image-caption {
+  width: 60%;
+  padding-left: 2rem;
+}
+@media only screen and (max-width: 56.25em) {
+  .consultation__p-container__image-caption {
+    width: 100%;
+    padding-left: 0;
+    order: -1;
+    margin-bottom: 2rem;
+  }
+  .consultation__p-container__image-caption--header, .consultation__p-container__image-caption--about {
+    text-align: center;
+  }
+}
+.consultation__p-container__image-caption--header {
+  display: block;
+  font-size: 2.4rem;
+  font-weight: bold;
+}
+.consultation__p-container__image-caption--about-part {
+  display: block;
+}
+.consultation__p-container__image-caption--about-part:not(:last-child) {
+  padding-bottom: 1rem;
+}
+.consultation__p-container--part-2 {
+  margin-top: 3rem;
+}
+
+.specialties {
+  background-color: #fff;
+}
+.specialties__bg-img {
+  position: relative;
+  z-index: 3;
+  width: 100%;
+  background-image: url(../img/overhead-plant.jpg);
+  background-repeat: no-repeat;
+  background-position: 140% 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.specialties__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+  max-width: 100rem;
+  padding: 7rem 5rem;
+}
+.specialties__header {
+  align-self: flex-start;
+  margin-bottom: 8rem;
+}
+@media only screen and (max-width: 56.25em) {
+  .specialties__container {
+    padding: 5rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .specialties__bg-img {
+    background-image: url(../img/overhead-plant-med.jpg), url(../img/overhead-plant-small.jpg);
+    background-position: calc(100% + 20rem) 0, -15rem 100%;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .specialties__bg-img {
+    background-position: calc(100% + 10rem) 12rem, -15rem 100%;
+  }
+  .specialties__header {
+    align-self: center;
+    width: 90%;
+  }
+}
+
+.before-after {
+  background-color: #2b4220;
+  color: #efefef;
+  display: flex;
+  justify-content: center;
+  /*&__video {
+      @include respond(tab-port) {
+          width: 100%;
+      }
+  }*/
+}
+.before-after__container {
+  width: 100%;
+  justify-self: center;
+  max-width: 100rem;
+  padding: 7rem 5rem;
+}
+@media only screen and (max-width: 37.5em) {
+  .before-after__container {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+.before-after__section:not(:last-child) {
+  margin-bottom: 5rem;
+}
+.before-after__section--side:not(:last-child) {
+  margin-right: 2rem;
+}
+@media only screen and (max-width: 56.25em) {
+  .before-after__section--side {
+    margin-bottom: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .before-after__section--side--header {
+    align-self: start;
+  }
+  .before-after__section--side:not(:last-child) {
+    margin-right: 0;
+  }
+}
+.before-after__section--1, .before-after__section--2 {
+  display: flex;
+}
+@media only screen and (max-width: 56.25em) {
+  .before-after__section--1, .before-after__section--2 {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+.before-after__p--1 {
+  width: 50%;
+  margin-right: 2rem;
+  align-self: center;
+}
+@media only screen and (max-width: 56.25em) {
+  .before-after__p--1 {
+    width: 100%;
+    margin-right: 0;
+  }
+}
+.before-after__img {
+  width: 90%;
+  height: 20rem;
+  background-color: grey;
+}
+@media only screen and (max-width: 56.25em) {
+  .before-after__img {
+    width: 80%;
+    height: 30rem;
+  }
+}
+.before-after__section--3 {
+  text-align: center;
+}
+.before-after__subheader {
+  margin-bottom: 1rem;
+}
+
+.inquire {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.inquire__container {
+  display: flex;
+  flex-direction: column;
+  padding: 7rem 5rem;
+  width: 90%;
+  max-width: 100rem;
+}
+.inquire__btn {
+  align-self: center;
+}
+.inquire__social-nav {
+  margin-bottom: 7rem;
+}
+.inquire__social-nav__icon {
+  width: 3rem;
+  height: 3rem;
+  fill: #000;
+}
+@media only screen and (max-width: 75em) {
+  .inquire__container {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
 .contact {
   background-image: url(../img/bud03_bg-large.jpg);
   background-repeat: no-repeat;
@@ -1405,7 +1728,7 @@ footer {
 }
 @media only screen and (min-width: 112.5em) {
   .genetics__header {
-    background-image: url(../img/buds01_bg-xl-test.jpg);
+    background-image: url(../img/buds01_bg-xl.jpg);
   }
 }
 .genetics__side-menu {
