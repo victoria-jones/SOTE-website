@@ -255,16 +255,43 @@ p:not(:last-child) {
 
 .drop-down-list {
   list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90%;
+}
+@media only screen and (max-width: 30em) {
+  .drop-down-list {
+    width: 95%;
+  }
 }
 .drop-down-list__item {
   background-color: white;
   font-family: "LEMONMILKPro-Regular", sans-serif;
+  width: 100%;
   padding: 4rem 7rem;
   transform: skew(-15deg, 0);
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.5);
 }
+@media only screen and (max-width: 37.5em) {
+  .drop-down-list__item {
+    max-width: 90%;
+  }
+}
+@media only screen and (max-width: 30em) {
+  .drop-down-list__item {
+    transform: skew(0);
+    padding: 4rem 5rem;
+    max-width: 100%;
+  }
+}
 .drop-down-list__item > * {
   transform: skew(15deg, 0);
+}
+@media only screen and (max-width: 30em) {
+  .drop-down-list__item > * {
+    transform: skew(0);
+  }
 }
 .drop-down-list__item:not(:last-child) {
   margin-bottom: 2rem;
@@ -1088,6 +1115,16 @@ footer {
   color: #96813c;
   transform: translateY(0);
 }
+@media only screen and (max-width: 56.25em) {
+  .site-nav__link {
+    font-size: 1.4rem;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .site-nav__link {
+    font-size: inherit;
+  }
+}
 .site-nav__checkbox {
   display: none;
 }
@@ -1381,6 +1418,13 @@ footer {
     flex-direction: column;
   }
 }
+.consultation__p-container__image {
+  background-color: orange;
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  width: 18rem;
+  height: 20rem;
+}
 .consultation__p-container__image-caption {
   width: 60%;
   padding-left: 2rem;
@@ -1390,6 +1434,7 @@ footer {
     width: 100%;
     padding-left: 0;
     order: -1;
+    margin-bottom: 2rem;
   }
   .consultation__p-container__image-caption--header, .consultation__p-container__image-caption--about {
     text-align: center;

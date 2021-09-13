@@ -36,6 +36,16 @@
             }
         }
 
+        &__image {
+            //replace with background image
+            background-color: orange;
+
+            clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+            -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+            width: 18rem;
+            height: 20rem;
+        }
+
         &__image-caption {
             width: 60%;
             padding-left: 2rem;
@@ -44,6 +54,7 @@
                 width: 100%;
                 padding-left: 0;
                 order: -1;
+                margin-bottom: 2rem;
 
                 &--header,
                 &--about {

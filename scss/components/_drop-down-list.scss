@@ -1,16 +1,42 @@
 .drop-down-list {
     list-style-type: none;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 90%;
+
+    @include respond(phone-med) {
+        width: 95%;
+    }
 
     &__item {
         background-color: white;
         //font-size: $display-font-size-small;
         font-family: $font-display-light;
+        width: 100%;
+
         @include default-container-padding;
         @include default-skew-vertical;
         @include box-shadow-light;
 
+        @include respond(phone) {
+            max-width: 90%;
+        }
+
+        @include respond(phone-med) {
+            transform: skew(0);
+            padding: 4rem 5rem;
+            max-width: 100%;
+        }
+
         & > * {
             @include default-unskew-vertical; 
+
+            @include respond(phone-med) {
+                transform: skew(0);
+            }
         }
 
         &:not(:last-child) {
