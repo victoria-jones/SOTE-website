@@ -1530,6 +1530,8 @@ footer {
   background-color: #2b4220;
   color: #efefef;
   display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
   /*&__video {
       @include respond(tab-port) {
@@ -1606,6 +1608,15 @@ footer {
 }
 .before-after__subheader {
   margin-bottom: 1rem;
+}
+.before-after__video-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 5rem;
+}
+.before-after__video-container__video {
+  width: 70rem;
+  max-width: 90%;
 }
 
 /*.inquire {
