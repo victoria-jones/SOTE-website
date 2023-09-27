@@ -22,7 +22,7 @@
     }
 
     &__input,
-    &__textarea {       
+    &__textarea {
         font-family: inherit;
         color: inherit;
         font-size: $default-font-size;
@@ -75,7 +75,7 @@
         opacity: 1;
     }
 
-    //drop label into view when input is focused 
+    //drop label into view when input is focused
     &__input:placeholder-shown + &__label,
     &__textarea:placeholder-shown + &__label {
         opacity: 0;
@@ -87,7 +87,7 @@
 .component__contact {
     //background-image: url(../img/leaves2_bg-large.jpg);
     background-repeat: no-repeat;
-    background-size: cover; 
+    background-size: cover;
     background-attachment: fixed;
     background-position: center;
     display: flex;
@@ -127,8 +127,8 @@
     //@include default-section-container-padding;
 }
 
-.home__contact { 
-    background-image: url(../img/farm3_bg-large.jpg); 
+.home__contact {
+    background-image: url(../img/farm3_bg-large.jpg);
     @include respond(phone) {
         //background-attachemnt: fixed does not work on some mobile browsers including safari ios
             //this is the workaround
@@ -142,9 +142,9 @@
         background-image: url(../img/farm3_bg-xl.jpg);
     }
 }
-.whoweare__contact { 
+.whoweare__contact {
     //this was removed from the contact page
-    /*background-image: url(../img/roots_bg-large.jpg); 
+    /*background-image: url(../img/roots_bg-large.jpg);
     @include respond(phone) {
         //background-image: url(../img/roots_bg-small.jpg);
         //background-attachemnt: fixed does not work on some mobile browsers including safari ios
@@ -152,14 +152,14 @@
         background-image: none;
         &::after {
             background-image: url(../img/roots_bg-small.jpg);
-        }  
+        }
     }*/
-    
+
 }
-.meetthefamily__contact { 
-    background-image: url(../img/family_bg-large.jpg); 
+.meetthefamily__contact {
+    background-image: url(../img/family_bg-large.jpg);
     @include respond(phone) {
-        //background-image: url(../img/family_bg-small.jpg);  
+        //background-image: url(../img/family_bg-small.jpg);
         //background-attachemnt: fixed does not work on some mobile browsers including safari ios
             //this is the workaround
         background-image: none;
@@ -173,8 +173,8 @@
         //background-image: url(../img/farm3_bg-xl.jpg);
     }
 }
-.genetics__contact { 
-    background-image: url(../img/buds3_bg-large.jpg); 
+.genetics__contact {
+    background-image: url(../img/buds3_bg-large.jpg);
     @include respond(phone) {
         //background-image: url(../img/buds3_bg-small.jpg);
         //background-attachemnt: fixed does not work on some mobile browsers including safari ios
@@ -194,6 +194,24 @@
 .genetics__contact {
     flex-direction: column;
     align-items: center;
+}
+
+.consultation__contact {
+    background-image: url(../img/babies02_bg-large.jpg);
+    @include respond(phone) {
+        //background-image: url(../img/buds3_bg-small.jpg);
+        //background-attachemnt: fixed does not work on some mobile browsers including safari ios
+            //this is the workaround
+        background-image: none;
+        &::after {
+            background-image: url(../img/buds3_bg-small.jpg);
+            z-index: -2;
+        }
+    }
+
+    @include respond(big-desktop) {
+        background-image: url(../img/buds3_bg-xl.jpg);
+    }
 }
 
 //temporary form down thing

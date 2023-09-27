@@ -18,7 +18,7 @@
             background-position: center;
             background-repeat: no-repeat;
         }
-        
+
     }
 
     @include respond(big-desktop) {
@@ -39,6 +39,7 @@
         &__image {
             //replace with background image
             background-color: orange;
+            background-image: url(../img/brent/brent-with-plants.png);
 
             clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
             -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
@@ -79,6 +80,44 @@
         &--part-2 {
             margin-top: 3rem;
         }
+
+        &__worked-with {
+            &__companies {
+                margin-top: 1rem;
+
+                &__images {
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: space-evenly;
+
+                    &__image {
+                        width: 10rem;
+                    }
+                }
+
+                &__links {
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: space-evenly;
+
+                    &__link {
+                        //text-decoration: none;
+                        //color: $color-white;
+                        //font-family: $font-display-light;
+
+                        //background-color: $color-primary-yellow;
+                        //padding: 0 .5rem;
+                        margin: .5rem;
+                    }
+                }
+            }
+        }
+    }
+
+    &__contact {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 }
 
@@ -98,7 +137,7 @@
         justify-content: center;
 
     }
-     
+
     &__container {
         display: flex;
         flex-direction: column;
@@ -127,8 +166,8 @@
                                 url(../img/overhead-plant-small.jpg);
             background-position: (calc(100% + 20rem) 0), (-15rem 100%);
         }
-    }  
-    
+    }
+
     @include respond(phone) {
         &__bg-img {
             background-position: (calc(100% + 10rem) 12rem), (-15rem 100%);
@@ -138,7 +177,7 @@
             align-self: center;
             width: 90%;
         }
-        
+
     }
 }
 
@@ -147,11 +186,11 @@
     color: $color-grey-light;
     display: flex;
     justify-content: center;
-    
+
 
     &__container {
         width: 100%;
-        
+
         justify-self: center;
         @include default-container-max-width-large;
         @include default-section-container-padding;
@@ -232,10 +271,12 @@
     &__subheader {
         margin-bottom: 1rem;
     }
-    
+
 }
 
-.inquire {
+
+
+/*.inquire {
     background-color: $color-white;
     //color: $color-grey-light;
     display: flex;
@@ -248,6 +289,12 @@
         @include default-section-container-padding;
         width: 90%;
         @include default-container-max-width-large;
+    }
+
+    &__contact {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     &__btn {
@@ -271,4 +318,4 @@
         }
     }
 
-}
+}*/

@@ -6,7 +6,7 @@ Author: Victoria Jones
 victoria-jones-design.com
 victoria.j.art@gmail.com
 
-Date Last Modified: 12/21/2020
+Date Last Modified: 9/27/2023
 
 **************************/
 /**************************/
@@ -34,8 +34,7 @@ $breakpoints:
 EM used here (do not change to different measurement)
 1em === 16px
 ***********/
-/****** variables only ******/
-/**********************
+/****** variables only ******/ /**********************
 
 REM sizing used for styling
 base size:  1rem = 10px
@@ -198,8 +197,7 @@ p:not(:last-child) {
   background-color: #e0c15a;
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.5);
   cursor: pointer;
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
+  backface-visibility: hidden;
   transition: all 0.2s;
   backface-visibility: hidden;
   position: relative;
@@ -233,8 +231,7 @@ p:not(:last-child) {
   border-radius: 0.1rem;
   background-color: #e0c15a;
   cursor: pointer;
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
+  backface-visibility: hidden;
   transition: all 0.2s;
   backface-visibility: hidden;
   position: relative;
@@ -444,7 +441,7 @@ p:not(:last-child) {
 }
 
 .whoweare__contact {
-  /*background-image: url(../img/roots_bg-large.jpg); 
+  /*background-image: url(../img/roots_bg-large.jpg);
   @include respond(phone) {
       //background-image: url(../img/roots_bg-small.jpg);
       //background-attachemnt: fixed does not work on some mobile browsers including safari ios
@@ -452,7 +449,7 @@ p:not(:last-child) {
       background-image: none;
       &::after {
           background-image: url(../img/roots_bg-small.jpg);
-      }  
+      }
   }*/
 }
 
@@ -488,6 +485,24 @@ p:not(:last-child) {
 .genetics__contact {
   flex-direction: column;
   align-items: center;
+}
+
+.consultation__contact {
+  background-image: url(../img/babies02_bg-large.jpg);
+}
+@media only screen and (max-width: 37.5em) {
+  .consultation__contact {
+    background-image: none;
+  }
+  .consultation__contact::after {
+    background-image: url(../img/buds3_bg-small.jpg);
+    z-index: -2;
+  }
+}
+@media only screen and (min-width: 112.5em) {
+  .consultation__contact {
+    background-image: url(../img/buds3_bg-xl.jpg);
+  }
 }
 
 .contact__email-span {
@@ -672,7 +687,7 @@ p:not(:last-child) {
 }
 @media only screen and (max-width: 37.5em) {
   .popup__message-sent .message-sent--successful,
-.popup__message-sent .message-sent--error {
+  .popup__message-sent .message-sent--error {
     width: 95%;
   }
 }
@@ -1212,7 +1227,6 @@ footer {
     opacity: 0;
     transition: 0.8s cubic-bezier(0.83, 0, 0.17, 1) 0.2s;
   }
-
   .site-nav {
     position: fixed;
     left: 0;
@@ -1235,7 +1249,6 @@ footer {
   .site-nav__droplist {
     margin-right: -4rem;
   }
-
   .nav-main__header {
     position: absolute;
     bottom: -70vh;
@@ -1257,14 +1270,12 @@ footer {
   .nav-main .social-nav__item:not(:last-child) {
     margin-right: 15vw;
   }
-
   .nav-mobile__button,
-.nav-mobile__icon,
-.nav-mobile__img,
-.nav-mobile__background {
+  .nav-mobile__icon,
+  .nav-mobile__img,
+  .nav-mobile__background {
     display: block;
   }
-
   .nav-mobile__button {
     height: 6rem;
     width: 6rem;
@@ -1280,7 +1291,6 @@ footer {
     text-align: center;
     cursor: pointer;
   }
-
   .nav-mobile__icon {
     position: relative;
     margin-top: 2.8rem;
@@ -1304,7 +1314,6 @@ footer {
   .nav-mobile__icon::after {
     bottom: 1.2rem;
   }
-
   .nav-mobile__img {
     height: 4rem;
     width: 12.5rem;
@@ -1318,7 +1327,6 @@ footer {
     filter: drop-shadow(0 1rem 1rem rgba(0, 0, 0, 0.7));
     -webkit-filter: drop-shadow(0 1rem 1rem rgba(0, 0, 0, 0.7));
   }
-
   .nav-mobile__background {
     height: 250%;
     width: 0;
@@ -1330,8 +1338,7 @@ footer {
     background-repeat: no-repeat;
     background-size: 270%;
     background-position: -30%;
-    -webkit-backface-visibility: hidden;
-            backface-visibility: hidden;
+    backface-visibility: hidden;
     transition: 1s cubic-bezier(0.83, 0, 0.17, 1);
   }
 }
@@ -1345,38 +1352,26 @@ footer {
     width: 170%;
     background-position: 100%;
   }
-}
-@media only screen and (max-width: 37.5em) {
   .nav-mobile__checkbox:checked ~ .site-nav,
-.nav-mobile__checkbox:checked ~ .nav-main__header {
+  .nav-mobile__checkbox:checked ~ .nav-main__header {
     width: 100%;
     opacity: 1;
   }
-}
-@media only screen and (max-width: 37.5em) {
   .nav-mobile__checkbox:checked ~ .nav-main__header .social-nav {
     width: 100%;
     left: initial;
   }
-}
-@media only screen and (max-width: 37.5em) {
   .nav-mobile__checkbox:checked ~ .nav-mobile__button .nav-mobile__icon {
     background-color: transparent;
   }
-}
-@media only screen and (max-width: 37.5em) {
   .nav-mobile__checkbox:checked ~ .nav-mobile__button .nav-mobile__icon::before {
     top: 0;
     transform: rotate(135deg) scale(1.5, 1);
   }
-}
-@media only screen and (max-width: 37.5em) {
   .nav-mobile__checkbox:checked ~ .nav-mobile__button .nav-mobile__icon::after {
     top: 0;
     transform: rotate(-135deg) scale(1.5, 1);
   }
-}
-@media only screen and (max-width: 37.5em) {
   .nav-mobile__checkbox:checked ~ .site-nav .site-nav__list {
     margin-left: 0;
   }
@@ -1420,6 +1415,7 @@ footer {
 }
 .consultation__p-container__image {
   background-color: orange;
+  background-image: url(../img/brent/brent-with-plants.png);
   clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
   -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
   width: 18rem;
@@ -1453,6 +1449,30 @@ footer {
 }
 .consultation__p-container--part-2 {
   margin-top: 3rem;
+}
+.consultation__p-container__worked-with__companies {
+  margin-top: 1rem;
+}
+.consultation__p-container__worked-with__companies__images {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.consultation__p-container__worked-with__companies__images__image {
+  width: 10rem;
+}
+.consultation__p-container__worked-with__companies__links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.consultation__p-container__worked-with__companies__links__link {
+  margin: 0.5rem;
+}
+.consultation__contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .specialties {
@@ -1588,37 +1608,49 @@ footer {
   margin-bottom: 1rem;
 }
 
-.inquire {
-  background-color: #fff;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.inquire__container {
-  display: flex;
-  flex-direction: column;
-  padding: 7rem 5rem;
-  width: 90%;
-  max-width: 100rem;
-}
-.inquire__btn {
-  align-self: center;
-}
-.inquire__social-nav {
-  margin-bottom: 7rem;
-}
-.inquire__social-nav__icon {
-  width: 3rem;
-  height: 3rem;
-  fill: #000;
-}
-@media only screen and (max-width: 75em) {
-  .inquire__container {
-    padding-left: 0;
-    padding-right: 0;
-  }
-}
+/*.inquire {
+    background-color: $color-white;
+    //color: $color-grey-light;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
+    &__container {
+        display: flex;
+        flex-direction: column;
+        @include default-section-container-padding;
+        width: 90%;
+        @include default-container-max-width-large;
+    }
+
+    &__contact {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__btn {
+        align-self: center;
+    }
+
+    &__social-nav {
+        margin-bottom: 7rem;
+
+        &__icon {
+            width: 3rem;
+            height: 3rem;
+            fill: $color-black;
+        }
+    }
+
+    @include respond(tab-land) {
+        &__container {
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+
+}*/
 .contact {
   background-image: url(../img/bud03_bg-large.jpg);
   background-repeat: no-repeat;
