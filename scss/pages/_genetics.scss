@@ -21,6 +21,11 @@
         @include respond(big-desktop) {
             background-image: url(../img/buds01_bg-xl.jpg);
         }
+
+        &__links {
+            display: flex;
+            justify-content: space-evenly;
+        }
     }
 
     &__side-menu {
