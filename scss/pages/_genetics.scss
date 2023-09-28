@@ -27,11 +27,13 @@
             justify-content: space-evenly;
             flex-wrap: wrap;
 
-            @include respond(phone) {
-                &__link {
-                    margin-bottom: 1rem;
+            &__link {
+                margin-bottom: 1rem;
+                @include respond(tab-port) {
+                    text-align: center;
                 }
             }
+
         }
     }
 
