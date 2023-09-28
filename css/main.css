@@ -454,14 +454,14 @@ p:not(:last-child) {
 }
 
 .meetthefamily__contact {
-  background-image: url(../img/family_bg-large.jpg);
+  background-image: url(../img/farm4_bg-large.jpg);
 }
 @media only screen and (max-width: 37.5em) {
   .meetthefamily__contact {
     background-image: none;
   }
   .meetthefamily__contact::after {
-    background-image: url(../img/family_bg-small.jpg);
+    background-image: url(../img/farm4_bg-small.jpg);
   }
 }
 .genetics__contact {
@@ -1773,6 +1773,10 @@ footer {
   .genetics__header {
     background-image: url(../img/buds01_bg-xl.jpg);
   }
+}
+.genetics__header__links {
+  display: flex;
+  justify-content: space-evenly;
 }
 .genetics__side-menu {
   background-color: #DDD;

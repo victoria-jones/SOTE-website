@@ -157,14 +157,14 @@
 
 }
 .meetthefamily__contact {
-    background-image: url(../img/family_bg-large.jpg);
+    background-image: url(../img/farm4_bg-large.jpg);
     @include respond(phone) {
         //background-image: url(../img/family_bg-small.jpg);
         //background-attachemnt: fixed does not work on some mobile browsers including safari ios
             //this is the workaround
         background-image: none;
         &::after {
-            background-image: url(../img/family_bg-small.jpg);
+            background-image: url(../img/farm4_bg-small.jpg);
         }
     }
 
