@@ -292,6 +292,12 @@
         }
     }
 
+    &__brent-img {
+        @include respond(tab-port) {
+            width: 90%;
+        }
+    }
+
 }
 
 
