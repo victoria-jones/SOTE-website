@@ -270,6 +270,13 @@
         text-align: center;
     }
 
+    &__section--4 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 5rem;
+    }
+
     &__subheader {
         margin-bottom: 1rem;
     }
