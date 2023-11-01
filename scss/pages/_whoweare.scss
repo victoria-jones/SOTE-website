@@ -18,7 +18,7 @@
             background-position: center;
             background-repeat: no-repeat;
         }
-        
+
     }
 
     @include respond(big-desktop) {
@@ -44,7 +44,7 @@
         justify-content: center;
 
     }
-     
+
     &__container {
         display: flex;
         flex-direction: column;
@@ -73,8 +73,8 @@
                                 url(../img/overhead-plant-small.jpg);
             background-position: (calc(100% + 20rem) 0), (-15rem 100%);
         }
-    }  
-    
+    }
+
     @include respond(phone) {
         &__bg-img {
             background-position: (calc(100% + 10rem) 12rem), (-15rem 100%);
@@ -84,7 +84,7 @@
             align-self: center;
             width: 90%;
         }
-        
+
     }
 
     @include respond(phone-med) {
@@ -95,8 +95,8 @@
 
     @include respond(xl-desktop) {
         &__bg-img {
-            background-position: (calc(50% + 50rem) 0), (calc(50% - 50rem) 100%);  
-        }     
+            background-position: (calc(50% + 50rem) 0), (calc(50% - 50rem) 100%);
+        }
     }
 }
 
@@ -106,7 +106,7 @@
     color: $color-grey-light;
     overflow-x: hidden;
     @include box-shadow-light;
-    
+
     &:not(:last-child) {
         margin-bottom: 10rem;
     }
@@ -115,7 +115,7 @@
     &__p {
         min-height: 10rem;
     }
-    
+
     &__img {
         min-width: 30rem;
         max-height: 100%;
@@ -137,14 +137,14 @@
         background-position: 4rem center;
      }
 
-    &__img--3 { 
+    &__img--3 {
         background-image: url(../img/teenplant.jpg);
         background-position: 5rem center;
     }
 
     &__container {
         display: flex;
-        @include default-unskew-vertical; 
+        @include default-unskew-vertical;
     }
 
     &--wrapper {
@@ -185,7 +185,7 @@
         max-width: 30rem;
         &--wrapper {
             padding: 0 3rem 3rem 3rem;
-        } 
+        }
     }
 
     @include respond(phone-med) {
@@ -198,7 +198,7 @@
     color: $color-grey-light;
     display: flex;
     justify-content: center;
-    
+
 
     &__container {
         width: 100%;
@@ -264,7 +264,7 @@
         color: $color-primary-yellow;
         font-weight: bold;
         margin-right: 2rem;
-    }    
+    }
 
     &__social-nav {
         margin-bottom: 2rem;
@@ -282,7 +282,7 @@
         width: inherit;
         align-self: flex-end;
     }
-    
+
 }
 
 .thefamily {
@@ -300,7 +300,7 @@
         @include default-container-max-width-large;
     }
 
-    
+
 
     /*
     &__grid {
@@ -328,7 +328,7 @@
         background-size: contain;
         background-repeat: no-repeat;
         padding: 1rem;
-        //make the grid into perfect squares 
+        //make the grid into perfect squares
         display: grid;
         &::before {
             content: "";
@@ -337,13 +337,13 @@
         }*/
     }
 
-    //square grid inside content fix 
+    //square grid inside content fix
     &__img,
     &__img--wrapper::before {
         //grid-area: 1 / 1 / 2 / 2;
     }
     /******/
-    
+
     @include respond(tab-land) {
         &__container {
             padding-left: 0;
@@ -358,7 +358,7 @@
             &::after {
                 padding-top: 65.91375770020534%;
             }
-            
+
         }
 
        /*&__grid {
@@ -396,4 +396,16 @@
         }*/
     }
 
+}
+
+/*******
+IPAD area
+*********/
+
+.whoweare.header__ipad {
+    //background-image: none;
+
+        &::after {
+            background-image: url(../img/babies02_bg-large.jpg);
+        }
 }

@@ -300,6 +300,21 @@
 
 }
 
+/*******
+IPAD area
+*********/
+
+.consultation.header__ipad {
+    //background-image: none;
+
+        &::after {
+            background-image: url(../img/babies02_bg-small.jpg);
+        }
+}
+.consultation__contact.component__contact__ipad {
+    background-image: none;
+}
+
 
 
 /*.inquire {

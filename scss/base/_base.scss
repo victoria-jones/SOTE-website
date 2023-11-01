@@ -4,7 +4,7 @@ REM sizing used for styling
 base size:  1rem = 10px
 
 def:
-- base browser sizes at 16px 
+- base browser sizes at 16px
 - changed to 62.5% to equal 10px
 - conversions are (desired px size)/16px
     - change to percent
@@ -28,7 +28,7 @@ html {
 body {
     box-sizing: border-box;
     padding: 2rem;
-    //not part of browser reset 
+    //not part of browser reset
     background-color: $color-grey-light;
 
     @include respond(phone) {

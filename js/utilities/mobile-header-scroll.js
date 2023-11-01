@@ -1,15 +1,14 @@
 /**********
- * 
+ *
  *  This script is for fixing the position of the mobile header image
  *  fixed background image is not supported on some mobile browsers
  *  This is a workaround ONLY for pages that have 2 fixed images on the page (header and contact)
- *  
+ *
  */
 
 //initial width check
 function checkPageWidth() {
     let currentScreenSize = window.innerWidth;
-
 
     if(currentScreenSize <= 600) {
         //mobileFixedHeader();
@@ -33,7 +32,7 @@ function removeMobileFixedHeader () {
     let header = document.getElementsByClassName('alt-header')[0];
     let headerClasses = header.classList;
     let addClass = false;
-    
+
     for(i in headerClasses) {
         if(headerClasses[i] === "alt-header__bg-attachment-fix") {
             addClass = false;
@@ -53,7 +52,7 @@ function addMobileFixedHeader() {
     let header = document.getElementsByClassName('alt-header')[0];
     let headerClasses = header.classList;
     let removeClass = false;
-    
+
     for(i in headerClasses) {
         if(headerClasses[i] === "alt-header__bg-attachment-fix") {
             removeClass = true;

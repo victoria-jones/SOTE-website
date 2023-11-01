@@ -496,3 +496,18 @@
         }
     }
 }
+
+/*******
+IPAD area
+*********/
+
+.genetics__header.header__ipad {
+    //background-image: none;
+
+        &::after {
+            background-image: url(../img/buds01_bg-large.jpg);
+        }
+}
+.genetics__contact.component__contact__ipad {
+    background-image: none;
+}

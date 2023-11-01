@@ -1,7 +1,7 @@
 .contact {
    background-image: url(../img/bud03_bg-large.jpg);
    background-repeat: no-repeat;
-   background-size: cover; 
+   background-size: cover;
    background-attachment: fixed;
    min-height: 100vh;
 
@@ -12,7 +12,7 @@
 
    @include respond(phone) {
         //background-image: url(../img/bud03_bg-small.jpg);
-        //background-attatchment:fixed mobile browser fix 
+        //background-attatchment:fixed mobile browser fix
         background-image: none;
         &::after {
             content: "";
@@ -61,7 +61,7 @@
        }
    }
 
-   
+
 }
 
 .contact__social-nav {
@@ -82,7 +82,7 @@
         }
 
         @include respond(phone) {
-            
+
             &__icon {
                 width: 3.5rem;
                 height: 3.5rem;
@@ -105,4 +105,16 @@
             }
         }
     }
+}
+
+ /*******
+IPAD area
+*********/
+
+.contact.header__ipad {
+    //background-image: none;
+
+        &::after {
+            background-image: url(../img/bud03_bg-large.jpg);
+        }
 }
