@@ -36,13 +36,13 @@
         justify-content: center;
         align-items: center;
         padding: 7rem 5rem;
-        overflow-x: hidden; 
+        overflow-x: hidden;
         overflow-y: hidden;
         @include torn-edge-fix;
         position: relative;
         z-index: 3;
     }
-    
+
     &__info {
         max-width: 50rem;
     }
@@ -145,8 +145,17 @@
 
 }
 
-/*
-.white-space {
-    background-color: $color-white;
-    height: 30rem;
-}*/
+ /*******
+IPAD area
+*********/
+
+.home__header.header__ipad {
+    //background-image: none;
+
+        &::after {
+            background-image: url(../img/farm3_bg-large.jpg);
+        }
+}
+.home__contact.component__contact__ipad {
+    background-image: none;
+}

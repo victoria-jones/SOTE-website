@@ -40,7 +40,7 @@ REM sizing used for styling
 base size:  1rem = 10px
 
 def:
-- base browser sizes at 16px 
+- base browser sizes at 16px
 - changed to 62.5% to equal 10px
 - conversions are (desired px size)/16px
     - change to percent
@@ -150,6 +150,10 @@ p:not(:last-child) {
 
 .torn-edge-fix {
   padding-top: 8rem;
+}
+
+.container__ipad {
+  padding: 0 !important;
 }
 
 .bg-video {
@@ -1005,6 +1009,21 @@ footer {
     margin-top: -25rem;
   }
 }
+.header__ipad {
+  background-image: none !important;
+}
+.header__ipad::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
 
 .alt-header {
   background-size: cover;
@@ -1630,6 +1649,17 @@ footer {
   }
 }
 
+/*******
+IPAD area
+*********/
+.consultation.header__ipad::after {
+  background-image: url(../img/babies02_bg-small.jpg);
+}
+
+.consultation__contact.component__contact__ipad {
+  background-image: none;
+}
+
 /*.inquire {
     background-color: $color-white;
     //color: $color-grey-light;
@@ -1757,6 +1787,13 @@ footer {
   .contact__social-nav .social-nav__item:not(:last-child) {
     margin-right: 0;
   }
+}
+
+/*******
+IPAD area
+*********/
+.contact.header__ipad::after {
+  background-image: url(../img/bud03_bg-large.jpg);
 }
 
 .genetics {
@@ -2186,6 +2223,17 @@ footer {
   }
 }
 
+/*******
+IPAD area
+*********/
+.genetics__header.header__ipad::after {
+  background-image: url(../img/buds01_bg-large.jpg);
+}
+
+.genetics__contact.component__contact__ipad {
+  background-image: none;
+}
+
 .home__header {
   /*background-image: url(../img/leaves_bg-large.jpg);
   background-size: cover;
@@ -2311,11 +2359,17 @@ footer {
   }
 }
 
-/*
-.white-space {
-    background-color: $color-white;
-    height: 30rem;
-}*/
+/*******
+IPAD area
+*********/
+.home__header.header__ipad::after {
+  background-image: url(../img/farm3_bg-large.jpg);
+}
+
+.home__contact.component__contact__ipad {
+  background-image: none;
+}
+
 .meetthefamily {
   background-image: url(../img/family_bg_02-large.jpg);
 }
@@ -2407,6 +2461,17 @@ footer {
 }
 .family-group__img--8 {
   background-image: url(../img/family_08.png);
+}
+
+/*******
+IPAD area
+*********/
+.meetthefamily.header__ipad::after {
+  background-image: url(../img/family_bg_02-large.jpg);
+}
+
+.meetthefamily__contact.component__contact__ipad {
+  background-image: none;
 }
 
 .merch-page {
@@ -2502,6 +2567,13 @@ footer {
   .merch-page__social-nav .social-nav__item:not(:last-child) {
     margin-right: 0;
   }
+}
+
+/*******
+IPAD area
+*********/
+.merch-page.header__ipad::after {
+  background-image: url(../img/merch-preview_bg-large.jpg);
 }
 
 .whoweare {
@@ -2793,7 +2865,7 @@ footer {
   background-size: contain;
   background-repeat: no-repeat;
   padding: 1rem;
-  //make the grid into perfect squares 
+  //make the grid into perfect squares
   display: grid;
   &::before {
       content: "";
@@ -2847,4 +2919,11 @@ footer {
         width: 50%;
     }*/
   }
+}
+
+/*******
+IPAD area
+*********/
+.whoweare.header__ipad::after {
+  background-image: url(../img/babies02_bg-large.jpg);
 }
