@@ -13,7 +13,6 @@ function checkIfIpad() {
 
     if(isIpad) {
         ipadFix();
-        console.log('ipad fix');
     }
 }
 
