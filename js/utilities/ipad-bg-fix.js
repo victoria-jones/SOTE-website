@@ -47,7 +47,9 @@ function ipadFix() {
 }
 
 function checkUserAgent() {
-    if((navigator.maxTouchPoints > 0) || (navigator.msMaxTouchPoints > 0)) {
+    if((navigator.maxTouchPoints > 0) || (navigator.msMaxTouchPoints > 0) || (navigator.maxTouchPoints > 2)) {
+        return true;
+    } else if (/iPad/i.test(navigator.userAgent)){
         return true;
     } else {
         return false;
