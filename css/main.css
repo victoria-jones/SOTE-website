@@ -1149,11 +1149,6 @@ footer {
   color: #96813c;
   transform: translateY(0);
 }
-@media only screen and (max-width: 56.25em) {
-  .site-nav__link {
-    font-size: 1.4rem;
-  }
-}
 @media only screen and (max-width: 37.5em) {
   .site-nav__link {
     font-size: inherit;
@@ -1239,7 +1234,7 @@ footer {
   display: none;
 }
 
-@media only screen and (max-width: 37.5em) {
+@media only screen and (max-width: 56.25em) {
   .site-nav, .nav-main__header {
     z-index: 5;
     width: 0;
@@ -1361,12 +1356,12 @@ footer {
     transition: 1s cubic-bezier(0.83, 0, 0.17, 1);
   }
 }
-@media only screen and (max-width: 37.5em) and (max-width: 18.75em) {
+@media only screen and (max-width: 56.25em) and (max-width: 18.75em) {
   .nav-mobile__background {
     background-size: 280%;
   }
 }
-@media only screen and (max-width: 37.5em) {
+@media only screen and (max-width: 56.25em) {
   .nav-mobile__checkbox:checked ~ .nav-mobile__background {
     width: 170%;
     background-position: 100%;

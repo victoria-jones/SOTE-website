@@ -49,6 +49,7 @@ function ipadFix() {
 function checkUserAgent() {
     if((navigator.maxTouchPoints > 0) || (navigator.msMaxTouchPoints > 0) || (navigator.maxTouchPoints > 2)) {
         return true;
+    //this is for older generation/landscape mode detection
     } else if (/iPad/i.test(navigator.userAgent)){
         return true;
     } else {
