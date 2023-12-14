@@ -4,11 +4,11 @@
         list-style-type: none;
         width: 100%;
     }
-    
+
     &__item {
         display: inline-block;
     }
-    
+
 }
 
 .nav-main {
@@ -20,7 +20,7 @@
      //logo and social media links
     &__header {
         color: $color-grey-light;
-        padding: 3rem 0;   
+        padding: 3rem 0;
         margin-bottom: 2rem;
     }
 
@@ -62,7 +62,7 @@
 }
 
 .site-nav {
-    
+
     &__list {
         display:flex;
         justify-content: space-between;
@@ -90,7 +90,7 @@
         }
 
         @include respond(tab-port) {
-            font-size: 1.4rem;
+            //font-size: 1.4rem;
         }
 
         @include respond(phone) {
@@ -136,8 +136,8 @@
         overflow: hidden;
         max-height: 0;
     }
-  
-    &__dropdown {  
+
+    &__dropdown {
         transition: .8s cubic-bezier(0.83, 0, 0.17, 1);
     }
 
@@ -149,11 +149,11 @@
     &__checkbox:checked ~ &__dropbtn &__droplist &__dropicon {
         transform: rotate(-45deg);
     }
-    
+
 }
 
 .social-nav {
-    
+
     &__icon {
         height: 2rem;
         width: 2rem;
@@ -188,9 +188,9 @@
                 }
             }
         }
-        
-    }   
-    
+
+    }
+
 }
 
 .nav-mobile__,
@@ -204,7 +204,9 @@
 
 //mobile nav styles and functionality
 
-@include respond(phone) {
+    //adjusted from 'phone' to 'tab-port' to accomodate the large navigation
+
+@include respond(tab-port) {
 
     .site-nav, .nav-main__header {
         z-index: 5;
@@ -224,7 +226,7 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            
+
             //the sitenav is clickable on the edge of the screen but invisible this moves it out of range of the screen
                 //transition re-added to prevent a "skipping" to the negative margin while the menu moves out of view
             margin-left: -6.1rem;
@@ -250,7 +252,7 @@
             position: absolute;
             bottom: -70vh;
         }
-        
+
         &__social-nav {
             position: fixed;
             //width: 100%;
@@ -303,7 +305,7 @@
         position: relative;
         margin-top: 2.8rem;
         width: 4.3rem;
-        
+
         &,
         &::before,
         &::after {
@@ -378,7 +380,7 @@
         left: initial;
     }
 
-    //icon change to close 
+    //icon change to close
     .nav-mobile__checkbox:checked ~ .nav-mobile__button .nav-mobile__icon {
         background-color: transparent;
     }
